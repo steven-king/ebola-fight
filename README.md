@@ -17,6 +17,6 @@ Frameworks:
 Foundation 5, d3.js
 
 APIs:
-CrisiNet
-NyTimes
-Gardian
+crisis.net API
+NyTimes Article API
+Gardian Article API
