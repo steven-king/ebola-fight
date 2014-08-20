@@ -1,0 +1,182 @@
+<!doctype html>
+    <html class="no-js" lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ebola in Liberia | Informatics</title>
+        <link rel="stylesheet" href="css/foundation.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/vendor/modernizr.js"></script>
+
+      </head>
+      <body>
+        <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">Fight Ebola</a></h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+
+
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="#">Map</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">About</a></li>
+          <li class="has-dropdown">
+            <a href="#">Countries</a>
+            <ul class="dropdown">
+              <li><a href="#">Liberia</a></li>
+              <li><a href="#">Future Country</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="row">
+      <div class="large-12 columns">
+            <p class="condense">Enter your own query:</p> <input class="condense" type="text" id="userQuery" value="" placeholder="Enter your own query..." />
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-6 columns">
+            <p class="condense">From (date):</p> <input type="text" class="condense" id="fromDate" value="" placeholder="2014-08-10" />
+        </div>
+        <div class="large-6 columns">
+            <p class="condense">To (date):</p> <input type="text" class="condense" id="toDate" value="" placeholder="2014-08-19"/><br />
+      </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <button onclick="get_map();">Send</button>
+            <div id="map" style="height: 700px; width: 100%;">
+            </div>
+        </div>
+    </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+    get_map();
+});
+
+function get_map() {
+var userQuery = $("#userQuery").val();
+var fromDate = $("#fromDate").val();
+var toDate = $("#toDate").val();
+var tagged = $("#tagged").val();
+console.log(fromDate);
+console.log(toDate);
+qs = 'text=ebola&after=2014-08-10';
+if (userQuery != ''){
+    qs = userQuery;
+}
+else if (fromDate != '' && toDate != ''){
+    qs = 'text=ebola&after='+fromDate+'&before='+toDate;
+}
+else if (fromDate != ''){
+    qs = 'text=ebola&after='+fromDate;
+}
+else if (toDate != ''){
+    qs = 'text=ebola&before='+toDate;
+}
+else{
+    qs = 'text=ebola&after=2014-08-10';
+}
+console.log(qs);
+apiKey = '&apikey=53f3b2c526102d463f4b14e1';
+params = qs + apiKey;
+var geocoder = new google.maps.Geocoder();
+
+  $.ajax({
+			data: params,
+			url: 'http://api.crisis.net/item?',
+			type: 'get',
+			dataType: 'json',
+			beforeSend: function () {},
+			success:  function (response, textStatus, jqXHR) {
+
+                for(var key in response){
+                    coords_list = [];
+                    if (response.hasOwnProperty(key)){
+                        var value=response[key];
+                        console.log("total responses: " + value.length);
+                        console.log(value);
+                        for(var key in value){
+                            if (value.hasOwnProperty(key)){
+                                var entry = value[key];
+                                coords = entry['geo']['coords'];
+                                content = entry['content'];
+                                createdAt = entry['createdAd'];
+                                fromURL = entry['fromURL'];
+                                tags = [];
+                                all_tags = entry['tags'];
+                                for(var key in all_tags){
+                                    if (all_tags.hasOwnProperty(key)){
+                                        var tag = all_tags[key];
+                                        tags.push(' '+tag['name'])
+                                    }
+                                }
+                                affected = entry['totalAffectedPersons'];
+                                published = entry['publishedAt'];
+                                updated = entry['updatedAt'];
+                                // Not getting this
+                                // loc = entry['geo']['addressComponenets'];
+                                mini_list = [content, coords, createdAt, fromURL, tags, affected, published, updated];
+                                if (coords){
+                                    // console.log(entry);
+                                    coords_list.push(mini_list);
+                                }
+                            }
+                        }
+                    console.log("geocoded locs: " + coords_list.length);
+                    }
+
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 4,
+                      center: new google.maps.LatLng(15.332138, 14.031175),
+                      mapTypeId: google.maps.MapTypeId.ROADMAP
+                    });
+
+                    var infowindow = new google.maps.InfoWindow();
+
+                    var marker, i;
+
+                    for (i = 0; i < coords_list.length; i++) {
+                      marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(coords_list[i][1][1], coords_list[i][1][0]),
+                        map: map
+                      });
+
+                      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                        return function() {
+                          infowindow.setContent('<b>content:</b> '+coords_list[i][0]+'\
+                          <br /><b>created at:</b> '+coords_list[i][2]+'\
+                          <br /><b>url:</b> <a href='+coords_list[i][3]+' target="_blank">'+coords_list[i][3]+'</a>\
+                          <br /><b>tags:</b> '+coords_list[i][4]+'\
+                          <br /><b>affected people:</b> '+coords_list[i][5]+'\
+                          <br /><b>published at:</b> '+coords_list[i][6]+'\
+                          <br /><b>updated at:</b> '+coords_list[i][7]);
+                          infowindow.open(map, marker);
+                        }
+                      })(marker, i));
+                    }
+                }
+
+
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+			$("#error").text(textStatus + "; " + errorThrown);
+		}
+	});
+}
+  </script>
+</body>
+</html>
