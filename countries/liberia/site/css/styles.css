@@ -1,0 +1,35 @@
+#country-graph{
+    height:285px;
+}
+
+.numbers{
+  
+    padding-bottom: 2.25em;
+}
+.panel .lg-number{
+    margin-top:.33em;
+    font-size: 88px;
+    line-height: .22em;
+}
+
+.panel .sm-number{
+    margin-top:1.5em;
+    margin-left:0;
+    font-size: 22px;
+    list-style: none;
+   
+ 
+    
+}
+
+.footer{
+    margin:1em;
+}
+
+.panel .light-blue{
+    color: #2ba6cb;
+}
+
+.panel .dark-blue{
+    color: #434348;
+}
