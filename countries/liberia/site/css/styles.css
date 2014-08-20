@@ -3,7 +3,7 @@
 }
 
 .numbers{
-  
+
     padding-bottom: 2.25em;
 }
 .panel .lg-number{
@@ -17,9 +17,9 @@
     margin-left:0;
     font-size: 22px;
     list-style: none;
-   
- 
-    
+
+
+
 }
 
 .footer{
@@ -32,4 +32,7 @@
 
 .panel .dark-blue{
     color: #434348;
+}
+.condense{
+    margin-bottom: 10px;
 }
