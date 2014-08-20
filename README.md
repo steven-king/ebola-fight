@@ -3,6 +3,7 @@ ebola-fight
 
 Data dashboard and app for tracking and informing about the ebola epidemic 
 
+View latest dev deloyment at: http://steventking.com/apps/countries/liberia/site/
 
 Provides a central location to 
 
