@@ -1,0 +1,53 @@
+[
+   {
+      "Type":"Specimens collected on 12th Aug 2014",
+      "National":2,
+      "Bomi County":0,
+      "Bong County":0,
+      "Gbarpolu County":0,
+      "Grand Bassa":2,
+      "Grand Cape Mount":0,
+      "Grand Gedeh":0,
+      "Grand Kru":0,
+      "Lofa County":0,
+      "Margibi County":0,
+      "Maryland County":0,
+      "Montserrado County":34,
+      "Nimba County":0,
+      "RiverCess County":0
+   },
+   {
+      "Type":"Specimens pending for testing",
+      "National":12,
+      "Bomi County":0,
+      "Bong County":0,
+      "Gbarpolu County":0,
+      "Grand Bassa":2,
+      "Grand Cape Mount":0,
+      "Grand Gedeh":0,
+      "Grand Kru":0,
+      "Lofa County":6,
+      "Margibi County":1,
+      "Maryland County":0,
+      "Montserrado County":15,
+      "Nimba County":3,
+      "RiverCess County":0
+   },
+   {
+      "Type":"Total specimens tested",
+      "National":75,
+      "Bomi County":0,
+      "Bong County":0,
+      "Gbarpolu County":0,
+      "Grand Bassa":0,
+      "Grand Cape Mount":0,
+      "Grand Gedeh":0,
+      "Grand Kru":0,
+      "Lofa County":56,
+      "Margibi County":0,
+      "Maryland County":0,
+      "Montserrado County":19,
+      "Nimba County":0,
+      "RiverCess County":0
+   }
+]
