@@ -110,6 +110,34 @@ function loadGoogleNews(){
           }
       });
 
+      loadCDC();
+}
+
+function loadCDC(){
+    // var params = 'rid=cs_3879&topicid=27726&fromdate=2014-06-01';
+    var site = "http://t.cdc.gov/feed.aspx?topicid=27726&fromdate=2014-06-01";
+    // var yql = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from html where url="' + site + '"') + '&format=json&callback=?';
+    $.ajax({
+              data: 'q='+encodeURIComponent('select * from html where url="' + site + '"') + '&format=xml&callback=?',
+              url: 'http://query.yahooapis.com/v1/public/yql?',
+              type: 'get',
+              dataType: 'xml',
+              crossDomain: true,
+              success:  function (response, textStatus, jqXHR) {
+                console.log(response);
+
+                // Having cross domain issues
+                // Additional instructions provided on CDC site: https://tools.cdc.gov/syndication/api.aspx
+                // & also looking into using yql. Not 100% sure of what's here, but thought that it
+                // might be worth checking out.
+
+
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+              console.log(textStatus + "; " + errorThrown);
+          }
+      });
+
       loadFlckr();
 }
 
