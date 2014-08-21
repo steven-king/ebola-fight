@@ -50,11 +50,11 @@ ul li .tabs-title{
 
 #flickr {
     display: inline-block;
-  
+
 }
 
 #flickr img {
-    padding: .25em; 
+    padding: .25em;
     width: 145px;
     height: 100px;
 
@@ -64,6 +64,15 @@ ul li .tabs-title{
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    padding: 0; 
+    padding: 0;
 }
-
+.google-image{
+    display: inline;
+    float: left;
+    width: 220px;
+    margin: 7px 15px 1.25rem 0;
+}
+.news-outlet{
+    font-weight: 500;
+    font-size: .8em;
+}
