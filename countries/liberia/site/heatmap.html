@@ -1,0 +1,93 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Liberia Ebola</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <style type="text/css">
+            #container {
+                height: 500px; 
+                min-width: 310px; 
+                max-width: 100%; 
+                margin: 0 auto; 
+            }
+            .loading {
+                margin-top: 5em;
+                text-align: center;
+                color: gray;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function () {
+
+                // Prepare demo data
+                var data = [{ 'hc-key': 'lr-my', value: 0 },
+                    { 'hc-key': 'lr-si', value: 1 },
+                    { 'hc-key': 'lr-bm', value: 41 },
+                    { 'hc-key': 'lr-gp', value: 33 },
+                    { 'hc-key': 'lr-bg', value: 44 },
+                    { 'hc-key': 'lr-586', value: 5 },
+                    { 'hc-key': 'lr-cm', value: 19 },
+                    { 'hc-key': 'lr-lf', value: 7 },
+                    { 'hc-key': 'lr-mo', value: 69 },
+                    { 'hc-key': 'lr-mg', value: 63 },
+                    { 'hc-key': 'lr-ni', value: 0 },
+                    { 'hc-key': 'lr-ri', value: 0 },
+                    { 'hc-key': 'lr-gd', value: 1 },
+                    { 'hc-key': 'lr-rg', value: 0 },
+                    { 'hc-key': 'lr-gk', value: 0 }];
+
+                    
+                // Initiate the chart
+                $('#container').highcharts('Map', {
+                    
+                    title : {
+                        text : 'Liberia Outbreak'
+                    },
+
+                    subtitle : {
+                        text : 'Source map: <a href="http://code.highcharts.com/mapdata/countries/lr/lr-all.js">countries/lr/lr-all</a>'
+                    },
+
+                    mapNavigation: {
+                        enabled: true,
+                        buttonOptions: {
+                            verticalAlign: 'bottom'
+                        }
+                    },
+
+                    colorAxis: {
+                        min: 0
+                    },
+
+                    series : [{
+                        data : data,
+                        mapData: Highcharts.maps['countries/lr/lr-all'],
+                        joinBy: 'hc-key',
+                        name: 'Random data',
+                        states: {
+                            hover: {
+                                color: '#BADA55'
+                            }
+                        },
+                        dataLabels: {
+                            enabled: true,
+                            format: '{point.name}'
+                        }
+                    }]
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <script src="http://code.highcharts.com/maps/highmaps.js"></script>
+        <script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
+        <script src="http://code.highcharts.com/mapdata/countries/lr/lr-all.js"></script>
+
+
+        <div id="container"></div>
+
+    </body>
+</html>
