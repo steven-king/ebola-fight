@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ebola in Liberia | Informatics</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/vendor/modernizr.js"></script>
 
@@ -21,7 +22,7 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title">Ebola in Liberia</h1>
+        <h1 class="title uppercase">Liberia Ebola</h1>
       </section>
 
     </nav>
@@ -52,97 +53,48 @@
     
     
     
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Ebola in Liberia | Informatics</h1>
-      </div>
-    </div>
 
     <div class="row">
 
-      <div class="large-5 columns">
       	<div class="panel numbers">
 
 	  <div class="row">
 	      <div class="small-6 medium-6 large-6 columns">
-		<h3>Deaths</h3>
-		<p class="lg-number light-blue">282</p>
-	      </div>
+		<h2>613</p>
+		<h3 class="uppercase white">Deaths</h3>
+		<a href="#" class="button [radius round]">> 40+ This Week</a>
 
+	      </div>
+	      
 	      <div class="small-6 medium-6 large-6 columns">
-		<ul class="sm-number">
-		  <li class="dark-blue">Confirmed: 180</li>
-		  <li class="light-blue">Suspected: 102</li>
-		</ul>
-	      </div>
-	  </div> <!-- Close row -->
-
-	</div><!-- Close panel -->
-
-
-	<div class="panel numbers">
-	   <div class="row">
-	      <div class="small-6 medium-6 large-6 columns">
-		  <h3>Cases</h3>
-		  <p class="lg-number dark-blue">191</p>
+		<h2>1,074</p>
+		<h3 class="uppercase white">Cases</h3>
+		<a href="#" class="button [radius round]">> 20- This Week</a>
+  
 	      </div>
 
-	      <div class="small-6 medium-6 large-6 columns">
-		<ul class="sm-number">
-		  <li class="dark-blue">Confirmed: 48</li>
-		  <li class="light-blue">Suspected: 143</li>
-		</ul>
-	      </div>
+
 	  </div><!-- Close row -->
 	</div><!-- Close panel -->
 
-      	</div><!-- Close 6 -->
+
+    </div><!-- Close row -->
 
 
-
-
-      <div class="large-7 columns">
+      <div class="large-12 columns">
       
 	 
-	<iframe src="heatmap.html" width="100%" height="600px" border="none"></iframe>
+	<iframe src="heatmap.html" width="100%" height="600px" frameBorder="0" border="none"></iframe>
       </div>
 
 
 
-    </div>
-    </div>
-    <div class="large-12 columns">
-       <h3>Countries</h3>
-	     <div id="country-graph"></div>
-      	</div>
-
-<br/>
-<div class="row">
-
-
-	<div class="large-4 columns">
-	  <h3><a href="news.html">Read Articles and View Photos</a></h3>
-	  <p>Articles and photos about Ebola from New York Times and The Guardian and Flickr users</p>
-	</div>
+  </div>
+  
 	
-	<div class="large-4 columns">
-	  <h3><a href="info-spread.html">Learn How Ebola Spreads</a></h3>
-	  <p>Infofraphic</p>
-	</div>
+	  <div class="footer">Last Updated: AUG 20, 2014 9:24AM ET</div>
 	
-	<div class="large-4 columns">
-	  <h3><a href="info-symptoms.html">Learn the symptoms of Ebola</a></h3>
-	  <p>Infofraphic</p>
-	</div>
-    </div>
 
-
-      <div class="row">
-	<div class="large-12 columns">
-	  <div class="footer">Footer Content here </div>
-	</div>
-
-      </div>
     </div>
       
       
@@ -173,6 +125,9 @@
       $(document).foundation();
       $(document).ready(function() {
 	createCharts(); //graphs.js
+	
+	var currentDate = new Date();
+	document.getElementById("date").innerHTML = currentDate;
       });
     </script>
   </body>

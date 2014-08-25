@@ -31,7 +31,7 @@
          function loadData(){
         $.ajax({
           type:"GET",
-          url:"data/deaths_new.json",
+          url:"data/outbreak_overview.json",
           dataType:"text",
           success: parseData
         });
@@ -44,9 +44,13 @@
             var dataObj = $.parseJSON(data);
             console.log( dataObj );
             for (var i = 0, len = dataObj.length; i < len; ++i) {
-            var aDay = dataObj[i];
-            console.log("Total Daily Deaths: " + aDay["1. Total daily deaths"]);
-            console.log("Daily deaths in suspected cases: " + aDay["2. Daily deaths in suspected cases"]); 
+            var aDataType= dataObj[i];
+            if (i == 3) {
+               console.log("type: " + aDataType.Type);
+               createMap(aDataType);
+            }
+            
+           
  }
             
             
@@ -54,24 +58,24 @@
             
             
             
-            function createMap(){
+            function createMap(aDataType){
 
                 // Prepare map data
-                var data = [{ 'hc-key': 'lr-my', value: 0 },
-                    { 'hc-key': 'lr-si', value: 1 },
-                    { 'hc-key': 'lr-bm', value: 41 },
-                    { 'hc-key': 'lr-gp', value: 33 },
-                    { 'hc-key': 'lr-bg', value: 44 },
-                    { 'hc-key': 'lr-586', value: 5 },
-                    { 'hc-key': 'lr-cm', value: 19 },
-                    { 'hc-key': 'lr-lf', value: 7 },
-                    { 'hc-key': 'lr-mo', value: 69 },
-                    { 'hc-key': 'lr-mg', value: 63 },
-                    { 'hc-key': 'lr-ni', value: 0 },
-                    { 'hc-key': 'lr-ri', value: 0 },
-                    { 'hc-key': 'lr-gd', value: 1 },
-                    { 'hc-key': 'lr-rg', value: 0 },
-                    { 'hc-key': 'lr-gk', value: 0 }];
+                var data = [{ 'hc-key': 'lr-my', value: aDataType["Maryland County"]},
+                    { 'hc-key': 'lr-si', value: 0 },
+                    { 'hc-key': 'lr-bm', value: aDataType["Bomi County"] },
+                    { 'hc-key': 'lr-gp', value: aDataType["Gbarpolu County"]},
+                    { 'hc-key': 'lr-bg', value: aDataType["Bong County"] },
+                    { 'hc-key': 'lr-586', value: 0 },
+                    { 'hc-key': 'lr-cm', value: 0 },
+                    { 'hc-key': 'lr-lf', value: aDataType["Lofa County"]},
+                    { 'hc-key': 'lr-mo', value: aDataType["Montserrado County"]},
+                    { 'hc-key': 'lr-mg', value: aDataType["Margibi County"]},
+                    { 'hc-key': 'lr-ni', value: aDataType["Nimba County"]},
+                    { 'hc-key': 'lr-ri', value: aDataType["RiverCess County"] },
+                    { 'hc-key': 'lr-gd', value: aDataType["Grand Gedeh"] },
+                    { 'hc-key': 'lr-rg', value: 0},
+                    { 'hc-key': 'lr-gk', value: aDataType["Grand Kru"]}];
 
                     
                 // Initiate the chart
@@ -82,8 +86,8 @@
                     },
 
                     subtitle : {
-                        text : 'Source map: <a href="http://code.highcharts.com/mapdata/countries/lr/lr-all.js">countries/lr/lr-all</a>'
-                    },
+                        text : aDataType.Type
+                    }, 
 
                     mapNavigation: {
                         enabled: true,
@@ -100,7 +104,7 @@
                         data : data,
                         mapData: Highcharts.maps['countries/lr/lr-all'],
                         joinBy: 'hc-key',
-                        name: 'Random data',
+                        name: 'Cumulative Cases',
                         states: {
                             hover: {
                                 color: '#BADA55'

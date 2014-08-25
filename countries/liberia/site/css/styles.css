@@ -1,9 +1,34 @@
+body, p, h1,h2,h3,h4,h5,ul,li{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+}
+
+
+
+.red{
+    color:#e35f5f;
+}
+.white{
+    color:#FFF;
+}
+
+
+.uppercase {
+    text-transform: uppercase;
+}
+
 .top-bar .toggle-topbar {
 position: absolute;
 left: 0;
 top: 0;
 }
 
+.footer{
+    background: #222;
+    color: #fff;
+    text-align: center;
+    
+}
 
 
 #country-graph{
@@ -12,19 +37,33 @@ top: 0;
 
 .numbers{
 
-    padding-bottom: 2.25em;
+    padding-bottom: 0em;
 }
-.panel .lg-number{
-    margin-top:.33em;
-    font-size: 88px;
-    line-height: .22em;
+.panel {
+    border:none;
+    margin: 0; 
+    padding: 1.25rem;
+    background: #e35f5f;
+
+}
+.panel h2{
+    color:#fff;
+    font-size: 80px;
+    text-align: center;
 }
 
-.panel .sm-number{
-    margin-top:1.5em;
-    margin-left:0;
-    font-size: 22px;
-    list-style: none;
+.panel h3{
+    color:#fff;
+    text-align: center;
+    
+}
+
+.panel .button
+{
+    text-align: center;
+    background: #fff;
+    color: #e35f5f;
+    width: 100%;
 }
 
 
@@ -33,17 +72,9 @@ top: 0;
 .gm-style img { max-width: none; }
 .gm-style label { width: auto; display: inline; }
 
-.footer{
-    margin:1em;
-}
 
-.panel .light-blue{
-    color: #2ba6cb;
-}
 
-.panel .dark-blue{
-    color: #434348;
-}
+
 .condense{
     margin-bottom: 10px;
 }
