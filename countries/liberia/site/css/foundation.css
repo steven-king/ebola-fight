@@ -1089,17 +1089,17 @@ button, .button {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1rem;
   position: relative;
   text-decoration: none;
   text-align: center;
   -webkit-appearance: none;
-  -webkit-border-radius: 0;
+  -webkit-border-radius: 4px;
   display: inline-block;
   padding-top: 1rem;
-  padding-right: 2rem;
-  padding-bottom: 1.0625rem;
-  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
   font-size: 1rem;
   background-color: #2ba6cb;
   border-color: #2285a2;
@@ -1931,7 +1931,7 @@ meta.foundation-mq-topbar {
   .panel > :last-child {
     margin-bottom: 0; }
   .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p, .panel li, .panel dl {
-    color: #333333; }
+    color: white; }
   .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
     line-height: 1;
     margin-bottom: 0.625rem; }
@@ -3627,19 +3627,17 @@ ul.off-canvas-list {
   ul.off-canvas-list li label {
     display: block;
     padding: 0.3rem 0.9375rem;
-    color: #999999;
+    color: white;
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: bold;
     background: #444444;
-    border-top: 1px solid #5e5e5e;
     border-bottom: none;
     margin: 0; }
   ul.off-canvas-list li a {
     display: block;
-    padding: 0.66667rem;
-    color: rgba(255, 255, 255, 0.7);
-    border-bottom: 1px solid #262626;
+    padding: 0.4rem;
+    color: white;
     transition: background 300ms ease; }
     ul.off-canvas-list li a:hover {
       background: #242424; }
