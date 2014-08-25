@@ -81,8 +81,9 @@
                 // Initiate the chart
                 $('#container').highcharts('Map', {
                     
+                    
                     title : {
-                        text : 'Liberia Outbreak'
+                        text : 'Current Cases'
                     },
 
                     subtitle : {
@@ -97,7 +98,15 @@
                     },
 
                     colorAxis: {
-                        min: 0
+                        min: 0,
+                        minColor: '#FFFFFF',
+                        maxColor: '#333333',
+                        
+                        labels:{
+                            style: {
+                                color: '#e35f5f'
+                            }
+                        }
                     },
 
                     series : [{
@@ -107,7 +116,7 @@
                         name: 'Cumulative Cases',
                         states: {
                             hover: {
-                                color: '#BADA55'
+                                color: '#e35f5f'
                             }
                         },
                         dataLabels: {
@@ -122,6 +131,7 @@
     </head>
     <body>
         <script src="http://code.highcharts.com/maps/highmaps.js"></script>
+        <script src="js/offred.js"></script>
         <script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
         <script src="http://code.highcharts.com/mapdata/countries/lr/lr-all.js"></script>
 
