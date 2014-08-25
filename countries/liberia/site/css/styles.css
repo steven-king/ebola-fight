@@ -36,7 +36,20 @@ top: 0;
 
 
 .footer{
-    margin:1em;
+    padding:1em;
+    background-color: #2E3134;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+}
+
+.blank50{
+    height: 50px;
+    width: 100%;
 }
 
 .condense{
@@ -128,7 +141,9 @@ body,p,h1,h2,h3,h4,h5,ul,li{
     border-color: #E0E0E0;
 }
 
-.black{
+.black,
+.black:hover,
+.blackc:active{
     color: #2E3134;
 }
 
@@ -145,6 +160,10 @@ body,p,h1,h2,h3,h4,h5,ul,li{
     padding: 0.4rem;
 }
 
+.botpad{
+    padding-bottom: 1rem;
+}
+
 .white{
     color: white;
 }
@@ -153,3 +172,10 @@ body,p,h1,h2,h3,h4,h5,ul,li{
     color: #868686;
 }
 
+.panel .black{
+    color: #2E3134;
+}
+
+.statcat{
+    font-size: .9em;
+}
