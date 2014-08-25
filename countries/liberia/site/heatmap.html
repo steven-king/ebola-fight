@@ -20,9 +20,43 @@
             }
         </style>
         <script type="text/javascript">
-            $(function () {
+            
+            
+             $(document).ready(function() {
+        console.log("document ready");
+        loadData();
+      });
 
-                // Prepare demo data
+            
+         function loadData(){
+        $.ajax({
+          type:"GET",
+          url:"data/deaths_new.json",
+          dataType:"text",
+          success: parseData
+        });
+      }//end load(xml)
+
+      
+        function parseData(data){
+            console.log("parseData");
+            
+            var dataObj = $.parseJSON(data);
+            console.log( dataObj );
+            for (var i = 0, len = dataObj.length; i < len; ++i) {
+            var aDay = dataObj[i];
+            console.log("Total Daily Deaths: " + aDay["1. Total daily deaths"]);
+            console.log("Daily deaths in suspected cases: " + aDay["2. Daily deaths in suspected cases"]); 
+ }
+            
+            
+        }
+            
+            
+            
+            function createMap(){
+
+                // Prepare map data
                 var data = [{ 'hc-key': 'lr-my', value: 0 },
                     { 'hc-key': 'lr-si', value: 1 },
                     { 'hc-key': 'lr-bm', value: 41 },
@@ -78,7 +112,8 @@
                         }
                     }]
                 });
-            });
+            };
+            
         </script>
     </head>
     <body>
