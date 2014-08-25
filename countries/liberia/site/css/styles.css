@@ -1,10 +1,22 @@
+/* Use the 'text-center' class to center content inside columns! */
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nunito-Light'), url(http://fonts.gstatic.com/s/nunito/v6/1TiHc9yag0wq3lDO9cw0vpBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
 .top-bar .toggle-topbar {
 position: absolute;
 left: 0;
 top: 0;
 }
 
-
+.panel .button{
+    text-align: center;
+}
 
 #country-graph{
     height:285px;
@@ -16,34 +28,17 @@ top: 0;
 }
 .panel .lg-number{
     margin-top:.33em;
-    font-size: 88px;
+    margin-bottom: .43em;
+    font-size: 72px;
     line-height: .22em;
+    font-weight: 100;
 }
 
-.panel .sm-number{
-    margin-top:1.5em;
-    margin-left:0;
-    font-size: 22px;
-    list-style: none;
-}
-
-
-
-
-.gm-style img { max-width: none; }
-.gm-style label { width: auto; display: inline; }
 
 .footer{
     margin:1em;
 }
 
-.panel .light-blue{
-    color: #2ba6cb;
-}
-
-.panel .dark-blue{
-    color: #434348;
-}
 .condense{
     margin-bottom: 10px;
 }
@@ -84,3 +79,77 @@ ul li .tabs-title{
     font-weight: 500;
     font-size: .8em;
 }
+
+body,p,h1,h2,h3,h4,h5,ul,li{
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+.redrock{
+    background-color: #E35F5F;
+    border-color: #E35F5F;
+}
+
+.uppercase{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.overtime{
+    color: #F59B96;
+    text-decoration: underline;
+    letter-spacing: 0;
+    font-size: 1rem;
+    
+}
+
+.overtime:hover,
+.overtime:active{
+    color: white;
+}
+
+.thisweek,
+.thisweek:hover{
+    background-color: white;
+    color: #E35F5F;
+}
+
+.thisweek:active{
+    position: relative;
+    top: 1px;
+    left: 1px;
+    
+    
+}
+
+.greypnl{
+    background-color: #E0E0E0;
+    border-color: #E0E0E0;
+}
+
+.black{
+    color: #2E3134;
+}
+
+.cat{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.cat:active{
+    text-decoration: underline;
+}
+
+.leftpad{
+    padding: 0.4rem;
+}
+
+.white{
+    color: white;
+}
+
+.dark-grey{
+    color: #868686;
+}
+
