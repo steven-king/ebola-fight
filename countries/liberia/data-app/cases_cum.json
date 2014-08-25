@@ -1,0 +1,142 @@
+[
+  {
+    "Date":"2-Aug-14",
+    "1. Total cases":471,
+    "2. Total suspected cases":107,
+    "3. Total probable cases":232,
+    "4.Total confirmed cases":132
+  },
+  {
+    "Date":"3-Aug-14",
+    "1. Total cases":498,
+    "2. Total suspected cases":111,
+    "3. Total probable cases":249,
+    "4.Total confirmed cases":132
+  },
+  {
+    "Date":"4-Aug-14",
+    "1. Total cases":508,
+    "2. Total suspected cases":121,
+    "3. Total probable cases":250,
+    "4.Total confirmed cases":137
+  },
+  {
+    "Date":"5-Aug-14",
+    "1. Total cases":525,
+    "2. Total suspected cases":127,
+    "3. Total probable cases":261,
+    "4.Total confirmed cases":137
+  },
+  {
+    "Date":"6-Aug-14",
+    "1. Total cases":546,
+    "2. Total suspected cases":132,
+    "3. Total probable cases":272,
+    "4.Total confirmed cases":142
+  },
+  {
+    "Date":"7-Aug-14",
+    "1. Total cases":579,
+    "2. Total suspected cases":135,
+    "3. Total probable cases":295,
+    "4.Total confirmed cases":149
+  },
+  {
+    "Date":"8-Aug-14",
+    "1. Total cases":591,
+    "2. Total suspected cases":138,
+    "3. Total probable cases":304,
+    "4.Total confirmed cases":149
+  },
+  {
+    "Date":"9-Aug-14",
+    "1. Total cases":591,
+    "2. Total suspected cases":135,
+    "3. Total probable cases":304,
+    "4.Total confirmed cases":152
+  },
+  {
+    "Date":"10-Aug-14",
+    "1. Total cases":605,
+    "2. Total suspected cases":145,
+    "3. Total probable cases":305,
+    "4.Total confirmed cases":155
+  },
+  {
+    "Date":"11-Aug-14",
+    "1. Total cases":662,
+    "2. Total suspected cases":146,
+    "3. Total probable cases":356,
+    "4.Total confirmed cases":160
+  },
+  {
+    "Date":"12-Aug-14",
+    "1. Total cases":721,
+    "2. Total suspected cases":155,
+    "3. Total probable cases":390,
+    "4.Total confirmed cases":176
+  },
+  {
+    "Date":"13-Aug-14",
+    "1. Total cases":778,
+    "2. Total suspected cases":173,
+    "3. Total probable cases":421,
+    "4.Total confirmed cases":184
+  },
+  {
+    "Date":"14-Aug-14",
+    "1. Total cases":810,
+    "2. Total suspected cases":182,
+    "3. Total probable cases":441,
+    "4.Total confirmed cases":187
+  },
+  {
+    "Date":"15-Aug-14",
+    "1. Total cases":826,
+    "2. Total suspected cases":190,
+    "3. Total probable cases":442,
+    "4.Total confirmed cases":194
+  },
+  {
+    "Date":"16-Aug-14",
+    "1. Total cases":838,
+    "2. Total suspected cases":198,
+    "3. Total probable cases":446,
+    "4.Total confirmed cases":194
+  },
+  {
+    "Date":"17-Aug-14",
+    "1. Total cases":862,
+    "2. Total suspected cases":212,
+    "3. Total probable cases":442,
+    "4.Total confirmed cases":208
+  },
+  {
+    "Date":"18-Aug-14",
+    "1. Total cases":964,
+    "2. Total suspected cases":228,
+    "3. Total probable cases":500,
+    "4.Total confirmed cases":236
+  },
+  {
+    "Date":"19-Aug-14",
+    "1. Total cases":1024,
+    "2. Total suspected cases":241,
+    "3. Total probable cases":539,
+    "4.Total confirmed cases":244
+  },
+  {
+    "Date":"20-Aug-14",
+    "1. Total cases":1074,
+    "2. Total suspected cases":259,
+    "3. Total probable cases":552,
+    "4.Total confirmed cases":263
+  },
+  {
+    "Date":"Grand Total",
+    "1. Total cases":13473,
+    "2. Total suspected cases":3135,
+    "3. Total probable cases":7001,
+    "4.Total confirmed cases":3331
+  }
+]
