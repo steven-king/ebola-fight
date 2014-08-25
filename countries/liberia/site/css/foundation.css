@@ -1923,7 +1923,7 @@ meta.foundation-mq-topbar {
   border-style: solid;
   border-width: 1px;
   border-color: #d8d8d8;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
   padding: 1.25rem;
   background: #f2f2f2; }
   .panel > :first-child {
@@ -5428,3 +5428,4 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+
