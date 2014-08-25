@@ -14,6 +14,14 @@ left: 0;
 top: 0;
 }
 
+a {
+    color: #FF6B6B;
+}
+
+a:hover {
+    color: #666;
+}
+
 .panel .button{
     text-align: center;
 }
