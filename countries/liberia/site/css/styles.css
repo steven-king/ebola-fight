@@ -52,7 +52,20 @@ iframe{
 
 
 .footer{
-    margin:1em;
+    padding:1em;
+    background-color: #2E3134;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+}
+
+.blank50{
+    height: 50px;
+    width: 100%;
 }
 
 .condense{
@@ -79,6 +92,8 @@ ul li .tabs-title{
 
 }
 
+
+
 #flickr-results {
     width: 100%;
     margin: 0 auto;
@@ -86,6 +101,7 @@ ul li .tabs-title{
     padding: 0;
 }
 .google-image{
+    border:1px solid #E35F5F;
     display: inline;
     float: left;
     width: 220px;
@@ -144,9 +160,12 @@ body,p,h1,h2,h3,h4,h5,ul,li{
     border-color: #E0E0E0;
 }
 
-.black{
+.black,
+.black:hover,
+.blackc:active{
     color: #2E3134;
 }
+
 
 .cat{
     font-weight: bold;
@@ -167,5 +186,13 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 
 .dark-grey{
     color: #868686;
+}
+
+.panel .black{
+    color: #2E3134;
+}
+
+.statcat{
+    font-size: .9em;
 }
 
