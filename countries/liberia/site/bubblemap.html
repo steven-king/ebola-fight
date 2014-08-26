@@ -47,7 +47,7 @@
             var aDataType= dataObj[i];
             if (i == 3) {
                console.log("type: " + aDataType.Type);
-               createChart(aDataType);
+               createMap(aDataType);
             }
             
            
@@ -58,7 +58,7 @@
             
             
             
-            function createChart(aDataType){
+            function createMap(aDataType){
 
                 // Prepare map data
                 var data = [{ 'hc-key': 'lr-my', value: aDataType["Maryland County"]},
@@ -80,7 +80,9 @@
                     
                 // Initiate the chart
                 $('#container').highcharts('Map', {
-                    
+                     chart : {
+                        borderWidth : 1
+                    },
                     
                     title : {
                         text : 'Current Cases'
@@ -108,22 +110,31 @@
                             }
                         }
                     },
-
+                    
                     series : [{
-                        data : data,
-                        mapData: Highcharts.maps['countries/lr/lr-all'],
-                        joinBy: 'hc-key',
-                        name: 'Cumulative Cases',
-                        states: {
-                            hover: {
-                                color: '#e35f5f'
-                            }
-                        },
-                        dataLabels: {
+                name: 'Liberia Ebola',
+                mapData: Highcharts.maps['countries/lr/lr-all'],
+                color: '#E0E0E0',
+                enableMouseTracking: false
+            }, {
+                type: 'mapbubble',
+                mapData: Highcharts.maps['countries/lr/lr-all'],
+                name: 'Outbreak name',
+                joinBy: ['iso-a2', 'code'],
+                data: data,
+                minSize: 4,
+                maxSize: '12%',
+                tooltip: {
+                    pointFormat: '{point.code}: {point.z} thousands'
+                },
+                 dataLabels: {
                             enabled: true,
                             format: '{point.name}'
                         }
-                    }]
+                        
+            }]
+                    
+            
                 });
             };
             

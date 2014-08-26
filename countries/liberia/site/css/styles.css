@@ -30,6 +30,10 @@ a:hover {
     height:285px;
 }
 
+iframe{
+    overflow:hidden;
+}
+
 .numbers{
 
     padding-bottom: 2.25em;
@@ -40,6 +44,10 @@ a:hover {
     font-size: 72px;
     line-height: .22em;
     font-weight: 100;
+}
+
+.panel h5{
+    font-size:12px;
 }
 
 
