@@ -29,7 +29,9 @@ a:hover {
 #country-graph{
     height:285px;
 }
-
+i{
+    margin-right:10px;
+}
 iframe{
     overflow:hidden;
 }
@@ -38,6 +40,31 @@ iframe{
 
     padding-bottom: 2.25em;
 }
+
+
+.panel .time-note{
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: .11em;
+    font-weight: 100;
+    
+}
+.panel .arrow{
+    color: #FFFFFF;
+    font-size: 32px;
+    line-height: .22em;
+    font-weight: 100;
+}
+.panel .med-number{
+    margin-top:.33em;
+    margin-bottom: .43em;
+    font-size: 44px;
+    line-height: .22em;
+    font-weight: 100;
+    
+    
+}
+
 .panel .lg-number{
     margin-top:.33em;
     margin-bottom: .43em;
@@ -45,6 +72,17 @@ iframe{
     line-height: .22em;
     font-weight: 100;
 }
+
+.panel .lg-number-red{
+    margin-top:.33em;
+    margin-bottom: .43em;
+    font-size: 72px;
+    line-height: .22em;
+    font-weight: 100;
+    color: #E35F5F;
+}
+
+
 
 .panel h5{
     font-size:12px;
@@ -130,7 +168,7 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 
 .overtime{
     color: #F59B96;
-    text-decoration: underline;
+    text-decoration: none;
     letter-spacing: 0;
     font-size: 1rem;
     
@@ -165,6 +203,7 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 .blackc:active{
     color: #2E3134;
 }
+
 
 
 .cat{

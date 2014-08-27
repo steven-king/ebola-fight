@@ -1,0 +1,51 @@
+[
+   {
+    "Type": "deaths",
+    "Total Deaths":613,
+    "Deaths Last Week": 106,
+    "Deaths This Week": 136
+   },
+   {
+    "Type": "cases",
+    "Total Cases":1074,
+    "Cases Last Week": 200,
+    "Cases This Week": 300
+   },
+   
+   {
+    "Type": "contacts",
+    "Total Contacts":1689,
+    "Contacts Last Week": 0,
+    "Contacts This Week": 0
+   },
+   {
+    "Type": "HCW deaths",
+    "Total HealthCare Worker Deaths":61,
+    "HealthCare Worker Deaths Last Week": 0,
+    "HealthCare Worker Deaths This Week": 0
+   },
+   {
+    "Type": "HCW cases",
+    "Total HealthCare Worker Cases":115,
+    "HealthCare Worker Cases Last Week": 0,
+    "HealthCare Worker Cases This Week": 0
+   },
+   {
+    "Type": "labs",
+    "Total Labs Processed":10,
+    "Labs Processed Last Week": 0,
+    "Labs Processed This Week": 0,
+    "Total Labs Collected":20,
+    "Labs Collected Last Week": 0,
+    "Labs Collected This Week": 0
+   },
+   {
+    "Type": "treatment",
+    "FCR":59,
+    "FCR Last Week": 0,
+    "FCR This Week": 0
+   }
+   
+]
+
+

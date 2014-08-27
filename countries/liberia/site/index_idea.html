@@ -6,7 +6,6 @@
     <title>Ebola in Liberia | Informatics</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link href='http://fonts.googleapis.com/css?family=JosefinSans:100,300,400,600' rel='stylesheet' type='text/css'>
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/vendor/modernizr.js"></script>
 
@@ -55,19 +54,17 @@
     
     
 
-   
+    <div class="row">
 
       	<div class="panel redrock lg-number">
 
 	<!-- Up caret = &#9650; down caret = &#9660; -->
 	  <div class="row">
 	      <div class="small-6 medium-6 large-6 text-center columns">
+		<h2 class="lg-number">147</h2>
 		<h3 class="uppercase white">Deaths</h3>
-		<h2 id= "total-deaths" class="lg-number">0</h2>
-		<h5 id="death-difference" class="uppercase overtimeLinks">0</h5>
-		
-		
-		<span id="deaths-time-link"><a href="#deaths-chart" onclick="showDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart"></i> View over time</a></span>
+		<h5 class="uppercase overtimeLinks">&#9650; 40 This Week</h5>
+		<span id="deaths-time-link"><a href="#deaths-chart" onclick="showDeathsOvertime()" class="button [radius round] thisweek">View over time</a></span>
 		
 
 		
@@ -75,10 +72,12 @@
 	      </div>
 	      
 	      <div class="small-6 medium-6 large-6 text-center columns">
-		<h3 class="uppercase white">Cases</h3>
-		<h2 id="total-cases" class="lg-number">0</p>
-		<h5 id="case-difference" class="uppercase overtimeLinks">&#9650; 127 This Week</h5>
-		<span id="cases-time-link"><a href="#cases-chart" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-area-chart"></i> View over time</a></span>
+		<h2 class="lg-number">40.65%</p>
+		<h3 class="uppercase white">Treatment Rate</h3>
+		
+		<h5 class="uppercase overtimeLinks">2,643 / 1,074</h5>
+		<h5 class="uppercase overtimeLinks">Contacts / Cases</h5>
+		<span id="cases-time-link"><a href="#cases-chart" onclick="showCasesOvertime()" class="button [radius round] thisweek">View over time</a></span>
 		
 	      </div>
 
@@ -87,6 +86,7 @@
 	</div><!-- Close panel -->
 
 
+    </div><!-- Close row -->
 <div class="row">
 
       <div id="cases-chart"class="small-12 medium-12 columns overtime">
@@ -120,24 +120,24 @@
 
 	<!-- Up caret = &#9650; down caret = &#9660; -->
 	  <div class="row">
-	    <h3 class="uppercase black text-center botpad">Status</h3>
+	    <h3 class="uppercase black text-center botpad">Statistics</h3>
 	      <div class="small-6 medium-6 large-6 text-center columns">
-		<h3 class="uppercase black statcat">Exposure Rate</h3>
-		<h2 id="exposure-rate" class="lg-number-red">0%</h2>
-		<h4 id="exposure-detail" class="uppercase overtime black">Contacts: 2,643 | Cases: 1,074</h4>
-		<a href="#" class="button [radius round] thisweek black uppercase"><i class="fa fa-area-chart"></i> View over time</a>
-	      </div>
-		<div class="small-6 medium-6 large-6 text-center columns">
-		<h3 class="uppercase black statcat">Fatality Rate (CFR)</h3>
-		<h2 id="cfr-rate" class="lg-number-red">0%</p>
-		<h5 id="cfr-change" class="uppercase overtimeLinks overtime black">&#9650; 127 This Week</h5>
-		<span id="cases-time-link"><a href="#cases-chart" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-area-chart"></i>View over time</a></span>
-		
-		
+		<h2 class="lg-number-red">1,688</h2>
+		<h3 class="uppercase black statcat">Total Contacts</h3>
+		<a href="#" class="button [radius round] thisweek black">&#9650; This Week</a>
+		<h4 class="uppercase"><a href="#" class="overtime black">view over time</a></h4>
 
 	      </div>
 	      
-	      
+	      <div class="small-6 medium-6 large-6 text-center columns">
+		<h2 class="lg-number-red">80%</p>
+		<h3 class="uppercase black statcat">Survival Rate</h3>
+		<a href="#" class="button [radius round] thisweek black">&#9650; This Week</a>
+		<h4 class="uppercase"><a href="#" class="overtime black">view over time</a></h4>
+		
+  
+	      </div>
+
 
 	  </div><!-- Close row -->
 	</div><!-- Close panel -->
@@ -146,34 +146,21 @@
 
 	<!-- Up caret = &#9650; down caret = &#9660; -->
 	  <div class="row">
-	     <h3 class="uppercase black text-center botpad">Healthcare Workers</h3>
 	      <div class="small-6 medium-6 large-6 text-center columns">
-		<h3 class="uppercase black statcat">Healthcare Worker Deaths</h3>
 		<h2 class="lg-number-red">115</h2>
-		<h4 class="uppercase"><a href="#" class="overtime black">&#9650; This Week</a></h4>
-		<a href="#" class="button [radius round] uppercase thisweek black">View over time</a>
+		<h3 class="uppercase black statcat">Healthcare worker cases</h3>
+		<a href="#" class="button [radius round] thisweek black">&#9650; This Week</a>
+		<h4 class="uppercase"><a href="#" class="overtime black">view over time</a></h4>
 
 	      </div>
 	      
 	      <div class="small-6 medium-6 large-6 text-center columns">
+		<h2 class="lg-number-red">2:1</p>
+		<h3 class="uppercase black statcat">Lab Specimins Collected vs Tested </h3>
+		<a href="#" class="button [radius round] thisweek black">&#9660; This Week</a>
+		<h4 class="uppercase"><a href="#" class="overtime black">view over time</a></h4>
 		
-		<h3 class="uppercase black statcat">Healthcare Worker Cases</h3>
-		<h2 class="lg-number-red">115</h2>
-		<h4 class="uppercase"><a href="#" class="overtime black">&#9650; This Week</a></h4>
-		<a href="#" class="button [radius round] uppercase thisweek black">View over time</a>
 	      </div>
-	      
-	      <div class="small-6 medium-6 large-6 text-center columns">
-		
-		<h3 class="uppercase black statcat">Labs Processed</h3>
-		<h2 id="lab-rate" class="lg-number-red">50%</h2>
-		<h4 id="lab-details"class="uppercase overtime black">Collected: 0 | Cases: 0</h4>
-		<!--<a href="#" class="button [radius round] thisweek black uppercase">View over time</a>-->
-		
-  
-	      </div>
-
-	      
 	      
 	      <div class="small-12 medium-12 large-12 text-center columns blank50"></div>
 
@@ -205,38 +192,41 @@
 
 
 
- 
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="js/graphs.js"></script>
     <script>
       function showDeathsOvertime(){
 	$("#deaths-chart").slideToggle( "slow" );;
-	$("#deaths-time-link").html('<a href="#" onclick="hideDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-minus-square-o"></i> hide time graph</a>');
+	$("#deaths-time-link").html('<a href="#" onclick="hideDeathsOvertime()" class="button [radius round] thisweek">hide time graph</a>');
       }
 	
       function hideDeathsOvertime(){
 	$("#deaths-chart").slideToggle( "slow" );;
-	$("#deaths-time-link").html('<a href="#" onclick="showDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart"> view over time</a>');
+	$("#deaths-time-link").html('<a href="#" onclick="showDeathsOvertime()" class="button [radius round] thisweek">view over time</a>');
       }
       
       function showCasesOvertime(){
 	$("#cases-chart").slideToggle( "slow" );;
-	$("#cases-time-link").html('<a href="#" onclick="hideCasesOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-minus-square-o"></i> hide time graph</a>');
+	$("#cases-time-link").html('<a href="#" onclick="hideCasesOvertime()" class="button [radius round] thisweek">hide time graph</a>');
       }
 	
       function hideCasesOvertime(){
 	$("#cases-chart").slideToggle( "slow" );;
-	$("#cases-time-link").html('<a href="#" onclick="showCasesOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart"> view over time</a>');
+	$("#cases-time-link").html('<a href="#" onclick="showCasesOvertime()" class="button [radius round] thisweek">view over time</a>');
       }
       
       
       $(document).foundation();
       $(document).ready(function() {
-	loadData();
-	// button needs
+	createCharts(); //graphs.js
 	$("#deaths-chart").hide();
 	$("#cases-chart").hide();
 	
+	
+	var currentDate = new Date();
+	document.getElementById("date").innerHTML = currentDate;
       });
     </script>
   </body>
