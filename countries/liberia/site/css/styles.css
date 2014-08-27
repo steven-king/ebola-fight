@@ -32,6 +32,12 @@ a:hover {
 i{
     margin-right:10px;
 }
+
+.mobile-icon{
+    margin:0px;
+    font-size:30px;
+    min-width:30px;
+}
 iframe{
     overflow:hidden;
 }
@@ -40,6 +46,11 @@ iframe{
 
     padding-bottom: 2.25em;
 }
+
+.spacer{
+    margin:10px;
+}
+
 
 
 .panel .time-note{
@@ -87,7 +98,9 @@ iframe{
 .panel h5{
     font-size:12px;
 }
-
+.crossbar{
+    min-height: 170px;
+}
 
 .footer{
     padding:1em;
@@ -97,7 +110,7 @@ iframe{
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 50px;
+    min-height: 50px;
     width: 100%;
 }
 
@@ -160,6 +173,9 @@ body,p,h1,h2,h3,h4,h5,ul,li{
     border-color: #E35F5F;
 }
 
+.red{
+    color:#E35F5F;
+}
 .uppercase{
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -232,6 +248,6 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 }
 
 .statcat{
-    font-size: .9em;
+    font-size: 1em;
 }
 

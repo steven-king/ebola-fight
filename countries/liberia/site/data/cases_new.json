@@ -131,12 +131,5 @@
     "2. New suspected cases":20,
     "3. New probable cases":27,
     "4. New confirmed cases":18
-  },
-  {
-    "Date":"Grand Total",
-    "1. Total new cases":651,
-    "2. New suspected cases":165,
-    "3. New probable cases":449,
-    "4. New confirmed cases":37
   }
 ]

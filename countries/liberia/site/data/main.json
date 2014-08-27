@@ -44,6 +44,10 @@
     "FCR":59,
     "FCR Last Week": 0,
     "FCR This Week": 0
+   },
+    {
+    "Type": "clinics",
+    "Total Clinics":59
    }
    
 ]

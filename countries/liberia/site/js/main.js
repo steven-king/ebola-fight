@@ -38,12 +38,12 @@ function parseData(data){
         //increase
         theDifference = thisWeek - lastWeek;
         console.log("theDifference = " + theDifference);
-        $("#death-difference").html("&#9650; " + theDifference + " more deaths this week");
+        $("#death-difference").html("&#9650; " + theDifference + " more<br/>deaths this week");
     }
     if ( thisWeek <= lastWeek) {
         //decrease
         theDifference = lastWeek - thisWeek;
-        $("#death-difference").html("&#9650;" + theDifference + " less deaths this week");
+        $("#death-difference").html("&#9650;" + theDifference + " less<br/>deaths this week");
     }
     if ( thisWeek == lastWeek) {
         //same
@@ -60,18 +60,59 @@ function parseData(data){
         //increase
         theDifference = thisWeek - lastWeek;
         console.log("theDifference = " + theDifference);
-        $("#case-difference").html("&#9650; " + theDifference + " more cases week");
+        $("#case-difference").html("&#9650; " + theDifference + " more<br/> cases this week");
     }
     if ( thisWeek <= lastWeek) {
         //decrease
         theDifference = lastWeek - thisWeek;
-        $("#case-difference").html("&#9650;" + theDifference + " less cases this week");
+        $("#case-difference").html("&#9650;" + theDifference + " less<br/> cases this week");
     }
     if ( thisWeek == lastWeek) {
         //same
-        $("#case-difference").html("no change week to week");
+        $("#case-difference").html("no change<br/> week to week");
     }
     
+    //hcw deaths box top left
+    $("#hcw-deaths").text(numberWithCommas(dataObj[3]["Total HealthCare Worker Deaths"]));
+    var theDifference;
+    var thisWeek = dataObj[3]["HealthCare Worker Deaths This Week"];
+    var lastWeek = dataObj[3]["HealthCare Worker Deaths Last Week"];
+    if (thisWeek >= lastWeek) {
+        //increase
+        theDifference = thisWeek - lastWeek;
+        console.log("theDifference = " + theDifference);
+        $("#hcw-death-details").html("&#9650; " + theDifference + " more <br/>deaths this week");
+    }
+    if ( thisWeek <= lastWeek) {
+        //decrease
+        theDifference = lastWeek - thisWeek;
+        $("#hcw-death-details").html("&#9650;" + theDifference + " less <br/>deaths this week");
+    }
+    if ( thisWeek == lastWeek) {
+        //same
+        $("#hcw-death-details").html("no change <br/>week to week");
+    }
+    
+    //hcw deaths box top left
+    $("#hcw-cases").text(numberWithCommas(dataObj[4]["Total HealthCare Worker Cases"]));
+    var theDifference;
+    var thisWeek = dataObj[4]["HealthCare Worker Cases This Week"];
+    var lastWeek = dataObj[4]["HealthCare Worker Cases Last Week"];
+    if (thisWeek >= lastWeek) {
+        //increase
+        theDifference = thisWeek - lastWeek;
+        console.log("theDifference = " + theDifference);
+        $("#hcw-cases-details").html("&#9650; " + theDifference + " more <br/> deaths this week");
+    }
+    if ( thisWeek <= lastWeek) {
+        //decrease
+        theDifference = lastWeek - thisWeek;
+        $("#hcw-cases-details").html("&#9650;" + theDifference + " less <br/> deaths this week");
+    }
+    if ( thisWeek == lastWeek) {
+        //same
+        $("#hcw-cases-details").html("no change<br/>week to week");
+    }
     
     
     
@@ -117,7 +158,7 @@ function parseData(data){
     
     
     
-    //CFR box top right
+    //CFR box lower  right
     $("#cfr-rate").text(dataObj[6]["FCR"] + "%");
     var theDifference;
     var thisWeek = dataObj[6]["FCR This Week"];
@@ -135,8 +176,23 @@ function parseData(data){
     }
     if ( thisWeek == lastWeek) {
         //same
-        $("#cfr-difference").html("no change week to week");
+        $("#cfr-difference").html("no change <br/> week to week");
     }
+    
+    
+     
+    //Clinics
+   
+    var theAverage;
+    var regions = 15;
+    var clinics  = dataObj[7]["Total Clinics"]
+    
+    theAverage = Math.round(clinics / regions); 
+    
+    $("#clinics").text(dataObj[7]["Total Clinics"]);
+    $("#clinics-details").html("Average of " + theAverage + "<br/> clinics per region");
+    
+    
     
 
 }
