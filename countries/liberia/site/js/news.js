@@ -11,14 +11,14 @@ function loadNewsArticles(){
                  $.each(times,function(i,data){
 
 
-                   html2 += '<h4><a class="nyt-links" href="' + data.web_url + '">' + data.headline.main + '</a></p>';
+                   html2 += '<h4><a class="nyt-links" href="' + data.web_url + '">' + data.headline.main + '</a></h4>';
 
                    if (data.byline) {
-                    html2 += '<p>' + data.byline.original + '</p>';
+                    html2 += "By: " + data.byline.original  + " | ";
 
                     }
 
-                   html2 += '<p>Published: ' + data.pub_date + '</p>';
+                   html2 += 'Published: ' + data.pub_date + '<br/>';
                    html2 += '<p>' + data.snippet +'</p>';
                    html2 += '<hr>'
                     });
@@ -61,8 +61,8 @@ function loadGuardian(data) {
              $.each(results, function(index,results){
 
             //   console.log(data.response.results.webTitle);
-                 html3 += '<br><h4><a class="nyt-links" href="' + data.response.results[index].webUrl + '">' + data.response.results[index].webTitle + '</a></p>';
-                html3 += '<p>Published: ' + results.webPublicationDate + '</p>';
+                 html3 += '<br><h4><a class="nyt-links" href="' + data.response.results[index].webUrl + '">' + data.response.results[index].webTitle + '</a></h4>';
+                html3 += '<h5>Published: ' + results.webPublicationDate + '</h5>';
                 html3 += '<hr>';
 
              });
@@ -90,10 +90,10 @@ function loadGoogleNews(){
                           var value=articles[key];
                           var image = value.image;
 
-                          google += '<h4><a class="nyt-links" href="' + value.unescapedUrl + '">' + value.titleNoFormatting + '</a></p>';
+                          google += '<h4><a class="nyt-links" href="' + value.unescapedUrl + '">' + value.titleNoFormatting + '</a></h4>';
 
-                          google += '<p class="news-outlet">' + value.publisher + '</p>';
-                          google += '<p>Published: ' + value.publishedDate + '</p>';
+                          google += '<h5 class="news-outlet">Source: ' + value.publisher + " | ";
+                          google += 'Published: ' + value.publishedDate + '</h5>';
                           if (image) {
                              google += '<img class="google-image" src="'+image.url+'"/>';
                            }

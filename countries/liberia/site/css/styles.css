@@ -14,6 +14,12 @@ left: 0;
 top: 0;
 }
 
+.row{
+    width:100%;
+    margin:0;
+    max-width:none;
+}
+
 a {
     color: #FF6B6B;
 }
@@ -35,8 +41,8 @@ i{
 
 .mobile-icon{
     margin:0px;
-    font-size:30px;
-    min-width:30px;
+    font-size:20px;
+    min-width:20px;
 }
 iframe{
     overflow:hidden;
@@ -79,7 +85,7 @@ iframe{
 .panel .lg-number{
     margin-top:.33em;
     margin-bottom: .43em;
-    font-size: 72px;
+    font-size: 120px;
     line-height: .22em;
     font-weight: 100;
 }
@@ -87,7 +93,7 @@ iframe{
 .panel .lg-number-red{
     margin-top:.33em;
     margin-bottom: .43em;
-    font-size: 72px;
+    font-size: 120px;
     line-height: .22em;
     font-weight: 100;
     color: #E35F5F;
@@ -102,6 +108,8 @@ iframe{
     min-height: 170px;
 }
 
+
+
 .footer{
     padding:1em;
     background-color: #2E3134;
@@ -110,7 +118,7 @@ iframe{
     position: fixed;
     bottom: 0;
     left: 0;
-    min-height: 50px;
+    min-height: 25px;
     width: 100%;
 }
 
@@ -250,4 +258,53 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 .statcat{
     font-size: 1em;
 }
+
+.news h4{
+    margin:0;
+}
+
+.news-outlet p{
+    margin:0;
+}
+
+
+@media only screen and (max-width: 40em) { /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+   .panel .lg-number { font-size: 48px; }
+   .panel .lg-number-red { font-size: 48px; }
+   
+   
+   .crossbar h3{font-size:12px;}
+   .crossbar .lg-number{font-size:28px;}
+
+}
+
+@media only screen and (min-width: 40.063em) {/* min-width 641px, medium screens */
+    .panel .lg-number { font-size: 68px; }
+    .panel .lg-number-red { font-size: 68px; }
+    
+    .crossbar h3{font-size:12px;}
+   .crossbar .lg-number{font-size:40px;}
+    
+    } 
+    
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+        
+    .panel .lg-number { font-size: 92px; }
+    .panel .lg-number-red { font-size: 92px; }
+    
+    .crossbar h3{font-size:16px;}
+   .crossbar .lg-number{font-size:48px;}
+    } 
+
+@media only screen and (min-width: 64.063em) {/* min-width 1025px, large screens */
+    .panel .lg-number { font-size: 120px; }
+    .panel .lg-number-red { font-size: 120px; }
+    
+    .crossbar h3{font-size:20px;}
+   .crossbar .lg-number{font-size:68px;}
+    
+    } 
+
+
 

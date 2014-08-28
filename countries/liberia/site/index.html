@@ -36,7 +36,7 @@
       <li class="uppercase cat"><a href="news.html"><i class=" red fa fa-newspaper-o"></i>News</a></li>
           <li class="uppercase cat"><a href="resources.html"><i class="red fa fa-life-ring"></i>Resources</a></li>
           <li class="uppercase cat"><a href="map.html"><i class="red fa fa-map-marker"></i>Interactive Map</a></li>
-      <li class="uppercase cat"><a href="#about"><i class="red fa fa-info"></i>About</a></li>
+      <li class="uppercase cat"><a href="about.html"><i class="red fa fa-info"></i>About</a></li>
       <li class="uppercase cat"><a href="#"><i class="red fa fa-medkit"></i>SIGN IN</a></li>
        
   
@@ -55,7 +55,7 @@
     
     
 
-   
+   <div class="row">
 
       	<div class="panel redrock lg-number">
 
@@ -67,9 +67,9 @@
 		<h5 id="death-difference" class="uppercase overtimeLinks">0</h5>
 		
 		
-		<span id="deaths-time-link" class="show-for-medium-up"><a href="#deaths-chart" onclick="showDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart"></i> Over time</a></span>
+		<span id="deaths-time-link" class="show-for-medium-up"><a href="#" onclick="showDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart"></i> Over time</a></span>
 		
-		<span id="deaths-time-link" class="show-for-small-only"><a href="#deaths-chart" onclick="showDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart mobile-icon "></i></a></span>
+		<span id="deaths-time-link" class="show-for-small-only"><a href="#" onclick="showDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart mobile-icon "></i></a></span>
 	
 		
   
@@ -82,11 +82,11 @@
 		<h2 id="total-cases" class="lg-number">0</p>
 		<h5 id="case-difference" class="uppercase overtimeLinks">&#9650; 127 This Week</h5>
 		
-		<div class="show-for-medium-up"><span id="cases-time-link" class=""><a href="#cases-chart" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-area-chart"></i>Over time</a></span> <span id="cases-map-link" class=""><a href="#cases-map" onclick="showCasesMapOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-map-marker"></i>By Region</a></span>
+		<div class="show-for-medium-up"><span id="cases-time-link" class=""><a href="#" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-area-chart"></i>Over time</a></span> <span id="cases-map-link" class=""><a href="#" onclick="showCasesMapOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-map-marker"></i>By Region</a></span>
 		</div>
 		
 		<div class="show-for-small-only">
-		  <span id="cases-time-link" class=""><a href="#cases-chart" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-area-chart mobile-icon"></i></a></span> <span id="cases-map-link" class=""><a href="#cases-map" onclick="showCasesMapOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-map-marker mobile-icon"></i></a></span>
+		  <span id="cases-time-link" class=""><a href="#" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-area-chart mobile-icon"></i></a></span> <span id="cases-map-link" class=""><a href="#" onclick="showCasesMapOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-map-marker mobile-icon"></i></a></span>
 		
 		  
 		</div>
@@ -98,7 +98,7 @@
 	  </div><!-- Close row -->
 	</div><!-- Close panel -->
 
-
+   </div>
 <div class="row">
 
       <div id="cases-chart"class="small-12 medium-12 columns overtime">
@@ -148,7 +148,7 @@
 		<h3 class="uppercase black statcat">Fatality Rate (CFR)</h3>
 		<h2 id="cfr-rate" class="lg-number-red">0%</p>
 		<h5 id="cfr-difference" class="uppercase overtimeLinks overtime black">&#9650; 127 <br/> This Week</h5>
-		<span id="cases-time-link"><a href="#cases-chart" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-map-marker"></i>By District</a></span>
+		<span id="cases-time-link"><a href="#" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-map-marker"></i>By District</a></span>
 		
 		
 
@@ -217,8 +217,8 @@
 	</div><!-- Close panel -->
 	
 	 <div class="footer">
-	  <span id="openall" class=""><a href="#" onclick="showAll()" class="button uppercase thisweek "><i class="fa fa-area-chart mobile-icon "></i> Show All Graphs</a></span><br/>
-	
+	 <!-- <span id="openall" class=""><a href="#" onclick="showAll()" class="button uppercase thisweek "><i class="fa fa-area-chart mobile-icon "></i> Show All Graphs</a></span><br/>
+	-->
 	  
 	  Last Updated: AUG 20, 2014 9:24AM ET</div>
 
@@ -258,12 +258,12 @@
       
       //$(".responsive_text").fitText();
       function showDeathsOvertime(){
-	$("#deaths-chart").slideToggle( "slow" );;
+	$("#deaths-chart").slideToggle( "fast" );;
 	$("#deaths-time-link").html('<a href="#" onclick="hideDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-minus-square-o"></i> hide time graph</a>');
       }
 	
       function hideDeathsOvertime(){
-	$("#deaths-chart").slideToggle( "slow" );;
+	$("#deaths-chart").slideToggle( "fast" );;
 	$("#deaths-time-link").html('<a href="#" onclick="showDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart">over time</a>');
       }
       
@@ -272,12 +272,12 @@
       
       
       function showCasesMapOvertime(){
-	$("#cases-map").slideToggle( "slow" );;
+	$("#cases-map").slideToggle( "fast" );;
 	$("#cases-map-link").html('<a href="#" onclick="hideCasesMapOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-minus-square-o"></i> hide map</a>');
       }
 	
       function hideCasesMapOvertime(){
-	$("#cases-map").slideToggle( "slow" );;
+	$("#cases-map").slideToggle( "fast" );;
 	$("#cases-map-link").html('<a href="#" onclick="showCasesMapOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-map-marker">By Region</a>');
       }
  
@@ -288,23 +288,23 @@
  
  
        function showCasesOvertime(){
-	$("#cases-chart").slideToggle( "slow" );;
+	$("#cases-chart").slideToggle( "fast" );;
 	$("#cases-time-link").html('<a href="#" onclick="hideCasesOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-minus-square-o"></i> hide time graph</a>');
       }
 	
       function hideCasesOvertime(){
-	$("#cases-chart").slideToggle( "slow" );;
+	$("#cases-chart").slideToggle( "fast" );;
 	$("#cases-time-link").html('<a href="#" onclick="showCasesOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart">over time</a>');
       }
       
       
       function showCasesContact(){
-	$("#case-contact-chart").slideToggle( "slow" );;
+	$("#case-contact-chart").slideToggle( "fast" );;
 	$("#case-contact-link").html('<a href="#" onclick="hideCasesContact" class="uppercase button [radius round] thisweek"><i class="fa fa-minus-square-o"></i> hide time graph</a>');
       }
 	
       function hideCasesContact(){
-	$("#cases-contact-chart").slideToggle( "slow" );;
+	$("#cases-contact-chart").slideToggle( "fast" );;
 	$("#cases-contact-link").html('<a href="#" onclick="showCasesOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart">over time</a>');
       }
       
