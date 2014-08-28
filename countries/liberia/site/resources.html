@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ebola in Liberia | Informatics</title>
+    <title>Resources</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link href='http://fonts.googleapis.com/css?family=JosefinSans:100,300,400,600' rel='stylesheet' type='text/css'>
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -12,7 +12,8 @@
 
   </head>
   <body>
-       
+    
+    
     
     <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
@@ -22,12 +23,12 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title uppercase">Liberia Ebola | Map</h1>
+        <h1 class="title uppercase">Liberia Ebola | About</h1>
       </section>
 
     </nav>
 
- <aside class="left-off-canvas-menu">
+        <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
 	<li class="uppercase cat"><a href="index.html"><i class="red fa fa-home"></i>Home</a></li>
        <li class="uppercase cat show-for-large-up"><a href="dashboard.html"><i class="red fa fa-area-chart"></i>Dashboard</a></li> 
@@ -39,48 +40,75 @@
       <li class="uppercase cat"><a href="#"><i class="red fa fa-medkit"></i>SIGN IN</a></li>
        
   
+  
+  
     </ul>
       </ul>
     </aside>
 
     
 
+    
+
     <section class="main-section">
       <!-- content goes here -->
-  
-
-    <div class="row hide">
-      <div class="large-12 columns">
-            <p class="condense">Enter your own query:</p> <input class="condense" type="text" id="userQuery" value="" placeholder="Enter your own query..." />
-        </div>
-    </div>
-    <div class="row hide">
-        <div class="large-6 columns">
-            <p class="condense">From (date):</p> <input type="text" class="condense" id="fromDate" value="" placeholder="2014-08-10" />
-        </div>
-        <div class="large-6 columns">
-            <p class="condense">To (date):</p> <input type="text" class="condense" id="toDate" value="" placeholder="2014-08-19"/><br />
-      </div>
-    </div>
+      
+	<div class="panel redrock lg-number">
     <div class="row">
-        <div class="large-12 columns">
-	  <h2>Crisis New Data</h2>
-            <button class="hide" onclick="get_map();">Send</button>
-            <div id="mapCanvas" style="height: 600px; width: 100%;">
-            </div>
-        </div>
+	<div class="large-12 columns">
+	  <h2>Resources</h2>
+	  <p>If you have been in contact with someone with Ebola or think you might have the disease, contact</p>
+	  </div>
     </div>
+	
+     
+
+	</div>
+
+
+
+
+
+	
+  <div class="row">
+  <div class="large-7  columns">
+    <a href="info-transmission.html"><img src="img/ebola-transmission-thumb.jpg"class="google-image"></a>
+    <h3> <a href="info-transmission.html">How Ebola is transmitted</a></h3>
+    <p>Learn the process of how Ebola spreads.<br/>
+     <a href="info-transmission.html"><i class="fa fa-area-chart"></i> View Graphic</a>  <br/>  <a href="img/ebola-transmission-infographic.pdf"><i class="fa fa-file-pdf-o"></i> Download PDF</a>
     
-       </div>
+    </p>
+	<hr/>
+	
+	
+	<div class="spacer"><p>&nbsp;&nbsp;</p></div>
+	
+	
+	</div>
   
-  
+  <div class="large-5 columns">
+	<h3>Partner Resources</h3>
+	<li><a href="http://www.cdc.gov/vhf/ebola/">CDC Ebola Resources</a></li>
+      
+      <li><a href="http://www.who.int/csr/disease/ebola/en/">WHO Ebola Resources</a></li>
+    </ul>
+      
+
+      </div>
+
+
+
+    </div>
+
+
+
       <div class="row">
 	<div class="large-12 columns">
-	  <div class="footer">Map incomplete</div>
+	  <div class="footer">Updated: 8/28/2014</div>
 	</div>
 
       </div>
-    </div>
+ 
     
     
   <a class="exit-off-canvas"></a>
@@ -88,12 +116,22 @@
   </div>
 </div>
     
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbIJVzcMQ4tkDKJTKWwcNn9qaP2CUxVOI&sensor=true"> </script>
-    <script type="text/javascript" src="js/map.js"></script>
+    
+    
+    
+    
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
 
 
 
-
-
-
+    <script src="js/news.js"></script>
+    <script>
+      $(document).foundation();
+      $(document).ready(function() {
+      
+      });
+    </script>
+  </body>
+</html>

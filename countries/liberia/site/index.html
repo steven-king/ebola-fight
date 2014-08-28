@@ -31,7 +31,7 @@
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
 	<li class="uppercase cat"><a href="index.html"><i class="red fa fa-home"></i>Home</a></li>
-       <li class="uppercase cat"><a href="dashboard.html"><i class="red fa fa-area-chart"></i>Dashboard</a></li> 
+       <li class="uppercase cat show-for-large-up"><a href="dashboard.html"><i class="red fa fa-area-chart"></i>Dashboard</a></li> 
 
       <li class="uppercase cat"><a href="news.html"><i class=" red fa fa-newspaper-o"></i>News</a></li>
           <li class="uppercase cat"><a href="resources.html"><i class="red fa fa-life-ring"></i>Resources</a></li>
@@ -142,14 +142,22 @@
 		<h3 class="uppercase black statcat">Exposure Rate</h3>
 		<h2 id="exposure-rate" class="lg-number-red">0%</h2>
 		<h5 id="exposure-detail" class="uppercase overtimeLinks overtime black">Contacts: 2,643 <br/> Cases: 1,074</h5>
-		<a href="#" onclick="showCasesContact()" class="button [radius round] thisweek uppercase"><i class="fa fa-area-chart"></i>over time</a>
+		
+		
+		
+		<span class="show-for-medium-up"><a href="#" onclick="showCasesContact()" class="button [radius round] thisweek uppercase"><i class="fa fa-area-chart"></i>over time</a></span>
+		<span id="deaths-time-link" class="show-for-small-only"><a href="#" onclick="showCasesContact()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart mobile-icon "></i></a></span>
+	
+	      
+	      
 	      </div>
 		<div class="small-6 medium-6 large-6 text-center columns">
 		<h3 class="uppercase black statcat">Fatality Rate (CFR)</h3>
 		<h2 id="cfr-rate" class="lg-number-red">0%</p>
 		<h5 id="cfr-difference" class="uppercase overtimeLinks overtime black">&#9650; 127 <br/> This Week</h5>
-		<span id="cases-time-link"><a href="#" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-map-marker"></i>By District</a></span>
-		
+		<!--<span id="cases-time-link" class="show-for-medium-up"><a href="#" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-map-marker"></i>By District</a></span>
+		<span id="deaths-time-link" class="show-for-small-only"><a href="#" onclick="showCasesOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart mobile-icon "></i></a></span>
+	      -->
 		
 
 	      </div>
@@ -220,7 +228,7 @@
 	 <!-- <span id="openall" class=""><a href="#" onclick="showAll()" class="button uppercase thisweek "><i class="fa fa-area-chart mobile-icon "></i> Show All Graphs</a></span><br/>
 	-->
 	  
-	  Last Updated: AUG 20, 2014 9:24AM ET</div>
+	  Updated: 8/28/2014</div>
 
     </div>
       
