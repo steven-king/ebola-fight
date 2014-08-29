@@ -64,35 +64,17 @@
 	      <div class="small-6 medium-6 large-6 text-center columns">
 		<h3 class="uppercase white ">Deaths</h3>
 		<h2 id= "total-deaths" class="lg-number ">0</h2>
+        <hr class="stats-hr">
 		<h5 id="death-difference" class="uppercase overtimeLinks">0</h5>
-		
-		
-		<span id="deaths-time-link" class="show-for-medium-up"><a href="#" onclick="showDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart"></i> Over time</a></span>
-		
-		<span id="deaths-time-link" class="show-for-small-only"><a href="#" onclick="showDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart mobile-icon "></i></a></span>
 	
-		
-  
-		
-		
 	      </div>
 	      
-	      <div class="small-6 medium-6 large-6 text-center columns">
-		<h3 class="uppercase white">Cases</h3>
-		<h2 id="total-cases" class="lg-number">0</p>
-		<h5 id="case-difference" class="uppercase overtimeLinks">&#9650; 127 This Week</h5>
-		
-		<div class="show-for-medium-up"><span id="cases-time-link" class=""><a href="#" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-area-chart"></i>Over time</a></span> <span id="cases-map-link" class=""><a href="#" onclick="showCasesMapOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-map-marker"></i>By Region</a></span>
+	   <div class="small-6 medium-6 large-6 text-center columns">
+		  <h3 class="uppercase white">Cases</h3>
+		  <h2 id="total-cases" class="lg-number">0</h2>
+            <hr class="stats-hr">
+		  <h5 id="case-difference" class="uppercase overtimeLinks">&#9650; 127 This Week</h5>
 		</div>
-		
-		<div class="show-for-small-only">
-		  <span id="cases-time-link" class=""><a href="#" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-area-chart mobile-icon"></i></a></span> <span id="cases-map-link" class=""><a href="#" onclick="showCasesMapOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-map-marker mobile-icon"></i></a></span>
-		
-		  
-		</div>
-		
-		
-	      </div>
 
 
 	  </div><!-- Close row -->
@@ -104,7 +86,6 @@
       <div id="cases-chart"class="small-12 medium-12 columns overtime">
     
        <iframe src="cases_daily.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
-	<a href="#" onclick="hideCasesOvertime()"><i class="fa fa-minus-square-o"></i>Hide Chart</a><br/>
 	<a href="cases_daily.html"><i class="fa fa-expand"></i>View Large Chart</a>
 	
 	<hr/>
@@ -113,7 +94,6 @@
        <div id="deaths-chart" class="small-12 medium-12 columns overtime">
     
 	<iframe src="deaths.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
-	<a href="#" onclick="hideDeathsOvertime()"><i class="fa fa-minus-square-o"></i>Hide Chart</a><br/>
 	<a href="deaths.html"><i class="fa fa-expand"></i>View Large Chart</a>
 	
 	<hr/>
@@ -125,7 +105,6 @@
       
 	 
 	<iframe src="heatmap.html" width="100%" height="500px" scrolling="no" frameBorder="0" border="none"></iframe>
-	<a href="#" onclick="hideCasesMapOvertime()"><i class="fa fa-minus-square-o"></i>Hide Map</a><br/>
 	<a href="heatmap.html"><i class="fa fa-expand"></i>View Large Map</a>
       </div>
 
@@ -265,10 +244,10 @@
       $(document).ready(function() {
 	loadData();
 	// button needs
-	$("#cases-map").hide();
-	$("#deaths-chart").hide();
-	$("#cases-chart").hide();
-	$("#case-contact-chart").hide();
+	// $("#cases-map").hide();
+	// $("#deaths-chart").hide();
+	// $("#cases-chart").hide();
+	// $("#case-contact-chart").hide();
 	
       });
     </script>

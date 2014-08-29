@@ -14,6 +14,14 @@ left: 0;
 top: 0;
 }
 
+.stats-hr {
+    width: 150px;
+    text-align: center;
+    float: none;
+    border: 1px solid #fff;
+    margin: 70px auto 30px;
+}
+
 .row{
     width:100%;
     margin:0;
@@ -83,7 +91,7 @@ iframe{
 }
 
 .panel .lg-number{
-    margin-top:.33em;
+    margin-top:.53em;
     margin-bottom: .43em;
     font-size: 120px;
     line-height: .22em;
@@ -99,6 +107,9 @@ iframe{
     color: #0cc1bc;
 }
 
+.panel h3 {
+    font-size: 1.2em;
+}
 
 
 .panel h5{
