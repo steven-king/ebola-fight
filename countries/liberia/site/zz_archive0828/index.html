@@ -133,6 +133,48 @@
 
  
   
+	<div class="panel greypnl lg-number">
+
+	<!-- Up caret = &#9650; down caret = &#9660; -->
+	  <div class="row">
+	    <h3 class="uppercase black text-center botpad">Status Rates</h3>
+	      <div class="small-6 medium-6 large-6 text-center columns">
+		<h3 class="uppercase black statcat">Exposure Rate</h3>
+		<h2 id="exposure-rate" class="lg-number-red">0%</h2>
+		<h5 id="exposure-detail" class="uppercase overtimeLinks overtime black">Contacts: 2,643 <br/> Cases: 1,074</h5>
+		
+		
+		
+		<span class="show-for-medium-up"><a href="#" onclick="showCasesContact()" class="button [radius round] thisweek uppercase"><i class="fa fa-area-chart"></i>over time</a></span>
+		<span id="deaths-time-link" class="show-for-small-only"><a href="#" onclick="showCasesContact()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart mobile-icon "></i></a></span>
+	
+	      
+	      
+	      </div>
+		<div class="small-6 medium-6 large-6 text-center columns">
+		<h3 class="uppercase black statcat">Fatality Rate (CFR)</h3>
+		<h2 id="cfr-rate" class="lg-number-red">0%</p>
+		<h5 id="cfr-difference" class="uppercase overtimeLinks overtime black">&#9650; 127 <br/> This Week</h5>
+		<!--<span id="cases-time-link" class="show-for-medium-up"><a href="#" onclick="showCasesOvertime()" class=" uppercase button [radius round] thisweek"><i class="fa fa-map-marker"></i>By District</a></span>
+		<span id="deaths-time-link" class="show-for-small-only"><a href="#" onclick="showCasesOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart mobile-icon "></i></a></span>
+	      -->
+		
+
+	      </div>
+		
+		<div id="case-contact-chart" class="small-12 medium-12 columns overtime">
+    
+	<iframe src="case-contact.html" width="100%" height="850px" scrolling="no" frameBorder="0" border="none"></iframe>
+	<a href="#" onclick="hideDeathsOvertime()"><i class="fa fa-minus-square-o"></i>Hide Chart</a><br/>
+	<a href="case-contact.html"><i class="fa fa-expand"></i>View Large Chart</a>
+	
+	<hr/>
+      </div>
+	      
+	      
+
+	  </div><!-- Close row -->
+	</div><!-- Close panel -->
 	
 	<div class="panel greypnl lg-number">
 
@@ -155,8 +197,26 @@
 		<!--<a href="#" class="button [radius round] uppercase thisweek black">View over time</a>-->
 	      </div>
 	      <div class="spacer"><hr/></div>
+	      <div class="small-6 medium-6 large-6 text-center columns">
+		
+		<h3 class="uppercase black statcat">Labs Processed</h3>
+		<h2 id="lab-rate" class="lg-number-red">0%</h2>
+		<h5 id="lab-details"class="uppercase overtimeLinks overtime black">Collected: 0 | Cases: 0</h5>
+		<!--<a href="#" class="button [radius round] thisweek black uppercase">View over time</a>-->
+		
+  
+	      </div>
 	      
-	     
+	      <div class="small-6 medium-6 large-6 text-center columns">
+		
+		<h3 class="uppercase black statcat">Clinics</h3>
+		<h2 id="clinics" class="lg-number-red">0</h2>
+		<h5 id="clinics-details"class="uppercase overtimeLinks overtime black"></h5>
+		<!--<a href="#" class="button [radius round] thisweek black uppercase">View over time</a>-->
+		
+  
+	      </div>
+
 	      
 	      
 	      <div class="small-12 medium-12 large-12 text-center columns blank50"></div>

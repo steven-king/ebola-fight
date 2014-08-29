@@ -1,0 +1,168 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ebola in Liberia | Dashboard</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link href='http://fonts.googleapis.com/css?family=JosefinSans:100,300,400,600' rel='stylesheet' type='text/css'>
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/vendor/modernizr.js"></script>
+
+  </head>
+  <body>
+    
+    
+    
+    <div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+        <h1 class="title uppercase">Dashboard</h1>
+      </section>
+
+    </nav>
+
+ <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+	<li class="uppercase cat"><a href="index.html"><i class="red fa fa-home"></i>Home</a></li>
+       <li class="uppercase cat show-for-large-up"><a href="dashboard.html"><i class="red fa fa-area-chart"></i>Dashboard</a></li> 
+
+      <li class="uppercase cat"><a href="news.html"><i class=" red fa fa-newspaper-o"></i>News</a></li>
+          <li class="uppercase cat"><a href="resources.html"><i class="red fa fa-life-ring"></i>Resources</a></li>
+          <li class="uppercase cat"><a href="map.html"><i class="red fa fa-map-marker"></i>Interactive Map</a></li>
+      <li class="uppercase cat"><a href="about.html"><i class="red fa fa-info"></i>About</a></li>
+      <li class="uppercase cat"><a href="#"><i class="red fa fa-medkit"></i>SIGN IN</a></li>
+       
+  
+    </ul>
+      </ul>
+    </aside>
+
+    
+
+    <section class="main-section">
+      <!-- content goes here -->
+	<div class="row">
+  	<div class="panel redrock lg-number crossbar">
+
+	<!-- Up caret = &#9650; down caret = &#9660; -->
+
+	      <div class="small-2 medium-2 large-2 text-center columns">
+		<h3 class="uppercase white ">Deaths</h3>
+		<h2 id= "total-deaths" class="lg-number ">0</h2>
+		<h5 id="death-difference" class="uppercase overtimeLinks">0</h5>
+		
+	      </div>
+	      
+	     <div class="small-2 medium-2 large-2 text-center columns">
+		<h3 class="uppercase white">Cases</h3>
+		<h2 id="total-cases" class="lg-number">0</p>
+		<h5 id="case-difference" class="uppercase overtimeLinks">&#9650; 127 This Week</h5>
+		
+		</div>
+		
+		<div class="small-2 medium-2 large-2 text-center columns">
+		<h3 class="uppercase white">CFR	</h3>
+		<h2 id="cfr-rate" class="lg-number">0%</p>
+		<h5 id="cfr-difference" class="uppercase overtimeLinks">&#9650; 127 <br/> This Week</h5>
+		</div>
+		
+		<div class="small-2 medium-2 large-2 text-center columns">
+		<h3 class="uppercase white">HCW Deaths</h3>
+		<h2 id="hcw-deaths" class="lg-number">0</h2>
+		<h5 id="hcw-death-details"class="uppercase overtimeLinks"></h5>
+		
+		</div>
+		
+		<div class="small-2 medium-2 large-2 text-center columns">
+		<h3 class="uppercase white">Specimens</h3>
+		<h2 id="lab-rate" class="lg-number">0%</h2>
+		<h5 id="lab-details"class="uppercase overtimeLinks">Collected: 0 | Cases: 0</h5>
+		
+		</div>
+		
+		<div class="small-2 medium-2 large-2 text-center columns">
+		<h3 class="uppercase white">Clinics</h3>
+		<h2 id="clinics" class="lg-number">0</h2>
+		<h5 id="clinics-details"class="uppercase overtimeLinks"></h5>
+		
+		</div>
+		
+		
+		
+	    
+
+
+	 
+	</div><!-- Close panel -->
+
+
+	</div>
+
+
+	<div class="large-6 columns">
+	  
+	
+	  
+<iframe src="deaths.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+	<a href="deaths.html"><i class="fa fa-expand"></i>View Large Chart</a>
+	  
+      <hr/>
+ <iframe src="heatmap.html" width="100%" height="500px" scrolling="no" frameBorder="0" border="none"></iframe>
+	<a href="heatmap.html"><i class="fa fa-expand"></i>View Large Map</a>
+	  <hr/>
+	  
+
+	</div>
+  <div class="large-6  columns">
+	 <iframe src="case-contact.html" width="100%" height="850px" scrolling="no" frameBorder="0" border="none"></iframe>
+	<a href="case-contact.html"><i class="fa fa-expand"></i>View Large Chart</a> 
+	    <hr/>
+	</div>
+  
+  
+
+
+
+
+
+
+      <div class="row">
+	<div class="large-12 columns">
+	  <div class="footer">Updated: 8/28/2014</div>
+	</div>
+
+      </div>
+    </div>
+    
+    </div>
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+    
+    
+    
+    
+    
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+
+
+
+    <script src="js/main.js"></script>
+    <script>
+      $(document).foundation();
+      $(document).ready(function() {
+	loadData();
+      });
+    </script>
+  </body>
+</html>

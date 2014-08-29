@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ebola Contacts</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    
+</head>
+
+<body>
+<script type = "text/javascript">
+   
+    var dataArray = [];
+    var daysArray = [];
+    var suspectedArray = []; 
+    var probableArray = [];
+    var confirmedArray = []; 
+    var cases = "";
+    var date = "";
+    var suspected = "";
+    var probable = "";
+    var confirmed = "";
+    var dataObj =""; 
+
+    
+    $(document).ready(function() {
+        
+    
+        loadData();
+      });
+
+            
+         function loadData(){
+        $.ajax({
+          type:"GET",
+          url:"data/cases_new.json",
+          dataType:"text",
+          success: parseData
+        });
+      }
+      //end load(json)
+     
+    
+     
+      function parseData(data){
+        
+        dataObj = $.parseJSON(data);
+                                
+            console.log( dataObj );
+          
+            
+            for (var i = 0, len = dataObj.length; i < len; ++i) {
+                
+                var aDay = dataObj[i];
+                date = aDay.Date;
+                cases = aDay["1. Total new cases"];
+                suspected = aDay["2. New suspected cases"];
+                probable = aDay["3. New probable cases"];
+                confirmed = aDay["4. New confirmed cases"];
+                dataArray.push(cases);
+                daysArray.push(date);
+                suspectedArray.push(suspected);
+                probableArray.push(probable);
+                confirmedArray.push(confirmed); 
+                
+    
+        
+ }
+         console.log(dataArray);
+         console.log(daysArray); 
+    
+            writeChart(); 
+ 
+ 
+      }
+     
+        
+    function writeChart() {
+   
+     $('#container').highcharts
+        var chart = new Highcharts.Chart({
+        chart: {
+          type: 'line',
+          renderTo: 'container'
+        },
+        title: {
+                text: 'New Cases of Ebola, By Day',
+               
+            },
+
+         xAxis: {
+                categories: daysArray,
+                title: {
+                    text: null
+                }
+            },
+         yAxis: {
+                min: 0,
+                title:
+                    {
+                        text:'Cases'
+                    },
+                    
+                labels: {
+                    
+                    overflow: 'justify'
+                }
+            },
+            plotOptions: {
+                 groupPadding: 0.1,
+                 spline: {
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            },
+        
+            credits: {
+                enabled: false
+            },
+         tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>'
+            }
+        },
+        series: [{
+                
+                    name: 'Total New Cases',
+                    data: dataArray,
+                    
+    
+            },
+            {
+                    name: 'Suspected Cases',
+                    data: suspectedArray,
+                
+        
+             },
+             {
+                    name: 'Probable Cases',
+                    data: probableArray, 
+             },
+             {
+                    name: 'Confirmed Cases',
+                    data: confirmedArray
+                
+             }
+             
+    
+             
+             ]
+        
+        
+        });    
+                
+            }
+</script>
+
+<script type = "text/javascript">
+    
+  var dateContacts = "";
+  var newContacts = "";
+  var completedContacts = "";
+  var lostContacts = ""; 
+  var newContactsArray = [];
+  var completedContactsArray =[];
+  var lostContactsArray = [];
+  var dateContactsArray = []; 
+  
+   // load information for contacts data  
+   
+     $(document).ready(function() {
+        
+        loadContactData();
+      
+      });
+
+    function loadContactData(){
+        $.ajax({
+          type:"GET",
+          url:"data/contacts_all.json",
+          dataType:"text",
+          success: parseContacts
+        });
+      }
+
+   // parse contacts data
+   
+    function parseContacts(data){
+        
+        dataObjContacts = $.parseJSON(data);                          
+          
+          for (var i = 0, len = dataObjContacts.length; i < len; ++i) {
+                
+                var contacts = dataObjContacts[i];
+                console.log(contacts);
+                
+                dateContacts = contacts.Date;
+                newContacts = contacts["New contacts"];
+                completedContacts = contacts["Contacts completed observation"];
+                lostContacts = contacts["Contacts lost follow up"];
+                
+                dateContactsArray.push(dateContacts); 
+                newContactsArray.push(newContacts);
+                completedContactsArray.push(completedContacts);
+                lostContactsArray.push(lostContacts);
+                
+            }
+          
+        console.log(dateContactsArray); 
+        console.log(newContactsArray);
+        console.log(completedContactsArray);
+        console.log(lostContactsArray); 
+
+    writeContactsChart();
+    }
+    
+  function writeContactsChart() {
+   
+     $('#container2').highcharts
+        var chart = new Highcharts.Chart({
+        chart: {
+          type: 'line',
+          renderTo: 'container2'
+        },
+        title: {
+                text: 'Contacts, By Day',
+               
+            },
+
+         xAxis: {
+                categories: dateContactsArray,
+                title: {
+                    text: null
+                }
+            },
+         yAxis: {
+                min: 0,
+                title:
+                    {
+                        text:'Contacts'
+                    },
+                    
+                    
+                labels: {
+                    
+                    overflow: 'justify'
+                }
+            },
+            plotOptions: {
+                 groupPadding: 0.1,
+                 spline: {
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            },
+        
+            credits: {
+                enabled: false
+            },
+         tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>'
+            }
+        },
+        series: [{
+                
+                    name: 'Total New Contacts',
+                    data: newContactsArray,
+                    
+    
+            },
+            {
+                    name: 'Completed Observations',
+                    data: completedContactsArray,
+                
+        
+             },
+             {
+                    name: 'Lost Contacts',
+                    data: lostContactsArray, 
+             }
+             
+             ]
+        
+        
+        });    
+                
+            }
+
+</script>
+<script type = "text/javascript">
+    
+  var grandTotal = ""; 
+  var completedContactsTotal = "";
+  var lostContactsTotal = ""; 
+  var newContactsTotal = "";
+  var xArray = [];
+  var yArray = [];
+  var zArray = []; 
+ 
+   // load information for contacts data  
+   
+     $(document).ready(function() {
+        
+        loadTotalsData();
+      
+      });
+
+    function loadTotalsData(){
+        $.ajax({
+          type:"GET",
+          url:"data/contacts_total.json",
+          dataType:"text",
+          success: parseTotalsData
+        });
+      }
+      
+      
+   // parse contacts data
+   
+    function parseTotalsData(data){
+        
+        dataObjProp = $.parseJSON(data);                          
+          
+          for (var i = 0, len = dataObjProp.length; i < len; ++i) {
+                
+                
+                var totals = dataObjProp[i];
+                console.log(totals);
+                
+                grandTotal = totals.Date;
+                newContactsTotal = totals["New contacts"];
+                completedContactsTotal = totals["Contacts completed observation"];
+                lostContactsTotal = totals["Contacts lost follow up"];
+            
+          }
+        console.log(grandTotal); 
+        console.log(newContactsTotal);
+        console.log(completedContactsTotal);
+        console.log(lostContactsTotal);
+                
+    
+ calculateProportions();
+
+            }
+
+            
+    function calculateProportions(){
+        
+        
+        for (var i = 0, len = dataObj.length; i < len; ++i) {
+                  
+             x=  (newContactsArray[i]/newContactsTotal)*100;
+             xArray.push(x);
+             y =  (completedContactsArray[i]/completedContactsTotal)*100;
+             yArray.push(y);
+             z = (lostContactsArray[i]/lostContactsTotal)*100;
+             zArray.push(z); 
+        
+        }
+        
+    writeProportionChart (); 
+    
+    }
+     
+      
+  
+  function writeProportionChart() {
+   
+     $('#container3').highcharts
+        var chart = new Highcharts.Chart({
+        chart: {
+          type: 'area',
+          renderTo: 'container3'
+        },
+        
+        colors: ['#FF6B6B','#666666', '#999999', '#333333'],
+        title: {
+                text: 'Percentage of Contacts By Day in Relation to Totals',
+               
+            },
+        subtitle: {
+                text: "Total New Contacts: " + newContactsTotal + "<br/>Total Observations Completed: " + completedContactsTotal + "<br/>Total Lost Contacts: " + lostContactsTotal,
+            }, 
+         xAxis: {
+                categories: dateContactsArray,
+               
+              
+                title: {
+                    text: null
+                }
+            },
+         yAxis: {
+                min: 0,
+                title:
+                    {
+                        text:'Percentage'
+                    },
+                    
+                labels: {
+                    
+                    overflow: 'justify'
+                }
+            },
+            plotOptions: {
+                 groupPadding: 0.1,
+                 spline: {
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            },
+        
+            credits: {
+                enabled: false
+            },
+         tooltip: {
+            formatter: function () {
+                
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + Math.round(this.y) + '%<br/>'
+            }
+        },
+        series: [{
+                
+                    name: 'Percentage of New Contacts',
+                    data: xArray,
+                    
+    
+            },
+            {
+                    name: 'Percentage of Completed Observations',
+                    data: yArray,
+                
+        
+             },
+             {
+                    name: 'Percentage of Lost Contacts',
+                    data: zArray, 
+             }
+             
+             ]
+        
+        
+        });    
+  }
+      
+</script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br><br>
+<div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br><br>
+<div id="container3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+</body>
+</html>
+

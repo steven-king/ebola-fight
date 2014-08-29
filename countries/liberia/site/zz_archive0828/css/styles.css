@@ -96,7 +96,7 @@ iframe{
     font-size: 120px;
     line-height: .22em;
     font-weight: 100;
-    color: #377296;
+    color: #E35F5F;
 }
 
 
@@ -160,7 +160,7 @@ ul li .tabs-title{
     padding: 0;
 }
 .google-image{
-    border:1px solid #377296;
+    border:1px solid #E35F5F;
     display: inline;
     float: left;
     width: 220px;
@@ -177,12 +177,12 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 }
 
 .redrock{
-    background-color: #377296;
-    border-color: #377296;
+    background-color: #E35F5F;
+    border-color: #E35F5F;
 }
 
 .red{
-    color:#377296;
+    color:#E35F5F;
 }
 .uppercase{
     letter-spacing: 1px;
@@ -206,7 +206,7 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 .thisweek,
 .thisweek:hover{
     background-color: white;
-    color: #377296;
+    color: #E35F5F;
 }
 
 .thisweek:active{
