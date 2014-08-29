@@ -3522,7 +3522,6 @@ dialog.full, .reveal-modal.full {
   height: 2.8125rem;
   position: absolute;
   top: 0;
-  border-right: solid 1px #1a1a1a;
   left: 0; }
 
 .right-small {
