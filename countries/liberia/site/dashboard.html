@@ -57,7 +57,6 @@
 		<h3 class="uppercase white">Total Cases</h3>
 		<h2 id="total-cases" class="lg-number">0</p>
 		<h5 id="case-difference" class="uppercase overtimeLinks">&#9650; 127 This Week</h5>
-		
 		</div>
 	      
 	      
@@ -168,6 +167,11 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
 
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+
+<script src="http://code.highcharts.com/modules/solid-gauge.src.js"></script>
+<script src="js/guage.js"></script>
 
 
     <script src="js/main.js"></script>
@@ -175,6 +179,7 @@
       $(document).foundation();
       $(document).ready(function() {
 	loadData();
+	addGuage();
       });
     </script>
   </body>
