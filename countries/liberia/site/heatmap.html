@@ -77,53 +77,38 @@
                     { 'hc-key': 'lr-rg', value: 0},
                     { 'hc-key': 'lr-gk', value: aDataType["Grand Kru"]}];
 
-                    
-                // Initiate the chart
-                $('#container').highcharts('Map', {
-                    
-                    
-                    title : {
-                        text : 'Current Cases'
+
+            $('#container').highcharts({
+                    chart: {
+                        type: 'bar'
                     },
-
-                    subtitle : {
-                        text : aDataType.Type
-                    }, 
-
-                    mapNavigation: {
-                        enabled: false,
-                        buttonOptions: {
-                            verticalAlign: 'bottom'
+                    title: {
+                        text: 'Current Cases'
+                    },
+                    xAxis: {
+                        title: {
+                            text: 'cases'
                         }
                     },
-
-                    colorAxis: {
+                    yAxis: {
                         min: 0,
-                        minColor: '#FFFFFF',
-                        maxColor: '#333333',
-                        
-                        labels:{
-                            style: {
-                                color: '#e35f5f'
+                        title: {
+                            text: 'Counties',
+                            align: 'high'
+                        },
+                        labels: {
+                            overflow: 'justify'
+                        }
+                    },
+                    plotOptions: {
+                        bar: {
+                            dataLabels: {
+                                enabled: true
                             }
                         }
                     },
+                    data: 
 
-                    series : [{
-                        data : data,
-                        mapData: Highcharts.maps['countries/lr/lr-all'],
-                        joinBy: 'hc-key',
-                        name: 'Cumulative Cases',
-                        states: {
-                            hover: {
-                                color: '#e35f5f'
-                            }
-                        },
-                        dataLabels: {
-                            enabled: true,
-                            format: '{point.name}'
-                        }
-                    }]
                 });
             };
             

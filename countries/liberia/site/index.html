@@ -62,7 +62,7 @@
 	<!-- Up caret = &#9650; down caret = &#9660; -->
 	  <div class="row">
 	      <div class="small-6 medium-6 large-6 text-center columns">
-		<h3 class="uppercase white ">Deaths</h3>
+		<h3 class="uppercase white ">Total Deaths</h3>
 		<h2 id= "total-deaths" class="lg-number ">0</h2>
         <hr class="stats-hr">
 		<h5 id="death-difference" class="uppercase overtimeLinks">0</h5>
@@ -175,80 +175,10 @@
  
 
     <script src="js/main.js"></script>
-    <script>
-     function showAll(){
-      showDeathsOvertime();
-      showCasesMapOvertime();
-      showCasesContact()
-     }
-      
-      
-      //$(".responsive_text").fitText();
-      function showDeathsOvertime(){
-	$("#deaths-chart").slideToggle( "fast" );;
-	$("#deaths-time-link").html('<a href="#" onclick="hideDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-minus-square-o"></i> hide time graph</a>');
-      }
-	
-      function hideDeathsOvertime(){
-	$("#deaths-chart").slideToggle( "fast" );;
-	$("#deaths-time-link").html('<a href="#" onclick="showDeathsOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart">over time</a>');
-      }
-      
-      
-    
-      
-      
-      function showCasesMapOvertime(){
-	$("#cases-map").slideToggle( "fast" );;
-	$("#cases-map-link").html('<a href="#" onclick="hideCasesMapOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-minus-square-o"></i> hide map</a>');
-      }
-	
-      function hideCasesMapOvertime(){
-	$("#cases-map").slideToggle( "fast" );;
-	$("#cases-map-link").html('<a href="#" onclick="showCasesMapOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-map-marker">By Region</a>');
-      }
- 
- 
- 
- 
- 
- 
- 
-       function showCasesOvertime(){
-	$("#cases-chart").slideToggle( "fast" );;
-	$("#cases-time-link").html('<a href="#" onclick="hideCasesOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-minus-square-o"></i> hide time graph</a>');
-      }
-	
-      function hideCasesOvertime(){
-	$("#cases-chart").slideToggle( "fast" );;
-	$("#cases-time-link").html('<a href="#" onclick="showCasesOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart">over time</a>');
-      }
-      
-      
-      function showCasesContact(){
-	$("#case-contact-chart").slideToggle( "fast" );;
-	$("#case-contact-link").html('<a href="#" onclick="hideCasesContact" class="uppercase button [radius round] thisweek"><i class="fa fa-minus-square-o"></i> hide time graph</a>');
-      }
-	
-      function hideCasesContact(){
-	$("#cases-contact-chart").slideToggle( "fast" );;
-	$("#cases-contact-link").html('<a href="#" onclick="showCasesOvertime()" class="uppercase button [radius round] thisweek"><i class="fa fa-area-chart">over time</a>');
-      }
-      
-      
-      
-      
-      
-      
+    <script>      
       $(document).foundation();
       $(document).ready(function() {
-	loadData();
-	// button needs
-	// $("#cases-map").hide();
-	// $("#deaths-chart").hide();
-	// $("#cases-chart").hide();
-	// $("#case-contact-chart").hide();
-	
+	       loadData();
       });
     </script>
   </body>
