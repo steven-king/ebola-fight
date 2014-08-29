@@ -38,12 +38,12 @@ function parseData(data){
         //increase
         theDifference = thisWeek - lastWeek;
         console.log("theDifference = " + theDifference);
-        $("#death-difference").html("&#9650; " + theDifference + " more<br/>deaths this week");
+        $("#death-difference").html("Up " + theDifference + " this week");
     }
     if ( thisWeek <= lastWeek) {
         //decrease
         theDifference = lastWeek - thisWeek;
-        $("#death-difference").html("&#9650;" + theDifference + " less<br/>deaths this week");
+        $("#death-difference").html("Down " + theDifference + " this week");
     }
     if ( thisWeek == lastWeek) {
         //same
@@ -60,12 +60,12 @@ function parseData(data){
         //increase
         theDifference = thisWeek - lastWeek;
         console.log("theDifference = " + theDifference);
-        $("#case-difference").html("&#9650; " + theDifference + " more<br/> cases this week");
+        $("#case-difference").html("Up " + theDifference + " this week");
     }
     if ( thisWeek <= lastWeek) {
         //decrease
         theDifference = lastWeek - thisWeek;
-        $("#case-difference").html("&#9650;" + theDifference + " less<br/> cases this week");
+        $("#case-difference").html("Less" + theDifference + " this week");
     }
     if ( thisWeek == lastWeek) {
         //same
@@ -81,12 +81,12 @@ function parseData(data){
         //increase
         theDifference = thisWeek - lastWeek;
         console.log("theDifference = " + theDifference);
-        $("#hcw-death-details").html("&#9650; " + theDifference + " more <br/>deaths this week");
+        $("#hcw-death-details").html("Up " + theDifference + " this week");
     }
     if ( thisWeek <= lastWeek) {
         //decrease
         theDifference = lastWeek - thisWeek;
-        $("#hcw-death-details").html("&#9650;" + theDifference + " less <br/>deaths this week");
+        $("#hcw-death-details").html("Down" + theDifference + " this week");
     }
     if ( thisWeek == lastWeek) {
         //same
@@ -102,12 +102,12 @@ function parseData(data){
         //increase
         theDifference = thisWeek - lastWeek;
         console.log("theDifference = " + theDifference);
-        $("#hcw-cases-details").html("&#9650; " + theDifference + " more <br/> deaths this week");
+        $("#hcw-cases-details").html("Up " + theDifference + " this week");
     }
     if ( thisWeek <= lastWeek) {
         //decrease
         theDifference = lastWeek - thisWeek;
-        $("#hcw-cases-details").html("&#9650;" + theDifference + " less <br/> deaths this week");
+        $("#hcw-cases-details").html("Down " + theDifference + " this week");
     }
     if ( thisWeek == lastWeek) {
         //same
@@ -167,12 +167,12 @@ function parseData(data){
         //increase
         theDifference = thisWeek - lastWeek;
         console.log("theDifference = " + theDifference);
-        $("#cfr-difference").html("&#9650; " + theDifference + " more cases this week");
+        $("#cfr-difference").html("Up " + theDifference + " this week");
     }
     if ( thisWeek <= lastWeek) {
         //decrease
         theDifference = lastWeek - thisWeek;
-        $("#cfr-difference").html("&#9650;" + theDifference + " less cases this week");
+        $("#cfr-difference").html("Down" + theDifference + " this week");
     }
     if ( thisWeek == lastWeek) {
         //same
