@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ebola Cases</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    
+</head>
+
+<body>
+<script type = "text/javascript">
+   
+    var dataArray = [];
+    var daysArray = [];
+    var suspectedArray = []; 
+    var probableArray = [];
+    var confirmedArray = []; 
+    var cases = "";
+    var date = "";
+    var suspected = "";
+    var probable = "";
+    var confirmed = "";
+    var dataObj =""; 
+
+    
+    $(document).ready(function() {
+        
+    
+        loadData();
+      });
+
+            
+         function loadData(){
+        $.ajax({
+          type:"GET",
+          url:"data/cases_cum.json",
+          dataType:"text",
+          success: parseData
+        });
+      }
+      //end load(json)
+     
+    
+     
+      function parseData(data){
+        
+        dataObj = $.parseJSON(data);
+                                
+            console.log( dataObj );
+          
+            
+            for (var i = 0, len = dataObj.length; i < len; ++i) {
+                
+                var aDay = dataObj[i];
+                date = aDay.Date;
+                cases = aDay["1. Total cases"];
+                suspected = aDay["2. Total suspected cases"];
+                probable = aDay["3. Total probable cases"];
+                confirmed = aDay["4. Total confirmed cases"];
+                dataArray.push(cases);
+                daysArray.push(date);
+                suspectedArray.push(suspected);
+                probableArray.push(probable);
+                confirmedArray.push(confirmed); 
+                
+                
+                if (i == (len-1)) {
+                totalDeaths = dataObj[i]["Total cases"]
+              
+              //drops off the grand total from end of each array
+               dataArray.pop();
+               daysArray.pop();
+               suspectedArray.pop();
+               probableArray.pop();
+               confirmedArray.pop();
+            }
+    
+        
+ }
+         console.log(dataArray);
+         console.log(daysArray); 
+    
+            writeChart(); 
+ 
+ 
+      }
+     
+        
+    function writeChart() {
+   
+     $('#container').highcharts
+        var chart = new Highcharts.Chart({
+        chart: {
+          type: 'area',
+          renderTo: 'container'
+        },
+        colors: ['#0cc1bc','#444444', '#777777', '#aaaaaa'],
+        title: {
+                text: 'Cumulative Total Cases',
+               
+            },
+
+         xAxis: {
+                categories: daysArray,
+                labels: {
+                    rotation: -45,
+                    formatter: function () {
+                        return this.value; // clean, unformatted number for year
+                    }
+                },
+                title: {
+                    text: null
+                }
+                
+            },
+         yAxis: {
+                min: 0,
+                title:
+                    {
+                        text:'Cases'
+                    },
+                    
+                labels: {
+                    
+                    overflow: 'justify'
+                }
+            },
+            plotOptions: {
+            area: {
+                
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    }
+                }
+            }
+        },
+        
+            credits: {
+                enabled: false
+            },
+         tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>'
+            }
+        },
+        series: [{
+                
+                    name: 'Total New Cases',
+                    data: dataArray,
+                    
+    
+            },
+            {
+                    name: 'Suspected Cases',
+                    data: suspectedArray,
+                
+        
+             },
+             {
+                    name: 'Probable Cases',
+                    data: probableArray, 
+             },
+             {
+                    name: 'Confirmed Cases',
+                    data: confirmedArray
+                
+             }
+             
+    
+             
+             ]
+        
+        
+        });    
+                
+            }
+</script>
+
+</script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br><br>
+
+</body>
+</html>
+
