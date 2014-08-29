@@ -232,6 +232,7 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 .greypnl{
     background-color: #E0E0E0;
     border-color: #E0E0E0;
+    margin-bottom: 70px;
 }
 
 .black,
@@ -277,6 +278,12 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 
 .news-outlet p{
     margin:0;
+}
+
+.data-region-label {
+    font-size: 1.6em;
+    margin-top: 1em;
+    text-transform: uppercase;
 }
 
 
