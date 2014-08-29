@@ -282,8 +282,15 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 
 @media only screen and (max-width: 40em) { /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
-   .panel .lg-number { font-size: 48px; }
+   .panel .lg-number { font-size: 48px; margin-top: 0.75em;}
    .panel .lg-number-red { font-size: 48px; }
+   .panel h3, .panel h5 {
+    font-size: 1em;
+   }
+
+   .stats-hr {
+        margin: 40px auto 30px;
+   }
    
    
    .crossbar h3{font-size:12px;}
