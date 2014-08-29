@@ -117,9 +117,12 @@ iframe{
     font-size: 20px;
 }
 .crossbar{
-    min-height: 250px;
+    min-height: 305px;
 }
 
+.crossbar .stats-hr{
+    margin: 50px auto 30px;
+}
 
 
 .footer{
