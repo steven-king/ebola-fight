@@ -1,19 +1,18 @@
+
 <!DOCTYPE html>
 
 <html>
 <head>
-    <title>Ebola Charts</title>
-   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+    <title>Ebola Cases</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
-       
-
+    
 </head>
 
 <body>
-    
 <script type = "text/javascript">
    
     var dataArray = [];
@@ -26,6 +25,7 @@
     var suspected = "";
     var probable = "";
     var confirmed = "";
+    var dataObj =""; 
 
     
     $(document).ready(function() {
@@ -43,13 +43,13 @@
           success: parseData
         });
       }
-      //end load(xml)
+      //end load(json)
      
     
      
       function parseData(data){
         
-        var dataObj = $.parseJSON(data);
+        dataObj = $.parseJSON(data);
                                 
             console.log( dataObj );
           
@@ -57,7 +57,7 @@
             for (var i = 0, len = dataObj.length; i < len; ++i) {
                 
                 var aDay = dataObj[i];
-                date = dataObj[i].Date;
+                date = aDay.Date;
                 cases = aDay["1. Total new cases"];
                 suspected = aDay["2. New suspected cases"];
                 probable = aDay["3. New probable cases"];
@@ -66,18 +66,7 @@
                 daysArray.push(date);
                 suspectedArray.push(suspected);
                 probableArray.push(probable);
-                confirmedArray.push(confirmed);
-                
-                 if (i == (len-1)) {
-                totalCases = dataObj[i]["1. Total daily deaths"]
-               
-              //drops off the grand total from end of each array
-               dataArray.pop();
-                daysArray.pop();
-                suspectedArray.pop();
-                probableArray.pop();
-                confirmedArray.pop();
-            }
+                confirmedArray.push(confirmed); 
                 
     
         
@@ -92,7 +81,6 @@
      
         
     function writeChart() {
-
    
      $('#container').highcharts
         var chart = new Highcharts.Chart({
@@ -100,27 +88,24 @@
           type: 'area',
           renderTo: 'container'
         },
+        colors: ['#0cc1bc','#444444', '#777777', '#aaaaaa'],
         title: {
                 text: 'New Cases, By Day',
                
             },
-        colors: ['#0cc1bc','#444444', '#777777', '#aaaaaa'],
 
          xAxis: {
                 categories: daysArray,
+                labels: {
+                    rotation: -45,
+                    formatter: function () {
+                        return this.value; // clean, unformatted number for year
+                    }
+                },
                 title: {
                     text: null
-                },
-                labels: {
-                rotation: -45,
-                formatter: function () {
-                    return this.value; // clean, unformatted number for year
-                },
-                style: {
-                    fontSize: '9px',
-                    fontFamily: 'Verdana, sans-serif'
                 }
-            }
+                
             },
          yAxis: {
                 min: 0,
@@ -135,13 +120,20 @@
                 }
             },
             plotOptions: {
-                 groupPadding: 0.1,
-                 spline: {
-                    dataLabels: {
-                        enabled: false
+            area: {
+                
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
                     }
                 }
-            },
+            }
+        },
         
             credits: {
                 enabled: false
@@ -180,17 +172,15 @@
              ]
         
         
-        });
-                
-                
-                
-                
-                
+        });    
                 
             }
 </script>
 
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+</script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br><br>
 
 </body>
 </html>
+
