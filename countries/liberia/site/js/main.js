@@ -16,7 +16,7 @@ function numberWithCommas(x) {
 function loadData(){
     $.ajax({
       type:"GET",
-      url:"data/main.json",
+      url:"data/data_all.json",
       dataType:"text",
       success: parseData
     });
@@ -26,12 +26,22 @@ function loadData(){
 function parseData(data){
     console.log("parseData")
     dataObj = $.parseJSON(data);
+    var theLastItem = dataObj.length - 1;
     
        
    
     //death box top left
-    $("#total-deaths").text(numberWithCommas(dataObj[0]["Total Deaths"]));
-    var theDifference;
+    $("#total-deaths").text(numberWithCommas(dataObj[theLastItem]["1. Total deaths in confirmed, probable and suspected cases"]));
+    
+    
+    
+ 
+    var theDifference = 231;
+    var percentChange = 37;
+
+    $("#death-difference").html("Up " + theDifference + " this week <br/>(" + percentChange + "% increase)");
+    
+    /*
     var thisWeek = dataObj[0]["Deaths This Week"];
     var lastWeek = dataObj[0]["Deaths Last Week"];
     if (thisWeek >= lastWeek) {
@@ -49,13 +59,17 @@ function parseData(data){
         //same
         $("#death-difference").html("no change week to week");
     }
-    
+    */
     
     //case box top left
-    $("#total-cases").text(numberWithCommas(dataObj[1]["Total Cases"]));
-    var theDifference;
+    $("#total-cases").text(numberWithCommas(dataObj[theLastItem]["1. Total cases"]));
+    var theDifference = 460;
+    var percentChange = 43;
+
+    $("#case-difference").html("Up " + theDifference + " this week <br/>(" + percentChange + "% increase)");
+    /*
     var thisWeek = dataObj[1]["Cases This Week"];
-    var lastWeek = dataObj[1]["Cases Last Week"];
+    
     if (thisWeek >= lastWeek) {
         //increase
         theDifference = thisWeek - lastWeek;
@@ -71,9 +85,16 @@ function parseData(data){
         //same
         $("#case-difference").html("no change<br/> week to week");
     }
+    */
     
     //hcw deaths box top left
-    $("#hcw-deaths").text(numberWithCommas(dataObj[3]["Total HealthCare Worker Deaths"]));
+    $("#hcw-deaths").text(numberWithCommas(dataObj[theLastItem]["HealthCare worker total deaths"]));
+    var theDifference = 8;
+    var percentChange = 13;
+
+    $("#hcw-death-details").html("Up " + theDifference + " this week <br/>(" + percentChange + "% increase)");
+    
+    /*
     var theDifference;
     var thisWeek = dataObj[3]["HealthCare Worker Deaths This Week"];
     var lastWeek = dataObj[3]["HealthCare Worker Deaths Last Week"];
@@ -92,9 +113,16 @@ function parseData(data){
         //same
         $("#hcw-death-details").html("no change <br/>week to week");
     }
-    
+    */
     //hcw deaths box top left
-    $("#hcw-cases").text(numberWithCommas(dataObj[4]["Total HealthCare Worker Cases"]));
+    $("#hcw-cases").text(numberWithCommas(dataObj[theLastItem]["HealthCare worker total cases"]));
+    
+    var theDifference = 20;
+    var percentChange = 17;
+
+    $("#hcw-cases-details").html("Up " + theDifference + " this week <br/>(" + percentChange + "% increase)");
+    
+    /*
     var theDifference;
     var thisWeek = dataObj[4]["HealthCare Worker Cases This Week"];
     var lastWeek = dataObj[4]["HealthCare Worker Cases Last Week"];
@@ -113,7 +141,7 @@ function parseData(data){
         //same
         $("#hcw-cases-details").html("no change<br/>week to week");
     }
-    
+    */
     
     
     

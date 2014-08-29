@@ -36,7 +36,7 @@
          function loadData(){
         $.ajax({
           type:"GET",
-          url:"data/deaths_cum.json",
+          url:"data/data_all.json",
           dataType:"text",
           success: parseData
         });
@@ -61,10 +61,7 @@
                 totalDeaths = dataObj[i]["1. Total deaths in confirmed, probable and suspected cases"]
                console.log("totalDeaths: " + totalDeaths);
               //drops off the grand total from end of each array
-               dayTotal.pop();
-               daySuspected.pop();
-               dayProb.pop();
-               dayConfirm.pop();
+               
             }
             createChart();
            

@@ -117,7 +117,7 @@ iframe{
     font-size: 20px;
 }
 .crossbar{
-    min-height: 305px;
+    min-height: 225px;
 }
 
 .crossbar .stats-hr{
@@ -136,6 +136,12 @@ iframe{
     min-height: 25px;
     width: 100%;
     text-transform: uppercase;
+    
+}
+
+.footer p{
+    font-size: .7rem;
+    margin-bottom: 5px;
 }
 
 .blank50{
@@ -281,8 +287,12 @@ body,p,h1,h2,h3,h4,h5,ul,li{
     color: #868686;
 }
 
+.panel{
+    padding:0;
+}
 .panel .black{
     color: #2E3134;
+    
 }
 
 .statcat{
@@ -305,7 +315,7 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 
 
 @media only screen and (max-width: 40em) { /* max-width 640px, mobile-only styles, use when QAing mobile issues */
-
+    
    .panel .lg-number { font-size: 48px; margin-top: 0.75em;}
    .panel .lg-number-red { font-size: 48px; }
    .panel h3, .panel h5 {

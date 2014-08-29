@@ -38,7 +38,7 @@
          function loadData(){
         $.ajax({
           type:"GET",
-          url:"data/data_all.json",
+          url:"data/cases_cum.json",
           dataType:"text",
           success: parseData
         });
@@ -72,6 +72,12 @@
                 if (i == (len-1)) {
                 totalDeaths = dataObj[i]["Total cases"]
               
+              //drops off the grand total from end of each array
+               dataArray.pop();
+               daysArray.pop();
+               suspectedArray.pop();
+               probableArray.pop();
+               confirmedArray.pop();
             }
     
         
