@@ -29,7 +29,7 @@ top: 0;
 }
 
 a {
-    color: #FF6B6B;
+    color: #0cc1bc;
 }
 
 a:hover {
@@ -135,6 +135,7 @@ iframe{
     left: 0;
     min-height: 25px;
     width: 100%;
+    text-transform: uppercase;
 }
 
 .blank50{
@@ -235,8 +236,21 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 .greypnl{
     background-color: #E0E0E0;
     border-color: #E0E0E0;
+}
+
+.region {
     margin-bottom: 70px;
 }
+
+.greypnl .lg-number, .greypnl h3, .greypnl h5 {
+    color: #333;
+}
+
+.greypnl .stats-hr {
+    border-color: #333;
+}
+
+
 
 .black,
 .black:hover,
@@ -301,6 +315,18 @@ body,p,h1,h2,h3,h4,h5,ul,li{
    .stats-hr {
         margin: 40px auto 30px;
    }
+
+    .crossbar {
+        min-height: 450px;
+   }
+
+   .crossbar .stats-hr {
+    margin: 30px auto 20px
+   }
+
+   .crossbar .text-center {
+        margin-bottom: 70px;
+   }
    
    
    .crossbar h3{font-size:12px;}
@@ -314,8 +340,10 @@ body,p,h1,h2,h3,h4,h5,ul,li{
     
     .crossbar h3{font-size:12px;}
    .crossbar .lg-number{font-size:40px;}
+
+
     
-    } 
+} 
     
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
         
@@ -324,6 +352,18 @@ body,p,h1,h2,h3,h4,h5,ul,li{
     
     .crossbar h3{font-size:16px;}
    .crossbar .lg-number{font-size:48px;}
+
+      .crossbar {
+        min-height: 550px;
+   }
+
+   .crossbar .stats-hr {
+    margin: 30px auto 20px
+   }
+
+   .crossbar .text-center {
+        margin-bottom: 70px;
+   }
     } 
 
 @media only screen and (min-width: 64.063em) {/* min-width 1025px, large screens */
