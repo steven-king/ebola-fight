@@ -14,6 +14,14 @@ left: 0;
 top: 0;
 }
 
+.stats-hr {
+    width: 150px;
+    text-align: center;
+    float: none;
+    border: 1px solid #fff;
+    margin: 70px auto 30px;
+}
+
 .row{
     width:100%;
     margin:0;
