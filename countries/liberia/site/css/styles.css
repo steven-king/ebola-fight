@@ -139,6 +139,16 @@ iframe{
     
 }
 
+.coatofarms {
+    width: 150px;
+    margin: 100px auto 50px;
+}
+
+.coatofarms img {
+    width: 150px;
+    height: auto;
+}
+
 .footer p{
     font-size: .7rem;
     margin-bottom: 5px;
