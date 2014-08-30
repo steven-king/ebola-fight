@@ -171,6 +171,10 @@ ul li .tabs-title{
     border-top: 1px solid gray;
 }
 
+#county-map {
+    padding-top: 0.9375em;
+}
+
 #flickr {
     display: inline-block;
 
