@@ -58,8 +58,8 @@
                 
                 var aDay = dataObj[i];
                 date = aDay.Date;
-                cases = aDay["HealthCare worker total cases"];
-                suspected = aDay["HealthCare worker total deaths"];
+                cases = aDay["1. Total cases"];
+                suspected = aDay["2. Total suspected cases"];
                 probable = aDay["3. Total probable cases"];
                 confirmed = aDay["4. Total confirmed cases"];
                 dataArray.push(cases);
@@ -72,12 +72,6 @@
                 if (i == (len-1)) {
                 totalDeaths = dataObj[i]["Total cases"]
               
-              //drops off the grand total from end of each array
-               dataArray.pop();
-               daysArray.pop();
-               suspectedArray.pop();
-               probableArray.pop();
-               confirmedArray.pop();
             }
     
         
@@ -101,15 +95,15 @@
         },
         colors: ['#0cc1bc', '#DF1FA4', '#F1E258', '#052E70'],
         title: {
-                text: 'Healthcare Workers Cases and Deaths',
+                text: 'Cumulative Total Cases',
                
             },
 
          xAxis: {
                 categories: daysArray,
                 labels: {
-                    step:5,
                     rotation: -45,
+                    step:5,
                     formatter: function () {
                         return this.value; // clean, unformatted number for year
                     }
@@ -158,18 +152,17 @@
         },
         series: [{
                 
-                    name: 'Total Cases',
+                    name: 'Total New Cases',
                     data: dataArray,
                     
     
             },
             {
-                    name: 'Total Deaths',
+                    name: 'Suspected Cases',
                     data: suspectedArray,
                 
         
-             }
-             /*,
+             },
              {
                     name: 'Probable Cases',
                     data: probableArray, 
@@ -179,7 +172,7 @@
                     data: confirmedArray
                 
              }
-             */
+             
     
              
              ]

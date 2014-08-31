@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Liberia Ebola</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <style type="text/css">
+            #container {
+                height: 500px; 
+                min-width: 310px; 
+                max-width: 100%; 
+                margin: 0 auto; 
+            }
+            .loading {
+                margin-top: 5em;
+                text-align: center;
+                color: gray;
+            }
+        </style>
+        <script type="text/javascript">
+            
+            
+             $(document).ready(function() {
+        console.log("document ready");
+        loadData();
+      });
+        var counties = [];
+        var dayTotal= [];
+        var daySuspected = [];
+        var dayProb = [];
+        var dayConfirm = [];
+        var totalDeaths;
+        var dataObj;
+        
+        var drillDownSeries = [];
+        
+            
+         function loadData(){
+        $.ajax({
+          type:"GET",
+          url:"../data/outbreak_overview.json",
+          dataType:"text",
+          success: parseData
+        });
+      }//end load(xml)
+
+      
+        function parseData(data){
+            console.log("parseData");
+            
+            dataObj = $.parseJSON(data);
+            console.log( dataObj );
+            for (var i = 0, len = dataObj.length; i < len; ++i) {
+                
+                
+                console.log(dataObj[i]["Maryland County"]);
+                
+            
+            
+                if (i == 3) {
+                    //console.log("type: " + aDataType.Type);
+                    
+                }
+            
+           
+            }
+            createChart()
+            
+        }
+        
+        function createChart(){
+            console.log("createChart");
+               
+        // Create the chart
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Basic drilldown'
+        },
+        xAxis: {
+            type: 'category'
+        },
+
+        legend: {
+            enabled: true
+        },
+
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    style: {
+                        color: 'white',
+                        textShadow: '0 0 2px black, 0 0 2px black'
+                    }
+                },
+                stacking: 'normal'
+            }
+        },
+
+        series: [{
+            name: 'Deaths Suspected',
+            data: [{
+                name: 'Animals',
+                y: 5,
+                drilldown: 'animals'
+            }, {
+                name: 'Fruits',
+                y: 2,
+                drilldown: 'fruits'
+            }, {
+                name: 'Cars',
+                y: 4,
+                drilldown: 'cars'
+            }]
+        }, {
+            name: 'Deaths Probable',
+            data: [{
+                name: 'Animals',
+                y: 1,
+                drilldown: 'animals2'
+            }, {
+                name: 'Fruits',
+                y: 5,
+                drilldown: 'fruits2'
+            }, {
+                name: 'Cars',
+                y: 2,
+                drilldown: 'cars2'
+            }],
+        },
+            {
+            name: 'Deaths Confirmed',
+            data: [{
+                name: 'Animals',
+                y: 1,
+                drilldown: 'animals2'
+            }, {
+                name: 'Fruits',
+                y: 5,
+                drilldown: 'fruits2'
+            }, {
+                name: 'Cars',
+                y: 2,
+                drilldown: 'cars2'
+            }]
+        }],
+        drilldown: {
+            activeDataLabelStyle: {
+                color: 'white',
+                textShadow: '0 0 2px black, 0 0 2px black'
+            },
+            series: [{
+                id: 'animals',
+                name: 'Animals',
+                data: [
+                    ['Cats', 4],
+                    ['Dogs', 2],
+                    ['Cows', 1],
+                    ['Sheep', 2],
+                    ['Pigs', 1]
+                ]
+            }, {
+                id: 'fruits',
+                name: 'Fruits',
+                data: [
+                    ['Apples', 4],
+                    ['Oranges', 2]
+                ]
+            }, {
+                id: 'cars',
+                name: 'Cars',
+                data: [
+                    ['Toyota', 4],
+                    ['Opel', 2],
+                    ['Volkswagen', 2]
+                ]
+            },{
+                id: 'animals2',
+                name: 'Animals2',
+                data: [
+                    ['Cats', 3],
+                    ['Dogs', 5],
+                    ['Cows', 6],
+                    ['Sheep', 2],
+                    ['Pigs', 2]
+                ]
+            }, {
+                id: 'fruits2',
+                name: 'Fruits2',
+                data: [
+                    ['Apples', 1],
+                    ['Oranges', 5]
+                ]
+            }, {
+                id: 'cars2',
+                name: 'Cars2',
+                data: [
+                    ['Toyota', 2],
+                    ['Opel', 3],
+                    ['Volkswagen', 2]
+                ]
+            }]
+        }
+    })
+};
+
+
+            
+            
+            
+                   </script>
+    </head>
+    <body>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="http://code.highcharts.com/modules/drilldown.js"></script>
+
+        <div id="container"></div>
+
+    </body>
+</html>
