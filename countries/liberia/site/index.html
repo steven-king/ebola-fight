@@ -61,7 +61,17 @@
       	<div class="panel redrock lg-number">
 
 	<!-- Up caret = &#9650; down caret = &#9660; -->
+	
 	  <div class="row">
+	     <div class="small-6 medium-6 large-6 text-center columns">
+		  <h3 class="uppercase white">Cases</h3>
+		  <h2 id="total-cases" class="lg-number">0</h2>
+            <hr class="stats-hr">
+		  <h5 id="case-difference" class="uppercase overtimeLinks">127 This Week</h5>
+		</div>
+	    
+	    
+	    
 	      <div class="small-6 medium-6 large-6 text-center columns">
 		<h3 class="uppercase white ">Total Deaths</h3>
 		<h2 id= "total-deaths" class="lg-number ">0</h2>
@@ -70,12 +80,7 @@
 	
 	      </div>
 	      
-	   <div class="small-6 medium-6 large-6 text-center columns">
-		  <h3 class="uppercase white">Cases</h3>
-		  <h2 id="total-cases" class="lg-number">0</h2>
-            <hr class="stats-hr">
-		  <h5 id="case-difference" class="uppercase overtimeLinks">127 This Week</h5>
-		</div>
+	  
 
 
 	  </div><!-- Close row -->
@@ -87,9 +92,7 @@
 
                  <div id="county-map" class="small-12 columns overtime">
     
-    <iframe width='100%' height='520' frameborder='0' src='http://unc-crisis-team.cartodb.com/viz/d2e58a02-2fb9-11e4-94b1-0e230854a1cb/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-    <hr/>
-      </div>
+    <iframe width='100%' height='520' frameborder='0' src='http://unc-crisis-team.cartodb.com/viz/205616b2-30d7-11e4-9cda-0e230854a1cb/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe></div>
 
 		 
    </div>
@@ -101,12 +104,7 @@
   <iframe src="charts/county.html" width="100%" height="500px" scrolling="no" frameBorder="0" border="none"></iframe>
       </div>
 
-    <div id="deaths-chart-total" class="small-12 medium-12 large-6 columns overtime">
-    
-    <iframe src="charts/deaths-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
-    
-    <hr/>
-      </div>
+ 
 
     <div id="cases-chart-total"class="small-12 medium-12 large-6 columns overtime">
     
@@ -114,17 +112,27 @@
     
         <hr/>
       </div>
-
-      <div id="deaths-chart-new" class="small-12 medium-12 large-6 columns overtime">
     
-    <iframe src="charts/deaths-new.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
     
+       <div id="deaths-chart-total" class="small-12 medium-12 large-6 columns overtime">
+    
+    <iframe src="charts/deaths-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+    
+    <hr/>
       </div>
+
+     
 
       <div id="cases-chart-new"class="small-12 medium-12 large-6 columns overtime">
     
        <iframe src="charts/cases-new.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
 
+      </div>
+      
+       <div id="deaths-chart-new" class="small-12 medium-12 large-6 columns overtime">
+    
+    <iframe src="charts/deaths-new.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+    
       </div>
 
 </div>
@@ -136,14 +144,8 @@
 
 	<!-- Up caret = &#9650; down caret = &#9660; -->
 	  <div class="row">
-	      <div class="small-6 medium-6 large-6 text-center columns">
-		<h3 class="uppercase black statcat">Healthcare Worker Deaths</h3>
-		<h2 id="hcw-deaths" class="lg-number">0</h2>
-        <hr class="stats-hr">
-		<h5 id="hcw-death-details"class="uppercase overtimeLinks overtime black"></h5>
-		<!--<a href="#" class="button [radius round] uppercase thisweek black">View over time</a>-->
-
-	      </div>
+	     
+		
 	      
 	      <div class="small-6 medium-6 large-6 text-center columns">
 		
@@ -153,6 +155,26 @@
 		<h5 id="hcw-cases-details" class="uppercase overtimeLinks overtime black"></h5>
 		<!--<a href="#" class="button [radius round] uppercase thisweek black">View over time</a>-->
 	      </div>
+	      
+	      
+	       <div class="small-6 medium-6 large-6 text-center columns">
+	      <h3 class="uppercase black statcat">Healthcare Worker Deaths</h3>
+		<h2 id="hcw-deaths" class="lg-number">0</h2>
+        <hr class="stats-hr">
+		<h5 id="hcw-death-details"class="uppercase overtimeLinks overtime black"></h5>
+		<!--<a href="#" class="button [radius round] uppercase thisweek black">View over time</a>-->
+
+	      </div>
+	      
+	      <div class="small-12 large-12  columns">
+  
+    <iframe src="charts/hcw-cases-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+	 
+      <hr/>
+	
+  </div>
+  
+	      
 	      <div class="spacer"><hr/></div>
 	      
 	     

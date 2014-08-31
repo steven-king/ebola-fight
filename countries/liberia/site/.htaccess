@@ -1,4 +1,0 @@
-AuthType Basic  
-AuthName "restricted area"  
-AuthUserFile /www.steventking.com/web/content/apps/countries/liberia/site/.htpasswd  
-require valid-user:
