@@ -39,7 +39,7 @@ function parseData(data){
     var theDifference = 231;
     var percentChange = 37;
 
-    $("#death-difference").html("Up " + theDifference + " this week <br/>(" + percentChange + "% increase)");
+    $("#death-difference").html("Up " + theDifference + " this week <br/>(" + percentChange + "% weekly increase)");
     
     /*
     var thisWeek = dataObj[0]["Deaths This Week"];
@@ -66,7 +66,7 @@ function parseData(data){
     var theDifference = 460;
     var percentChange = 43;
 
-    $("#case-difference").html("Up " + theDifference + " this week <br/>(" + percentChange + "% increase)");
+    $("#case-difference").html("Up " + theDifference + " this week <br/>(" + percentChange + "% weekly increase)");
     /*
     var thisWeek = dataObj[1]["Cases This Week"];
     
