@@ -44,10 +44,9 @@
 
       
         function parseData(data){
-            console.log("parseData");
             
             var dataObj = $.parseJSON(data);
-            console.log( dataObj );
+            
             for (var i = 0, len = dataObj.length; i < len; ++i) {
             //sets data to arrays for charts
             theDate.push(dataObj[i]["Date"]);
@@ -56,19 +55,11 @@
             daySuspected.push(dataObj[i]["2. Total deaths in suspected cases"]);
             dayProb.push(dataObj[i]["3. Total deaths in probable cases"]);
             dayConfirm.push(dataObj[i]["4. Total deaths in confirmed cases"]);
-            console.log(dayTotal);
-            if (i == (len-1)) {
-                totalDeaths = dataObj[i]["1. Total deaths in confirmed, probable and suspected cases"]
-               console.log("totalDeaths: " + totalDeaths);
-              //drops off the grand total from end of each array
-               
+         
             }
             createChart();
-           
- }
-            
-            
         }
+      
             
             
             
@@ -95,6 +86,7 @@
             
             labels: {
                 rotation: -45,
+                step:5,
                 formatter: function () {
                     return this.value; // clean, unformatted number for year
                 },
