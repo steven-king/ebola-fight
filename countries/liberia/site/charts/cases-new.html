@@ -38,7 +38,7 @@
          function loadData(){
         $.ajax({
           type:"GET",
-          url:"data/data_all.json",
+          url:"../data/data_all.json",
           dataType:"text",
           success: parseData
         });
@@ -58,10 +58,10 @@
                 
                 var aDay = dataObj[i];
                 date = aDay.Date;
-                cases = aDay["HealthCare worker new cases"];
-                suspected = aDay["HealthCare worker total cases"];
-                //probable = aDay["3. New probable cases"];
-                //confirmed = aDay["4. New confirmed cases"];
+                cases = aDay["1. Total new cases"];
+                suspected = aDay["2. New suspected cases"];
+                probable = aDay["3. New probable cases"];
+                confirmed = aDay["4. New confirmed cases"];
                 dataArray.push(cases);
                 daysArray.push(date);
                 suspectedArray.push(suspected);

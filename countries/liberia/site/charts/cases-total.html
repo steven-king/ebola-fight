@@ -38,7 +38,7 @@
          function loadData(){
         $.ajax({
           type:"GET",
-          url:"data/data_all.json",
+          url:"../data/data_all.json",
           dataType:"text",
           success: parseData
         });
@@ -58,16 +58,21 @@
                 
                 var aDay = dataObj[i];
                 date = aDay.Date;
-                cases = aDay["1. Total new cases"];
-                suspected = aDay["2. New suspected cases"];
-                probable = aDay["3. New probable cases"];
-                confirmed = aDay["4. New confirmed cases"];
+                cases = aDay["1. Total cases"];
+                suspected = aDay["2. Total suspected cases"];
+                probable = aDay["3. Total probable cases"];
+                confirmed = aDay["4. Total confirmed cases"];
                 dataArray.push(cases);
                 daysArray.push(date);
                 suspectedArray.push(suspected);
                 probableArray.push(probable);
                 confirmedArray.push(confirmed); 
                 
+                
+                if (i == (len-1)) {
+                totalDeaths = dataObj[i]["Total cases"]
+              
+            }
     
         
  }
@@ -90,7 +95,7 @@
         },
         colors: ['#0cc1bc', '#DF1FA4', '#F1E258', '#052E70'],
         title: {
-                text: 'New Cases, By Day',
+                text: 'Cumulative Total Cases',
                
             },
 

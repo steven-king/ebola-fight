@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Liberia Ebola</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <style type="text/css">
+            #container {
+                height: 500px; 
+                min-width: 310px; 
+                max-width: 100%; 
+                margin: 0 auto; 
+            }
+            .loading {
+                margin-top: 5em;
+                text-align: center;
+                color: gray;
+            }
+        </style>
+        <script type="text/javascript">
+            
+            
+             $(document).ready(function() {
+        console.log("document ready");
+        //loadData();
+      });
+        var counties = [];
+        var dayTotal= [];
+        var daySuspected = [];
+        var dayProb = [];
+        var dayConfirm = [];
+        var totalDeaths;
+        var dataObj;
+        var chart;
+        
+        var drillDownSeries = [];
+        createChart();
+            
+         function loadData(){
+        $.ajax({
+          type:"GET",
+          url:"data/outbreak_overview.json",
+          dataType:"text",
+          success: parseData
+        });
+      }//end load(xml)
+
+      
+        function parseData(data){
+            console.log("parseData");
+            
+            dataObj = $.parseJSON(data);
+            console.log( dataObj );
+            for (var i = 0, len = dataObj.length; i < len; ++i) {
+                
+                
+                console.log(dataObj[i]["Maryland County"]);
+                
+            
+            
+                if (i == 3) {
+                    //console.log("type: " + aDataType.Type);
+                    
+                }
+            
+           
+            }
+            createChart()
+            
+        }
+        
+        function createChart(){
+            console.log("createChart");
+               
+         $(function () {
+  
+    var counties = ["Bomi County","Bong County","Gbarpolu County","Grand Bassa","Grand Cape Mount","Grand Gedeh","Grand Kru", "Grand Kru","Lofa County","Margibi County","Margibi County","Margibi County","Maryland County","Montserrado County","Nimba County","RiverCess County"]
+    var countyCases =[{
+        name: "Cases Suspected",
+        data: [10, 17, 0, 3, 2, 2, 0, 34, 30, 0, 104, 6, 5, 0, 0]
+        },
+        {
+        name: "Cases Probable",
+        data: [13, 13, 0, 3, 1, 0, 0, 121, 40, 0, 114, 28, 0, 1, 0]
+        },
+        {
+        name: "Cases Confirmed",
+        data: [19, 11, 0, 6, 4, 0, 0, 129, 23, 0, 103, 23, 0, 0, 0]
+
+}]
+    var countyDeaths = [{
+        name: "Deaths Suspected",
+        data: [0, 17, 0, 3, 2, 2, 0, 34, 30, 0, 104, 6, 5, 0, 0]
+        },
+        {
+        name: "Deaths Probable",
+        data: [13, 13, 0, 3, 1, 0, 0, 121, 40, 0, 114, 28, 0, 1, 0]
+        },
+        {
+        name: "Deaths Confirmed",
+        data: [19, 11, 0, 6, 4, 0, 0, 129, 23, 0, 103, 23, 0, 0, 0]
+
+}];
+    
+    var countyDrillDown =[{
+        name:'Bomi County',
+        data:[{name:'Cases',
+              data:
+            [{
+                name: "Cases Suspected",
+                data: 0
+            },
+            {
+                name: "Cases Probable",
+                data: 13
+            },
+            {
+                name: "Cases Confirmed",
+                data: 19
+            }]
+        },
+        {name:'Deaths',
+              data:
+            [{
+                name: "Deaths Suspected",
+                data: [0, 17, 0, 3, 2, 2, 0, 34, 30, 0, 104, 6, 5, 0, 0]
+            },
+            {
+                name: "Deaths Probable",
+                data: [13, 13, 0, 3, 1, 0, 0, 121, 40, 0, 114, 28, 0, 1, 0]
+            },
+            {
+                name: "Deaths Confirmed",
+                data: [19, 11, 0, 6, 4, 0, 0, 129, 23, 0, 103, 23, 0, 0, 0]
+            }]
+        }]
+
+    }]
+    
+    var statCats = ["Total Cases", "Total Deaths", "HCW Cases", "HCW Deaths"]
+   console.log(countyDrillDown[0].data[0].data);
+     // Internationalization
+Highcharts.setOptions({
+    lang: {
+        drillUpText: '< Back to {series.name}'
+    }
+});
+
+var options = {
+
+    chart: {
+        height: 300
+    },
+    
+    title: {
+        text: 'Highcharts Drilldown Plugin'
+    },
+
+    xAxis: {
+        categories: true
+    },
+    
+    drilldown: {
+        series: [{
+            id: counties[0],
+            name: counties[0],
+            data: [
+                ['Total Cases', 4],
+                ['Total Deaths', 6],
+                ['HCW Cases', 2],
+                ['HCW Deaths', 8]
+            ]
+           
+        },
+        {
+            id: counties[1],
+            name: counties[1],
+            data: [
+                ['Total Cases', 4],
+                ['Total Deaths', 6],
+                ['HCW Cases', 2],
+                ['HCW Deaths', 8]
+            ]
+           
+        },
+        {
+            id: counties[2],
+            name: counties[2],
+            data: [
+                ['Total Cases', 4],
+                ['Total Deaths', 6],
+                ['HCW Cases', 2],
+                ['HCW Deaths', 8]
+            ]
+           
+        },
+        {
+            id: counties[3],
+            name: counties[3],
+            data: [
+                ['Total Cases', 4],
+                ['Total Deaths', 6],
+                ['HCW Cases', 2],
+                ['HCW Deaths', 8]
+            ]
+           
+        },
+        {
+            id: counties[4],
+            name: counties[4],
+            data: [
+                ['Total Cases', 4],
+                ['Total Deaths', 6],
+                ['HCW Cases', 2],
+                ['HCW Deaths', 8]
+            ]
+           
+        },
+        {
+            id: counties[5],
+            name: counties[5],
+            data: [
+                ['Total Cases', 4],
+                ['Total Deaths', 6],
+                ['HCW Cases', 2],
+                ['HCW Deaths', 8]
+            ]
+           
+        },
+        {
+            id: counties[6],
+            name: counties[6],
+            data: [
+                ['Total Cases', 4],
+                ['Total Deaths', 6],
+                ['HCW Cases', 2],
+                ['HCW Deaths', 8]
+            ]
+           
+        },
+        {
+            id: counties[7],
+            name: counties[7],
+            data: [
+                ['Total Cases', 4],
+                ['Total Deaths', 6],
+                ['HCW Cases', 2],
+                ['HCW Deaths', 8]
+            ]
+           
+        },
+        {
+            id: counties[8],
+            name: counties[8],
+            data: [
+                ['Total Cases', 4],
+                ['Total Deaths', 6],
+                ['HCW Cases', 2],
+                ['HCW Deaths', 8]
+            ]
+           
+        },
+        {
+            id: counties[9],
+            name: counties[9],
+            data: [
+                ['Total Cases', 4],
+                ['Total Deaths', 6],
+                ['HCW Cases', 2],
+                ['HCW Deaths', 8]
+            ]
+           
+        },
+        
+        
+        
+        ]
+    },
+    
+    legend: {
+        enabled: false
+    },
+    
+    plotOptions: {
+        series: {
+            dataLabels: {
+                enabled: true
+            },
+            shadow: false
+        },
+        pie: {
+            size: '80%'
+        }
+    },
+    
+    series: [{
+        name: 'Overview',
+        colorByPoint: true,
+        data: [{
+            name: counties[0],
+            y: countyCases[0].data[0],
+            drilldown: counties[0]
+        }, {
+            name: counties[1],
+            y: countyCases[1].data[0],
+            drilldown: counties[1]
+        },{
+            name: counties[2],
+            y: countyCases[2].data[0],
+            drilldown: counties[2]
+        },
+        {
+            name: counties[3],
+            y: countyCases[3].data[0],
+            drilldown: counties[3]
+        },
+        {
+            name: counties[4],
+            y: countyCases[4].data[0],
+            drilldown: counties[4]
+        },
+        {
+            name: counties[5],
+            y: countyCases[5].data[0],
+            drilldown: counties[5]
+        },
+        {
+            name: counties[6],
+            y: countyCases[6].data[0],
+            drilldown: counties[6]
+        },
+        {
+            name: counties[7],
+            y: countyCases[7].data[0],
+            drilldown: counties[7]
+        },
+
+        
+        
+        ]
+    }]
+};
+
+// Column chart
+options.chart.renderTo = 'container';
+options.chart.type = 'column';
+var chart1 = new Highcharts.Chart(options);
+
+
+         
+           console.log("done");
+   //console.log(dataObj[2])
+    });
+        }
+ 
+
+            
+            
+            
+                   </script>
+    </head>
+    <body>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="http://github.highcharts.com/bdf6471/modules/drilldown.src.js"></script>
+        <div id="container"></div>
+
+    </body>
+</html>

@@ -8,7 +8,7 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <style type="text/css">
             #container {
-                height: 400px; 
+                height: 500px; 
                 min-width: 310px; 
                 max-width: 100%; 
                 margin: 0 auto; 
@@ -36,7 +36,7 @@
          function loadData(){
         $.ajax({
           type:"GET",
-          url:"data/data_all.json",
+          url:"../data/deaths_new.json",
           dataType:"text",
           success: parseData
         });
@@ -52,16 +52,19 @@
             //sets data to arrays for charts
             theDate.push(dataObj[i]["Date"]);
            
-            dayTotal.push(dataObj[i]["1. Total deaths in confirmed, probable and suspected cases"]);
-            daySuspected.push(dataObj[i]["2. Total deaths in suspected cases"]);
-            dayProb.push(dataObj[i]["3. Total deaths in probable cases"]);
-            dayConfirm.push(dataObj[i]["4. Total deaths in confirmed cases"]);
+            dayTotal.push(dataObj[i]["1. Total daily deaths"]);
+            daySuspected.push(dataObj[i]["2. Daily deaths in suspected cases"]);
+            dayProb.push(dataObj[i]["3. Daily deaths in probable  cases"]);
+            dayConfirm.push(dataObj[i]["4. Daily deaths in confirmed cases"]);
             console.log(dayTotal);
             if (i == (len-1)) {
-                totalDeaths = dataObj[i]["1. Total deaths in confirmed, probable and suspected cases"]
+                totalDeaths = dataObj[i]["1. Total daily deaths"]
                console.log("totalDeaths: " + totalDeaths);
               //drops off the grand total from end of each array
-               
+               dayTotal.pop();
+               daySuspected.pop();
+               dayProb.pop();
+               dayConfirm.pop();
             }
             createChart();
            
@@ -79,15 +82,12 @@
         chart: {
             type: 'area'
         },
-        colors: ['#0cc1bc', '#DF1FA4', '#F1E258', '#052E70'],
+        colors: ['#0cc1bc','#444444', '#777777', '#aaaaaa'],
         title: {
-            text: 'Cumulative Total Deaths'
+            text: 'Daily Deaths'
         },
         subtitle: {
             text: ''
-        },
-        credits: {
-            enabled: false
         },
         xAxis: {
             allowDecimals: false,

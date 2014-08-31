@@ -36,7 +36,7 @@
          function loadData(){
         $.ajax({
           type:"GET",
-          url:"data/data_all.json",
+          url:"../data/data_all.json",
           dataType:"text",
           success: parseData
         });
@@ -52,15 +52,16 @@
             //sets data to arrays for charts
             theDate.push(dataObj[i]["Date"]);
            
-            dayTotal.push(dataObj[i]["1. Total daily deaths"]);
-            daySuspected.push(dataObj[i]["2. Daily deaths in suspected cases"]);
-            dayProb.push(dataObj[i]["3. Daily deaths in probable  cases"]);
-            dayConfirm.push(dataObj[i]["4. Daily deaths in confirmed cases"]);
+            dayTotal.push(dataObj[i]["1. Total deaths in confirmed, probable and suspected cases"]);
+            daySuspected.push(dataObj[i]["2. Total deaths in suspected cases"]);
+            dayProb.push(dataObj[i]["3. Total deaths in probable cases"]);
+            dayConfirm.push(dataObj[i]["4. Total deaths in confirmed cases"]);
             console.log(dayTotal);
             if (i == (len-1)) {
-                totalDeaths = dataObj[i]["1. Total daily deaths"]
+                totalDeaths = dataObj[i]["1. Total deaths in confirmed, probable and suspected cases"]
                console.log("totalDeaths: " + totalDeaths);
-              
+              //drops off the grand total from end of each array
+               
             }
             createChart();
            
@@ -78,9 +79,9 @@
         chart: {
             type: 'area'
         },
-        colors: ['#0cc1bc', '#DF1FA4', '#F1E258',  '#052E70'],
+        colors: ['#0cc1bc', '#DF1FA4', '#F1E258', '#052E70'],
         title: {
-            text: 'Deaths, By Day'
+            text: 'Cumulative Total Deaths'
         },
         subtitle: {
             text: ''
