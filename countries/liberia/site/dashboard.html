@@ -110,15 +110,21 @@
 	     <h3 class="uppercase black text-center botpad">Cases</h3>
 	
 	<div class="small-12 large-6 columns">
-	   <iframe src="charts/cases-new.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
-	    <a href="charts/cases-new.html"><i class="fa fa-expand"></i>View Large Chart</a> 
+	  <iframe src="charts/cases-new.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+	    <a href="charts/cases-new-daily.html"></i><i class="fa fa-expand"></i>View by Day since March</a></a>
+	
 	    <hr/>
 	</div>
+      
+      
+      
+
+
 	
 	<div class="small-12 large-6 columns">
 	
 	   <iframe src="charts/cases-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
-	    <a href="charts/cases-total.html"><i class="fa fa-expand"></i>View Large Chart</a> 
+	    <a href="charts/cases-total-daily.html"><i class="fa fa-expand"></i>View by Day since March</a> 
 	    <hr/>
 	</div>
   </div>
@@ -135,7 +141,7 @@
   <div class="small-12 large-6  columns">
   
     <iframe src="charts/deaths-new.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
-	<a href="charts/deaths-new.html"><i class="fa fa-expand"></i>View Large Chart</a>
+	<a href="charts/deaths-new-daily.html"><i class="fa fa-expand"></i>View by Day since March</a>
 	  
       <hr/>
 	
@@ -144,14 +150,77 @@
   <div class="small-12 large-6  columns">
   
     <iframe src="charts/deaths-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
-	<a href="charts/deaths-total.html"><i class="fa fa-expand"></i>View Large Chart</a>
+	<a href="charts/deaths-total-daily.html"><i class="fa fa-expand"></i>View by Day since March</a>
 	  
       <hr/>
 	
   </div>
+  
 
  </div>
 </div>
+	
+	
+	<div class="panel greypnl lg-number">
+
+ <div class="row">
+	     <h3 class="uppercase black text-center botpad">Health Care Worker Cases</h3>
+	
+  <div class="small-12 large-6  columns">
+  
+    <iframe src="charts/hcw-cases-new.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+	<a href="charts/hcw-cases-new-daily.html"><i class="fa fa-expand"></i>View by Day since March</a>
+	  
+      <hr/>
+	
+  </div>
+  
+  <div class="small-12 large-6  columns">
+  
+    <iframe src="charts/hcw-cases-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+	<a href="charts/hcw-cases-total-daily.html"><i class="fa fa-expand"></i>View by Day since March</a>
+	  
+      <hr/>
+	
+  </div>
+  
+
+
+ </div>
+</div>
+	
+	<div class="panel greypnl lg-number">
+
+ <div class="row">
+	     <h3 class="uppercase black text-center botpad">Health Care Worker Deaths</h3>
+	
+  <div class="small-12 large-6  columns">
+  
+    <iframe src="charts/hcw-deaths-new.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+	<a href="charts/hcw-deaths-new-daily.html"><i class="fa fa-expand"></i>View by Day since March</a>
+	  
+      <hr/>
+	
+  </div>
+  
+  <div class="small-12 large-6  columns">
+  
+    <iframe src="charts/hcw-deaths-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+	<a href="charts/hcw-deaths-total-daily.html"><i class="fa fa-expand"></i>View by Day since March</a>
+	  
+      <hr/>
+	
+  </div>
+  
+  
+  
+
+ </div>
+</div>	
+	
+	
+	
+	
 
   <div class="row"><div class="small-12 columns"><h2 class="data-region-label">Regional Data</h2>
 <div class="panel greypnl region">
@@ -162,6 +231,9 @@
      
 
       </div>
+
+      	 
+
       <div class="row">
 	<div class="large-12 columns">
 	  <div class="footer"><p>Source: Liberian MoHSW <br>Updated: 8/28/2014</p></div>
@@ -170,6 +242,7 @@
        
     </div>
     
+   
   <a class="exit-off-canvas"></a>
 
   </div>
@@ -177,7 +250,9 @@
     
     
     
-    
+   
+
+	 
     
 
     <script src="js/vendor/jquery.js"></script>
@@ -195,8 +270,15 @@
       $(document).foundation();
       $(document).ready(function() {
 	loadData();
-	addGuage();
+	//addGuage();
       });
+      
+      /*function loadIframe(iframe){
+	alert("loadIframe() " + iframe);
+	var source ='charts/' + iframe + ".html";
+      $('#'+iframe).attr('src', source);
+      
+}*/
     </script>
   </body>
 </html>

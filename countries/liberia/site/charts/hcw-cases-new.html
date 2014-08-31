@@ -59,7 +59,7 @@
                 var aDay = dataObj[i];
                 date = aDay.Date;
                 cases = aDay["HealthCare worker new cases"];
-                suspected = aDay["HealthCare worker total cases"];
+                //suspected = aDay["HealthCare worker new cases"];
                 //probable = aDay["3. New probable cases"];
                 //confirmed = aDay["4. New confirmed cases"];
                 dataArray.push(cases);
@@ -90,7 +90,7 @@
         },
         colors: ['#0cc1bc', '#DF1FA4', '#F1E258', '#052E70'],
         title: {
-                text: 'New Cases, By Day',
+                text: 'Health Care Workers New Cases, By Day',
                
             },
 
@@ -150,7 +150,8 @@
                     data: dataArray,
                     
     
-            },
+            }
+            /*,
             {
                     name: 'Suspected Cases',
                     data: suspectedArray,
@@ -166,7 +167,7 @@
                     data: confirmedArray
                 
              }
-             
+             */
     
              
              ]

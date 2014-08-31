@@ -54,6 +54,7 @@ i{
 }
 iframe{
     overflow:hidden;
+    z-index:1000;
 }
 
 .numbers{
@@ -186,8 +187,6 @@ ul li .tabs-title{
     height: 100px;
 
 }
-
-
 
 #flickr-results {
     width: 100%;

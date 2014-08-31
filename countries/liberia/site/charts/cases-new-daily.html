@@ -1,18 +1,39 @@
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title>Ebola Cases</title>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ebola Report | Republic of Liberia</title>
+    <link rel="stylesheet" href="../css/foundation.css" />
+    <link href='http://fonts.googleapis.com/css?family=JosefinSans:100,300,400,600' rel='stylesheet' type='text/css'>
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/vendor/modernizr.js"></script>
 
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
     
+    
+    
+    
+    
+    
+    
+    <style type="text/css">
+     
+    </style>
 </head>
 
 <body>
+    
+
+    
 <script type = "text/javascript">
    
     var dataArray = [];
@@ -38,7 +59,7 @@
          function loadData(){
         $.ajax({
           type:"GET",
-          url:"../data/data_all.json",
+          url:"../data/data_all_march.json",
           dataType:"text",
           success: parseData
         });
@@ -100,6 +121,7 @@
                 categories: daysArray,
                 labels: {
                     rotation: -45,
+                    step:5,
                     formatter: function () {
                         return this.value; // clean, unformatted number for year
                     }
@@ -179,9 +201,28 @@
             }
 </script>
 
-</script>
+    
+    
+ 
+     
 
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br><br>
+
+<div id="container" style="min-width: 310px; height:490px; margin: 0 auto"></div><br><br>
+
+    
+    
+    
+    
+    
+
+    <script src="../js/vendor/jquery.js"></script>
+    <script src="../js/foundation.min.js"></script>
+    <!--<script src="js/jquery.fittext.js"></script>-->
+
+
+
+
+
 
 </body>
 </html>
