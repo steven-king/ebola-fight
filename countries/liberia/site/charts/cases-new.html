@@ -70,16 +70,16 @@
                 probableArray.push(probable);
                 confirmedArray.push(confirmed); 
                 
-    
-        
+            }
+            
+           writeChart(); 
  }
-         console.log(dataArray);
-         console.log(daysArray); 
+        
     
-            writeChart(); 
+         
  
  
-      }
+    
      
         
     function writeChart() {
@@ -87,7 +87,7 @@
      $('#container').highcharts
         var chart = new Highcharts.Chart({
         chart: {
-          type: 'area',
+          type: 'column',
           renderTo: 'container'
         },
         colors: ['#0cc1bc', '#DF1FA4', '#F1E258', '#052E70'],
@@ -118,11 +118,21 @@
                     
                 labels: {
                     
-                    overflow: 'justify'
+                    overflow: 'justify',
+                    
                 }
             },
             plotOptions: {
-            area: {
+             
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                    style: {
+                        textShadow: '0 0 1px black, 0 0 1px black'
+                    }
+                },
                 
                 marker: {
                     enabled: false,
@@ -143,16 +153,15 @@
          tooltip: {
             formatter: function () {
                 return '<b>' + this.x + '</b><br/>' +
-                    this.series.name + ': ' + this.y + '<br/>'
+                    this.series.name + ': ' + this.y + '<br/><br/>Total Cases: ' + this.total;
             }
         },
-        series: [{
+        series: [
+            {
+                    name: 'Confirmed Cases',
+                    data: confirmedArray
                 
-                    name: 'Total New Cases',
-                    data: dataArray,
-                    
-    
-            },
+             },
             {
                     name: 'Suspected Cases',
                     data: suspectedArray,
@@ -162,21 +171,31 @@
              {
                     name: 'Probable Cases',
                     data: probableArray, 
-             },
-             {
-                    name: 'Confirmed Cases',
-                    data: confirmedArray
-                
              }
+             
              
     
              
              ]
         
         
-        });    
-                
-            }
+        },
+        function(chart){
+            $.each(chart.series,function(i,serie){
+        $.each(serie.data,function(j,data){
+            if(data.yBottom - data.plotY < 15)
+                data.dataLabel.destroy();
+        });
+    });
+         
+
+
+    });
+
+         
+           console.log("done");
+    };
+ 
 </script>
 
 </script>

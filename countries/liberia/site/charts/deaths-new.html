@@ -47,7 +47,7 @@
             console.log("parseData");
             
             var dataObj = $.parseJSON(data);
-            console.log( dataObj );
+         
             for (var i = 0, len = dataObj.length; i < len; ++i) {
             //sets data to arrays for charts
             theDate.push(dataObj[i]["Date"]);
@@ -56,16 +56,19 @@
             daySuspected.push(dataObj[i]["2. Daily deaths in suspected cases"]);
             dayProb.push(dataObj[i]["3. Daily deaths in probable  cases"]);
             dayConfirm.push(dataObj[i]["4. Daily deaths in confirmed cases"]);
-            console.log(dayTotal);
+            
             if (i == (len-1)) {
                 totalDeaths = dataObj[i]["1. Total daily deaths"]
-               console.log("totalDeaths: " + totalDeaths);
+              
               
             }
-            createChart();
+            
+           
            
  }
-            
+        console.log(theDate[18]);
+        console.log(dayProb);
+        createChart();     
             
         }
             
@@ -76,7 +79,7 @@
                
               $('#container').highcharts({
         chart: {
-            type: 'area'
+            type: 'column'
         },
         colors: ['#0cc1bc', '#DF1FA4', '#F1E258',  '#052E70'],
         title: {
@@ -110,10 +113,21 @@
         
         },
         tooltip: {
-            pointFormat: '{series.name} | <b>{point.y:,.0f}</b>'
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/><br/>Total Cases: ' + this.total;
+            }
         },
         plotOptions: {
-            area: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                    style: {
+                        textShadow: '0 0 1px black, 0 0 1px black'
+                    }
+                },
                 
                 marker: {
                     enabled: false,
@@ -128,24 +142,37 @@
             }
         },
         series: [{
-            name: 'Total Deaths',
-            data: dayTotal
-        }, {
+            name: 'Confirmed Deaths',
+            data: dayConfirm
+        },
+           {
             name: 'Suspected Deaths',
             data: daySuspected
         },
-        {
+        
+         {
             name: 'Probable Deaths',
             data: dayProb
-        },
-        {
-            name: 'Confirmed Deaths',
-            data: dayConfirm
         }
+        
         ]
+
+              },
+              function(chart){
+            $.each(chart.series,function(i,serie){
+        $.each(serie.data,function(j,data){
+            if(data.yBottom - data.plotY < 15)
+                data.dataLabel.destroy();
+        });
+    });
+         
+
+
     });
 
-};
+         
+           console.log("done");
+    };
         </script>
     </head>
     <body>
