@@ -26,6 +26,7 @@ top: 0;
     width:100%;
     margin:0;
     max-width:none;
+    text-align: center;
 }
 
 .sidepage {
@@ -121,10 +122,31 @@ iframe{
 }
 
 .panel h3 {
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-weight: bold;
+    margin-bottom: 1em;
 }
 
+.content {
+    text-align: left;
+}
+
+.tabs-content {
+    border: 0 !important;
+}
+
+.tab-title {
+    border: 1px solid #e0e0e0;
+}
+
+.tabs {
+    margin: auto;
+    display: inline-block;
+}
+
+.inner-wrapper {
+    padding: 4rem;
+}
 
 .panel h5{
     font-size: 20px;
@@ -334,9 +356,14 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 }
 
 .data-region-label {
-    font-size: 1.6em;
-    margin-top: 1em;
+    font-size: 2em;
     text-transform: uppercase;
+    font-weight: bold;
+    color: #000 !important;
+    border-bottom: 4px solid #000;
+    text-align: center;
+    margin: 1em auto !important;
+    display: inline-block;
 }
 
 
@@ -368,6 +395,12 @@ body,p,h1,h2,h3,h4,h5,ul,li{
    .crossbar h3{font-size:12px;}
    .crossbar .lg-number{font-size:28px;}
 
+}
+
+@media only screen and (max-width: 40.062em) {
+    #county-map {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 40.063em) {/* min-width 641px, medium screens */
