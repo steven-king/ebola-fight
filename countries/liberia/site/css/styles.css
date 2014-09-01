@@ -29,6 +29,10 @@ top: 0;
     text-align: center;
 }
 
+.columns {
+    text-align: left;
+}
+
 .sidepage {
     margin: 4rem;
 }
@@ -181,7 +185,7 @@ iframe{
     height: 100px;
     clear: both;
     display: block;
-    padding: 200px 0 100px;
+    padding: 100px 0 100px;
 }
 
 .coatofarms img {
@@ -293,6 +297,7 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 
 .greypnl{
     background-color: #f9f9f9;
+    text-align: center;
 }
 
 .region {
