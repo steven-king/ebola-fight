@@ -28,6 +28,18 @@ top: 0;
     max-width:none;
 }
 
+.sidepage {
+    margin: 4rem;
+}
+
+.sidepageheader {
+    padding: 4rem;
+}
+
+.sidepage hr {
+    width: 50%;
+}
+
 a {
     color: #0cc1bc;
 }
@@ -116,6 +128,7 @@ iframe{
 
 .panel h5{
     font-size: 20px;
+    line-height: 25px;
 }
 .crossbar{
     min-height: 325px;
@@ -142,7 +155,11 @@ iframe{
 
 .coatofarms {
     width: 150px;
-    margin: 100px auto 50px;
+    margin: 0 auto 50px;
+    height: 100px;
+    clear: both;
+    display: block;
+    padding: 200px 0 100px;
 }
 
 .coatofarms img {
@@ -257,7 +274,7 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 }
 
 .region {
-    margin-bottom: 70px;
+
 }
 
 .greypnl .lg-number, .greypnl h3, .greypnl h5 {
