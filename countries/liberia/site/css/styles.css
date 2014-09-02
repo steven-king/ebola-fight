@@ -369,12 +369,7 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 }
 
 .data-region-label {
-<<<<<<< HEAD
-    font-size: 1.6em;
-    margin: 1em;
-=======
     font-size: 2em;
->>>>>>> a3d6866abf899cfd3b391ae4cdddab3234e661d1
     text-transform: uppercase;
     font-weight: bold;
     color: #000 !important;
@@ -398,7 +393,7 @@ body,p,h1,h2,h3,h4,h5,ul,li{
    }
 
     .crossbar {
-        min-height: 450px;
+        min-height: 900px;
    }
 
    .crossbar .stats-hr {
@@ -408,7 +403,15 @@ body,p,h1,h2,h3,h4,h5,ul,li{
    .crossbar .text-center {
         margin-bottom: 70px;
    }
+
+   .title {
+        height: 45px;
+        overflow: hidden;
+   }
    
+   #container {
+    display: none;
+   }
    
    .crossbar h3{font-size:12px;}
    .crossbar .lg-number{font-size:28px;}
@@ -418,6 +421,19 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 @media only screen and (max-width: 40.062em) {
     #county-map {
         display: none;
+    }
+
+    .graph {
+        display: none;
+    }
+
+    .main-section {
+        margin: 0;
+        padding: 0;
+    }
+
+    .bigstat {
+        margin-bottom: 50px;
     }
 }
 
