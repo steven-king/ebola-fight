@@ -61,7 +61,7 @@
                 cases = aDay["1. Total cases"];
                 suspected = aDay["2. Total suspected cases"];
                 probable = aDay["3. Total probable cases"];
-                confirmed = aDay["4. Total confirmed cases"];
+                confirmed = aDay["4.Total confirmed cases"];
                 dataArray.push(cases);
                 daysArray.push(date);
                 suspectedArray.push(suspected);
@@ -152,20 +152,22 @@
         },
         series: [
             {
-                    name: 'Suspected Cases',
-                    data: suspectedArray,
+                    name: 'Confirmed Cases',
+                    data: confirmedArray
                 
-        
              },
+            
              {
                     name: 'Probable Cases',
                     data: probableArray, 
              },
              {
-                    name: 'Confirmed Cases',
-                    data: confirmedArray
+                    name: 'Suspected Cases',
+                    data: suspectedArray,
                 
+        
              }
+             
              
     
              
