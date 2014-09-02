@@ -85,7 +85,7 @@
      $('#container').highcharts
         var chart = new Highcharts.Chart({
         chart: {
-          type: 'area',
+          type: 'line',
           renderTo: 'container'
         },
         colors: ['#0cc1bc', '#DF1FA4', '#F1E258', '#052E70'],
@@ -120,11 +120,10 @@
                 }
             },
             plotOptions: {
-            area: {
+            line: {
                 
                 marker: {
                     enabled: false,
-                    symbol: 'circle',
                     radius: 2,
                     states: {
                         hover: {
