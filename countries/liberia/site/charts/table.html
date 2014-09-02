@@ -1,10 +1,25 @@
 
+<!DOCTYPE html>
 
-<script>
+<html>
+<head>
+    <title>Ebola Cases</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   
+   
+ </head>
+
+<body>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br><br>
+<script type = "text/javascript">
 $(document).ready(function() {
-    $('#example').dataTable( {
-        "ajax": "data/objects.txt",
+    $('#container').dataTable( {
+        "ajax": "../data/regional_drilldown.json",
         "columns": [
+         
             { "data": "name" },
             { "data": "position" },
             { "data": "office" },
@@ -15,3 +30,6 @@ $(document).ready(function() {
     } );
 } );
 </script>
+
+</body>
+</html>
