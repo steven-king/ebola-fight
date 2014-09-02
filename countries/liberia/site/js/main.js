@@ -38,7 +38,7 @@ function parseData(data){
  
     var theDifference = 231;
     var percentChange = 9;
-    $("#death-difference").html(theDifference + " new deaths");
+    $("#death-difference").html(theDifference + " deaths this week");
     
     //$("#death-difference").html("Up " + theDifference + " this week <br/>(" + percentChange + "% weekly increase)");
     
@@ -67,7 +67,7 @@ function parseData(data){
     var theDifference = 460;
     var percentChange = 55;
 
-    $("#case-difference").html(theDifference + " new cases");
+    $("#case-difference").html(theDifference + " cases this week");
     
     /*
     var thisWeek = dataObj[1]["Cases This Week"];
@@ -94,7 +94,7 @@ function parseData(data){
     var theDifference = 8;
     var percentChange = 25;
 
-    $("#hcw-death-details").html(theDifference + " new deaths");
+    $("#hcw-death-details").html(theDifference + " deaths this week");
     
     /*
     var theDifference;
@@ -122,7 +122,7 @@ function parseData(data){
     var theDifference = 20;
     var percentChange = 27;
 
-    $("#hcw-cases-details").html(theDifference + " new cases");
+    $("#hcw-cases-details").html(theDifference + " cases this week");
     
     /*
     var theDifference;
