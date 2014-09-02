@@ -369,12 +369,9 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 }
 
 .data-region-label {
-<<<<<<< HEAD
     font-size: 1.6em;
     margin: 1em;
-=======
     font-size: 2em;
->>>>>>> a3d6866abf899cfd3b391ae4cdddab3234e661d1
     text-transform: uppercase;
     font-weight: bold;
     color: #000 !important;
@@ -387,7 +384,26 @@ body,p,h1,h2,h3,h4,h5,ul,li{
 
 @media only screen and (max-width: 40em) { /* max-width 640px, mobile-only styles, use when QAing mobile issues */
     
-   .panel .lg-number { font-size: 48px; margin-top: 0.75em;}
+    .columns{
+        padding-left: 0;
+        padding-right: 0;
+        margin:0;
+    }
+    .panel{
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom:0;
+        padding-top:10px;
+        
+    }
+    .text-center{
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }
+    
+    
+   .panel .lg-number { padding: 10px; font-size: 48px; margin-top: 0.75em;}
    .panel .lg-number-red { font-size: 48px; }
    .panel h3, .panel h5 {
     font-size: 1em;
