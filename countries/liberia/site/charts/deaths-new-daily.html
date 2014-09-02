@@ -47,7 +47,7 @@
             console.log("parseData");
             
             var dataObj = $.parseJSON(data);
-            
+         
             for (var i = 0, len = dataObj.length; i < len; ++i) {
             //sets data to arrays for charts
             theDate.push(dataObj[i]["Date"]);
@@ -62,10 +62,13 @@
               
               
             }
-            createChart();
+            
+           
            
  }
-            
+        console.log(theDate[18]);
+      
+        createChart();     
             
         }
             
@@ -76,7 +79,7 @@
                
               $('#container').highcharts({
         chart: {
-            type: 'area'
+            type: 'column'
         },
         colors: ['#0cc1bc', '#DF1FA4', '#F1E258',  '#052E70'],
         title: {
@@ -93,8 +96,8 @@
             categories: theDate,
             
             labels: {
+                step:3,
                 rotation: -45,
-                step:5,
                 formatter: function () {
                     return this.value; // clean, unformatted number for year
                 },
@@ -111,10 +114,21 @@
         
         },
         tooltip: {
-            pointFormat: '{series.name} | <b>{point.y:,.0f}</b>'
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/><br/>Total Cases: ' + this.total;
+            }
         },
         plotOptions: {
-            area: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                    style: {
+                        textShadow: '0 0 1px black, 0 0 1px black'
+                    }
+                },
                 
                 marker: {
                     enabled: false,
@@ -129,24 +143,38 @@
             }
         },
         series: [{
-            name: 'Total Deaths',
-            data: dayTotal
-        }, {
-            name: 'Suspected Deaths',
-            data: daySuspected
+            name: 'Confirmed Deaths',
+            data: dayConfirm
         },
         {
             name: 'Probable Deaths',
             data: dayProb
         },
-        {
-            name: 'Confirmed Deaths',
-            data: dayConfirm
+           {
+            name: 'Suspected Deaths',
+            data: daySuspected
         }
+        
+         
+        
         ]
+
+              },
+              function(chart){
+            $.each(chart.series,function(i,serie){
+        $.each(serie.data,function(j,data){
+            if(data.yBottom - data.plotY < 15)
+                data.dataLabel.destroy();
+        });
+    });
+         
+
+
     });
 
-};
+         
+           console.log("done");
+    };
         </script>
     </head>
     <body>

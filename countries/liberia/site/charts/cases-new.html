@@ -102,7 +102,10 @@
                     rotation: -45,
                     formatter: function () {
                         return this.value; // clean, unformatted number for year
-                    }
+                    },
+                    style: {
+                    fontSize: '9px',
+                    }   
                 },
                 title: {
                     text: null
@@ -162,16 +165,17 @@
                     data: confirmedArray
                 
              },
-            {
+            
+             {
+                    name: 'Probable Cases',
+                    data: probableArray, 
+             },
+             {
                     name: 'Suspected Cases',
                     data: suspectedArray,
                 
         
              },
-             {
-                    name: 'Probable Cases',
-                    data: probableArray, 
-             }
              
              
     
