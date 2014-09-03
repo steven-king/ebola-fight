@@ -4,31 +4,55 @@
 <html>
 <head>
     <title>Ebola Cases</title>
+<link rel="stylesheet" href="../css/foundation.css" />
+<link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/725b2a2115b/integration/foundation/dataTables.foundation.css" />
 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-   
+   <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
    
  </head>
 
 <body>
 
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br><br>
-<script type = "text/javascript">
+<table id="container" class="display" cellspacing="0" width="100%">
+    <thead>
+            <tr>
+                <th>County</th>
+                <th>Total Cases</th>
+                <th>Total Deaths</th>
+                <th>Healthcare Worker Cases</th>
+                <th>Healthcare Worker Deaths</th>
+                
+            </tr>
+        </thead>
+ 
+        <tfoot>
+            <tr>
+                <th>County</th>
+                <th>Total Cases</th>
+                <th>Total Deaths</th>
+                <th>Healthcare Worker Cases</th>
+                <th>Healthcare Worker Deaths</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+    
+    <script type = "text/javascript">
 $(document).ready(function() {
     $('#container').dataTable( {
+        "paging":   false,
+        "bFilter": false,
         "ajax": "/data/regional_drilldown.json",
         "columns": [
          
-            { "data": "data" },
-            { "data": "location" },
-            { "data": "Total Deaths" },
-            { "data": "Total Cases" },
-            { "data": "HCW Cases" },
-            { "data": "HCW Deaths" },
-            { "data": "Daily Deaths"},
-            { "data": "Daily Cases"},
-            { "data": "FCR"}
+            { "data": "location__name" },
+            { "data": "cases_cum" },
+            { "data": "total_deaths_all" },
+            { "data": "hcw_deaths_cum" },
+            { "data": "hcw_cases_cum" }
+            
         
             
             
