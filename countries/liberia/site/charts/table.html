@@ -10,7 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
-   
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
  </head>
 
 <body>
@@ -20,7 +20,9 @@
             <tr>
                 <th>County</th>
                 <th>Total Cases</th>
+                <th>Daily Cases</th>
                 <th>Total Deaths</th>
+                <th>Daily Deaths</th>
                 <th>Healthcare Worker Cases</th>
                 <th>Healthcare Worker Deaths</th>
                 
@@ -31,7 +33,9 @@
             <tr>
                 <th>County</th>
                 <th>Total Cases</th>
+                <th>Daily Cases</th>
                 <th>Total Deaths</th>
+                <th>Daily Deaths</th>
                 <th>Healthcare Worker Cases</th>
                 <th>Healthcare Worker Deaths</th>
             </tr>
@@ -45,18 +49,43 @@ $(document).ready(function() {
         "paging":   false,
         "bFilter": false,
         "ajax": "/data/regional_drilldown.json",
+        "columnDefs": [ {
+            "targets": [4,2],
+            "class":"line",
+        
+      }],
         "columns": [
-         
             { "data": "location__name" },
             { "data": "cases_cum" },
+            { "data": "weekly-cases"},
             { "data": "total_deaths_all" },
+            { "data": "weekly-deaths"},
             { "data": "hcw_deaths_cum" },
             { "data": "hcw_cases_cum" }
             
         
             
             
-        ]
+        ],
+       
+    "initComplete": function(settings, json) {
+      $('.line').each(function(i,v){
+        
+        var t=$(this);
+        console.log(t.text());
+        
+        var data1 =t.text().split(',');
+        
+        console.log([]);
+        //var val1=t.text();
+        //var val2=100-val1;
+        t.sparkline(data1, {
+          type: 'line',
+          lineColor: '#0cc1bc',
+          spotColor: '#08817E',
+          defaultPixelsPerValue: 10});
+      })
+    },
     } );
 } );
 </script>
