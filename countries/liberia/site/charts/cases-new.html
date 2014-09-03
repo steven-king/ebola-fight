@@ -9,7 +9,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
-    
+    <script src="http://qtip2.com/v/2.2.0/jquery.qtip.min.js"></script>
+    <link rel="stylesheet" href="../css/qtip-style.css" />
 </head>
 
 <body>
@@ -196,7 +197,14 @@
 
     });
 
-         
+        $('.highcharts-legend').qtip({
+    content: 'Click any item to toggle data points on and off of the graph.',
+    style: 'qtip-light',
+    position: {
+        my: 'bottom center',  // Position my top left...
+        at: 'top center'
+    }
+}); 
            console.log("done");
     };
  
