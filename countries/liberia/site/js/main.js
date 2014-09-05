@@ -16,7 +16,7 @@ function numberWithCommas(x) {
 function loadData(){
     $.ajax({
       type:"GET",
-      url:"data/data_all.json",
+      url:"data/export_main_weekly.json",
       dataType:"text",
       success: parseData
     });

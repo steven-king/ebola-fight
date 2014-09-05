@@ -14,6 +14,27 @@
  </head>
 
 <body>
+    
+    <style>
+        .jqstooltip {
+            min-height:30px;
+            min-width:100px;
+ background-color: #c6e5f6 !important;
+ font-size: 11px !important; 
+ padding: 5px !important; 
+ color: black !important; 
+ overflow: auto !important; 
+ text-align: center !important;  
+ border-color: #CCCCCC !important; 
+ max-width: 400px !important; 
+ max-height: 400px !important; 
+}
+
+.jqsfield { 
+ font-size: 10px !important; 
+ color: black !important; /*set the text color here */
+}
+    </style>
 
 <table id="container" class="display" cellspacing="0" width="100%">
     <thead>
@@ -57,9 +78,9 @@ $(document).ready(function() {
         "columns": [
             { "data": "location__name" },
             { "data": "cases_cum" },
-            { "data": "weekly-cases"},
+            { "data": "daily_cases"},
             { "data": "total_deaths_all" },
-            { "data": "weekly-deaths"},
+            { "data": "daily_deaths"},
             { "data": "hcw_deaths_cum" },
             { "data": "hcw_cases_cum" }
             
@@ -70,9 +91,9 @@ $(document).ready(function() {
        
     "initComplete": function(settings, json) {
       $('.line').each(function(i,v){
-        
-        var t=$(this);
-        console.log(t.text());
+        if (i > 0 && i != 1) {
+            var t=$(this);
+            console.log(t.text());
         
         var data1 =t.text().split(',');
         
@@ -82,8 +103,18 @@ $(document).ready(function() {
         t.sparkline(data1, {
           type: 'line',
           lineColor: '#0cc1bc',
-          spotColor: '#08817E',
+          spotColor: '#DF1FA4',
+          minSpotColor: '#DF1FA4',
+          maxSpotColor: '#DF1FA4',
+          highlightLineColor:'#DF1FA4',
+          lineWidth: '1',
+          height: '30px',
+          tooltipFormat: "Day Total: {{y:val}}",
           defaultPixelsPerValue: 10});
+        }else{
+            console.log("not 0");
+        }
+        
       })
     },
     } );
