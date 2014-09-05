@@ -51,11 +51,45 @@
             for (var i = 0, len = dataObj.length; i < len; ++i) {
             //sets data to arrays for charts
             theDate.push(dataObj[i]["Date"]);
+            var tempHolder;
+            
+            tempHolder = dataObj[i]["1. Total daily deaths"]
+            
+            if (tempHolder === undefined) {
+                tempHolder = null;
+            }
+            dayTotal.push(tempHolder);
+            
+            
+            var tempHolder;
+            
+            tempHolder = dataObj[i]["2. Daily deaths in suspected cases"]
+            
+            if (tempHolder === undefined) {
+                tempHolder = null;
+            }
+            daySuspected.push(tempHolder);
+            
+            var tempHolder;
+            
+            tempHolder = dataObj[i]["3. Daily deaths in probable  cases"]
+            
+            if (tempHolder === undefined) {
+                tempHolder = null;
+            }
+            dayProb.push(tempHolder);
+            
+             var tempHolder;
+            
+            tempHolder = dataObj[i]["4. Daily deaths in confirmed cases"]
+            
+            if (tempHolder === undefined) {
+                tempHolder = null;
+            }
+           dayConfirm.push(tempHolder)
+            
+            
            
-            dayTotal.push(dataObj[i]["1. Total daily deaths"]);
-            daySuspected.push(dataObj[i]["2. Daily deaths in suspected cases"]);
-            dayProb.push(dataObj[i]["3. Daily deaths in probable  cases"]);
-            dayConfirm.push(dataObj[i]["4. Daily deaths in confirmed cases"]);
             
             if (i == (len-1)) {
                 totalDeaths = dataObj[i]["1. Total daily deaths"]
@@ -66,6 +100,19 @@
            
            
  }
+ 
+   for (var i = 0, len = dayProb.length; i < len; ++i) {
+        if (dayProb[i] < 0 ) {
+            dayProp[i] = 0;
+        }
+        if (dayConfirm[i] < 0 ) {
+            dayConfirm[i] = 0;
+        }
+        if (daySuspected[i] < 0 ) {
+            daySuspected[i] = 0;
+        }
+        
+   }
         console.log(dayProb);
         console.log(dayConfirm);
         console.log(daySuspected);
@@ -85,7 +132,7 @@
         },
         colors: ['#0cc1bc', '#DF1FA4', '#F1E258',  '#052E70'],
         title: {
-            text: 'Deaths, By Day'
+            text: 'Deaths, Each Week'
         },
         subtitle: {
             text: ''
@@ -189,6 +236,7 @@
 
 
         <div id="container"></div>
+<p><em>* Weekly total sum of daily reports. Daily reports not available for all days.</em></p>
 
     </body>
 </html>

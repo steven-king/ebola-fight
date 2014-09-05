@@ -36,7 +36,7 @@
          function loadData(){
         $.ajax({
           type:"GET",
-          url:"../data/data_all_march.json",
+          url:"../data/export_main.json",
           dataType:"text",
           success: parseData
         });
@@ -57,6 +57,11 @@
             dayProb.push(dataObj[i]["3. Daily deaths in probable  cases"]);
             dayConfirm.push(dataObj[i]["4. Daily deaths in confirmed cases"]);
             
+            
+            
+            
+        
+            
             if (i == (len-1)) {
                 totalDeaths = dataObj[i]["1. Total daily deaths"]
               
@@ -68,6 +73,21 @@
  }
         console.log(theDate[18]);
       
+      
+          
+            
+            for (var i = 0, len = dayProb.length; i < len; ++i) {
+        if (dayProb[i] < 0 ) {
+            dayProp[i] = 0;
+        }
+        if (dayConfirm[i] < 0 ) {
+            dayConfirm[i] = 0;
+        }
+        if (daySuspected[i] < 0 ) {
+            daySuspected[i] = 0;
+        }
+        
+   }
         createChart();     
             
         }
@@ -184,6 +204,7 @@
 
 
         <div id="container"></div>
+<p><em>* Daily reports not available for all days.</em></p>
 
     </body>
 </html>
