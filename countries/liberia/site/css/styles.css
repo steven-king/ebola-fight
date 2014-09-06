@@ -61,6 +61,19 @@ a:hover {
     color: #666;
 }
 
+.panel h2{
+  color: white;
+}
+.panel h3{
+  color: white;
+}
+.panel h5{
+  color: white;
+}
+.panel p{
+  color: white;
+} 
+
 .panel .button{
     text-align: center;
 }
