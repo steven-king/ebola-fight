@@ -7,14 +7,14 @@ function loadNewsArticles(){
 
      $.getJSON(apiurl2,function(data){
                 var times = data.response.docs;
-                // console.log(data.response.docs);
+              
                  $.each(times,function(i,data){
 
 
                    html2 += '<h4><a class="nyt-links" href="' + data.web_url + '">' + data.headline.main + '</a></h4>';
 
                    if (data.byline) {
-                    html2 += "By: " + data.byline.original  + " | ";
+                    html2 += data.byline.original  + " | ";
 
                     }
 
@@ -60,14 +60,13 @@ function loadGuardian(data) {
 
              $.each(results, function(index,results){
 
-            //   console.log(data.response.results.webTitle);
                  html3 += '<br><h4><a class="nyt-links" href="' + data.response.results[index].webUrl + '">' + data.response.results[index].webTitle + '</a></h4>';
                 html3 += '<h5>Published: ' + results.webPublicationDate + '</h5>';
                 html3 += '<hr>';
 
              });
 
-                // console.log(html3);
+            
 
            $("#guardian-results").append(html3);
 
@@ -124,7 +123,7 @@ function loadCDC(){
               dataType: 'xml',
               crossDomain: true,
               success:  function (response, textStatus, jqXHR) {
-                console.log(response);
+              
 
                 // Having cross domain issues
                 // Additional instructions provided on CDC site: https://tools.cdc.gov/syndication/api.aspx
@@ -134,7 +133,7 @@ function loadCDC(){
 
           },
           error: function(jqXHR, textStatus, errorThrown) {
-              console.log(textStatus + "; " + errorThrown);
+              
           }
       });
 
@@ -150,7 +149,7 @@ var html = ""  // string to hold data before writing to page
    function loadFlckr(){
 
             $.getJSON(apiurl,function(json){
-                // console.log(json);
+               
                 //code for outside loop
 
              //   $("#results2").append("<h2>" + json.title + "</h2>");
@@ -162,7 +161,7 @@ var html = ""  // string to hold data before writing to page
                     html += "<a href='" + data.link + "'>";
                     html += "<img src='" + data.media.m + "'></a></div>";
                     });
-                // console.log(html);
+
                 //after loop code
                 $("#flickr-results").append(html);
             });

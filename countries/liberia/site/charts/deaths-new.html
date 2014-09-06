@@ -28,7 +28,7 @@
         var totalDeaths;
             
              $(document).ready(function() {
-        console.log("document ready");
+       
         loadData();
       });
 
@@ -44,7 +44,7 @@
 
       
         function parseData(data){
-            console.log("parseData");
+            
             
             var dataObj = $.parseJSON(data);
          
@@ -113,10 +113,7 @@
         }
         
    }
-        console.log(dayProb);
-        console.log(dayConfirm);
-        console.log(daySuspected);
-        //console.log(theDate);
+       
         createChart();     
             
         }
@@ -225,7 +222,6 @@
     });
 
          
-           console.log("done");
     };
         </script>
     </head>

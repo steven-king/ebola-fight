@@ -26,7 +26,8 @@
     var probable = "";
     var confirmed = "";
     var dataObj =""; 
-
+  var isPhone= false;
+      var oddOnes= [];
     
     $(document).ready(function() {
         
@@ -51,7 +52,44 @@
         
         dataObj = $.parseJSON(data);
                                 
-            console.log( dataObj );
+            
+
+           //detects width of screen
+    screenWidth = $( window ).width();
+    if (screenWidth <= 410) {
+       isPhone = true;
+       
+    }
+        
+        dataObj = $.parseJSON(data);
+                                
+            
+
+            
+            
+            
+            if (isPhone == true) {
+              
+                    
+                  for (var i = 0, len = dataObj.length; i < len; ++i) {
+                         console.log("inside loop");
+                         var aDay = dataObj[i];
+                        date = aDay.Date;
+                        cases = aDay["HealthCare worker total cases"];
+                        suspected = aDay["HealthCare worker total deaths"];
+                        
+                
+                        
+                        (i % 2 == 0 ? dataArray : oddOnes).push(cases);
+                        (i % 2 == 0 ? daysArray : oddOnes).push(date);
+                        (i % 2 == 0 ? suspectedArray : oddOnes).push(suspected);
+                       
+                        
+                    }   
+               
+            }else{
+          
+          
           
             
             for (var i = 0, len = dataObj.length; i < len; ++i) {
@@ -60,13 +98,11 @@
                 date = aDay.Date;
                 cases = aDay["HealthCare worker total cases"];
                 suspected = aDay["HealthCare worker total deaths"];
-                probable = aDay["3. Total probable cases"];
-                confirmed = aDay["4. Total confirmed cases"];
+                
                 dataArray.push(cases);
                 daysArray.push(date);
                 suspectedArray.push(suspected);
-                probableArray.push(probable);
-                confirmedArray.push(confirmed); 
+                
                 
                 
                 if (i == (len-1)) {
@@ -76,14 +112,13 @@
                dataArray.pop();
                daysArray.pop();
                suspectedArray.pop();
-               probableArray.pop();
-               confirmedArray.pop();
+               
             }
-    
+            }
         
  }
-         console.log(dataArray);
-         console.log(daysArray); 
+         
+       
     
             writeChart(); 
  
@@ -169,18 +204,8 @@
                 
         
              }
-             /*,
-             {
-                    name: 'Probable Cases',
-                    data: probableArray, 
-             },
-             {
-                    name: 'Confirmed Cases',
-                    data: confirmedArray
-                
-             }
-             */
-    
+            
+         
              
              ]
         

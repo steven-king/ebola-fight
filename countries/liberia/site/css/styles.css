@@ -442,9 +442,7 @@ body,p,h1,h2,h3,h4,h5,ul,li{
         display: none;
     }
 
-    .graph {
-        display: none;
-    }
+    
 
     .main-section {
         margin: 0;

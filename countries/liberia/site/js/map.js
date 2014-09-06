@@ -127,7 +127,7 @@ var geocoder = new google.maps.Geocoder();
 
                       google.maps.event.addListener(marker, 'click', (function(marker, i) {
                         return function() {
-			   console.log("in set content");
+			 
                           infowindow.setContent('<b>content:</b> '+coords_list[i][0]+'\
                           <br /><b>created at:</b> '+coords_list[i][2]+'\
                           <br /><b>url:</b> <a href='+coords_list[i][3]+' target="_blank">'+coords_list[i][3]+'</a>\
@@ -208,7 +208,7 @@ function codeLatLng(lat, lng) {
       if (status == google.maps.GeocoderStatus.OK) {
         if (results[0]) {
           arrAddress = results[0].address_components;
-          console.log(arrAddress);
+         
           var city, stateShort, stateLong, country;
             $.each(arrAddress, function (i, address_component) {
                 console.log('address_component:'+i);

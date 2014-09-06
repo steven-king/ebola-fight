@@ -26,7 +26,8 @@
     var probable = "";
     var confirmed = "";
     var dataObj =""; 
-
+    var isPhone= false;
+      var oddOnes= [];
     
     $(document).ready(function() {
         
@@ -49,10 +50,41 @@
      
       function parseData(data){
         
+    //detects width of screen
+    screenWidth = $( window ).width();
+    if (screenWidth <= 410) {
+       isPhone = true;
+   
+    }
+        
         dataObj = $.parseJSON(data);
                                 
-            console.log( dataObj );
-          
+            
+
+            
+            
+            
+            if (isPhone == true) {
+              
+                    
+                  for (var i = 0, len = dataObj.length; i < len; ++i) {
+                       
+                         var aDay = dataObj[i];
+                        date = aDay.Date;
+                        cases = aDay["1. Total cases"];
+                        suspected = aDay["2. Total suspected cases"];
+                        probable = aDay["3. Total probable cases"];
+                        confirmed = aDay["4.Total confirmed cases"];
+                
+                        (i % 2 == 0 ? dataArray : oddOnes).push(cases);
+                        (i % 2 == 0 ? daysArray : oddOnes).push(date);
+                        (i % 2 == 0 ? suspectedArray : oddOnes).push(suspected);
+                        (i % 2 == 0 ? probableArray : oddOnes).push(probable);
+                        (i % 2 == 0 ? confirmedArray : oddOnes).push(confirmed);
+                        
+                    }   
+               
+            }else{
             
             for (var i = 0, len = dataObj.length; i < len; ++i) {
                 
@@ -68,16 +100,15 @@
                 probableArray.push(probable);
                 confirmedArray.push(confirmed); 
                 
-                
-                if (i == (len-1)) {
-                totalDeaths = dataObj[i]["Total cases"]
               
             }
+           
     
         
- }
+        }
+           
        
-         console.log("Confirmed Array: " + confirmedArray); 
+     
     
             writeChart(); 
  

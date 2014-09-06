@@ -23,7 +23,7 @@
             
             
              $(document).ready(function() {
-        console.log("document ready");
+        
         loadData();
       });
 
@@ -39,14 +39,14 @@
 
       
         function parseData(data){
-            console.log("parseData");
+            
             
             var dataObj = $.parseJSON(data);
-            console.log( dataObj );
+            
             for (var i = 0, len = dataObj.length; i < len; ++i) {
             var aDataType= dataObj[i];
             if (i == 3) {
-               console.log("type: " + aDataType.Type);
+             
                createMap(aDataType);
             }
             

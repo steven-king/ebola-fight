@@ -51,14 +51,14 @@
         
         dataObj = $.parseJSON(data);
                                 
-            //console.log( dataObj );
+
           
             
             for (var i = 0, len = dataObj.length; i < len; ++i) {
                 
                 var aDay = dataObj[i];
                 
-                console.log(aDay);
+             
                 date = aDay.Date;
                 cases = aDay["1. Total new cases"];
                 suspected = aDay["2. New suspected cases"];
@@ -204,7 +204,6 @@
     });
 
          
-           console.log("done");
     };
  
 </script>

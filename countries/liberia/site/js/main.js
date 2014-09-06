@@ -8,7 +8,7 @@ var HCWCases = new Array;
 var labs = new Array;
 var treatments = new Array;
 
-
+ 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -40,27 +40,7 @@ function parseData(data){
     var percentChange = 9;
     $("#death-difference").html(theDifference + " deaths this week");
     
-    //$("#death-difference").html("Up " + theDifference + " this week <br/>(" + percentChange + "% weekly increase)");
-    
-    /*
-    var thisWeek = dataObj[0]["Deaths This Week"];
-    var lastWeek = dataObj[0]["Deaths Last Week"];
-    if (thisWeek >= lastWeek) {
-        //increase
-        theDifference = thisWeek - lastWeek;
-        console.log("theDifference = " + theDifference);
-        $("#death-difference").html("Up " + theDifference + " this week");
-    }
-    if ( thisWeek <= lastWeek) {
-        //decrease
-        theDifference = lastWeek - thisWeek;
-        $("#death-difference").html("Down " + theDifference + " this week");
-    }
-    if ( thisWeek == lastWeek) {
-        //same
-        $("#death-difference").html("no change week to week");
-    }
-    */
+   
     
     //case box top left
     $("#total-cases").text(numberWithCommas(dataObj[theLastItem]["1. Total cases"]));
@@ -69,25 +49,7 @@ function parseData(data){
 
     $("#case-difference").html(theDifference + " cases this week");
     
-    /*
-    var thisWeek = dataObj[1]["Cases This Week"];
-    
-    if (thisWeek >= lastWeek) {
-        //increase
-        theDifference = thisWeek - lastWeek;
-        console.log("theDifference = " + theDifference);
-        $("#case-difference").html("Up " + theDifference + " this week");
-    }
-    if ( thisWeek <= lastWeek) {
-        //decrease
-        theDifference = lastWeek - thisWeek;
-        $("#case-difference").html("Less" + theDifference + " this week");
-    }
-    if ( thisWeek == lastWeek) {
-        //same
-        $("#case-difference").html("no change<br/> week to week");
-    }
-    */
+  
     
     //hcw deaths box top left
     $("#hcw-deaths").text(numberWithCommas(dataObj[theLastItem]["HealthCare worker total deaths"]));
@@ -96,27 +58,7 @@ function parseData(data){
 
     $("#hcw-death-details").html(theDifference + " deaths this week");
     
-    /*
-    var theDifference;
-    var thisWeek = dataObj[3]["HealthCare Worker Deaths This Week"];
-    var lastWeek = dataObj[3]["HealthCare Worker Deaths Last Week"];
-    if (thisWeek >= lastWeek) {
-        //increase
-        theDifference = thisWeek - lastWeek;
-        console.log("theDifference = " + theDifference);
-        $("#hcw-death-details").html("Up " + theDifference + " this week");
-    }
-    if ( thisWeek <= lastWeek) {
-        //decrease
-        theDifference = lastWeek - thisWeek;
-        $("#hcw-death-details").html("Down" + theDifference + " this week");
-    }
-    if ( thisWeek == lastWeek) {
-        //same
-        $("#hcw-death-details").html("no change <br/>week to week");
-    }
-    */
-    //hcw deaths box top left
+    
     $("#hcw-cases").text(numberWithCommas(dataObj[theLastItem]["HealthCare worker total cases"]));
     
     var theDifference = 14;
@@ -124,33 +66,9 @@ function parseData(data){
 
     $("#hcw-cases-details").html(theDifference + " cases this week");
     
-    /*
-    var theDifference;
-    var thisWeek = dataObj[4]["HealthCare Worker Cases This Week"];
-    var lastWeek = dataObj[4]["HealthCare Worker Cases Last Week"];
-    if (thisWeek >= lastWeek) {
-        //increase
-        theDifference = thisWeek - lastWeek;
-        console.log("theDifference = " + theDifference);
-        $("#hcw-cases-details").html("Up " + theDifference + " this week");
-    }
-    if ( thisWeek <= lastWeek) {
-        //decrease
-        theDifference = lastWeek - thisWeek;
-        $("#hcw-cases-details").html("Down " + theDifference + " this week");
-    }
-    if ( thisWeek == lastWeek) {
-        //same
-        $("#hcw-cases-details").html("no change<br/>week to week");
-    }
-    */
+   
     
-    
-    
-    //labs box top left
-    //$("#total-deaths").text(dataObj[0]["Total Deaths"]);
-    
-    
+  
     
 
 }

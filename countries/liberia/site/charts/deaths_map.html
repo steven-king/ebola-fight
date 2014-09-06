@@ -28,7 +28,7 @@
         var totalDeaths;
             
              $(document).ready(function() {
-        console.log("document ready");
+     
         loadData();
       });
 
@@ -44,10 +44,10 @@
 
       
         function parseData(data){
-            console.log("parseData");
+            
             
             var dataObj = $.parseJSON(data);
-            console.log( dataObj );
+            
             for (var i = 0, len = dataObj.length; i < len; ++i) {
             //sets data to arrays for charts
             theDate.push(dataObj[i]["Date"]);
@@ -56,10 +56,10 @@
             daySuspected.push(dataObj[i]["2. Daily deaths in suspected cases"]);
             dayProb.push(dataObj[i]["3. Daily deaths in probable  cases"]);
             dayConfirm.push(dataObj[i]["4. Daily deaths in confirmed cases"]);
-            console.log(dayTotal);
+           
             if (i == (len-1)) {
                 totalDeaths = dataObj[i]["1. Total daily deaths"]
-               console.log("totalDeaths: " + totalDeaths);
+               
               //drops off the grand total from end of each array
                dayTotal.pop();
                daySuspected.pop();
