@@ -24,7 +24,7 @@ function loadData(){
 
       
 function parseData(data){
-    console.log("parseData")
+   
     dataObj = $.parseJSON(data);
     var theLastItem = dataObj.length - 1;
     
