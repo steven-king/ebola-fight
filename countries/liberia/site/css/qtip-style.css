@@ -22,16 +22,16 @@
 
 	direction: ltr;
 
-	box-shadow: none;
+	box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.15);
 	padding: 0;
 }
 
 	.qtip-content{
 		position: relative;
-		padding: 5px 9px;
+		padding: 10px;
 		overflow: hidden;
 
-		text-align: left;
+		text-align: center;
 		word-wrap: break-word;
 	}
 
