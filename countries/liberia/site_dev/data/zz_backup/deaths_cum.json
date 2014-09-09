@@ -1,0 +1,142 @@
+[
+  {
+    "Date":"2-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":257,
+    "2. Total deaths in suspected cases":40,
+    "3. Total deaths in probable cases":99,
+    "4. Total deaths in confirmed cases":118
+  },
+  {
+    "Date":"3-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":264,
+    "2. Total deaths in suspected cases":41,
+    "3. Total deaths in probable cases":102,
+    "4. Total deaths in confirmed cases":121
+  },
+  {
+    "Date":"4-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":271,
+    "2. Total deaths in suspected cases":41,
+    "3. Total deaths in probable cases":108,
+    "4. Total deaths in confirmed cases":122
+  },
+  {
+    "Date":"5-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":276,
+    "2. Total deaths in suspected cases":42,
+    "3. Total deaths in probable cases":109,
+    "4. Total deaths in confirmed cases":125
+  },
+  {
+    "Date":"6-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":283,
+    "2. Total deaths in suspected cases":42,
+    "3. Total deaths in probable cases":115,
+    "4. Total deaths in confirmed cases":126
+  },
+  {
+    "Date":"7-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":295,
+    "2. Total deaths in suspected cases":42,
+    "3. Total deaths in probable cases":119,
+    "4. Total deaths in confirmed cases":134
+  },
+  {
+    "Date":"8-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":303,
+    "2. Total deaths in suspected cases":45,
+    "3. Total deaths in probable cases":122,
+    "4. Total deaths in confirmed cases":136
+  },
+  {
+    "Date":"9-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":312,
+    "2. Total deaths in suspected cases":49,
+    "3. Total deaths in probable cases":123,
+    "4. Total deaths in confirmed cases":140
+  },
+  {
+    "Date":"10-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":326,
+    "2. Total deaths in suspected cases":50,
+    "3. Total deaths in probable cases":133,
+    "4. Total deaths in confirmed cases":143
+  },
+  {
+    "Date":"11-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":344,
+    "2. Total deaths in suspected cases":50,
+    "3. Total deaths in probable cases":151,
+    "4. Total deaths in confirmed cases":143
+  },
+  {
+    "Date":"12-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":365,
+    "2. Total deaths in suspected cases":55,
+    "3. Total deaths in probable cases":163,
+    "4. Total deaths in confirmed cases":147
+  },
+  {
+    "Date":"13-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":402,
+    "2. Total deaths in suspected cases":66,
+    "3. Total deaths in probable cases":188,
+    "4. Total deaths in confirmed cases":148
+  },
+  {
+    "Date":"14-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":435,
+    "2. Total deaths in suspected cases":79,
+    "3. Total deaths in probable cases":192,
+    "4. Total deaths in confirmed cases":164
+  },
+  {
+    "Date":"15-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":455,
+    "2. Total deaths in suspected cases":83,
+    "3. Total deaths in probable cases":200,
+    "4. Total deaths in confirmed cases":172
+  },
+  {
+    "Date":"16-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":470,
+    "2. Total deaths in suspected cases":90,
+    "3. Total deaths in probable cases":203,
+    "4. Total deaths in confirmed cases":177
+  },
+  {
+    "Date":"17-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":481,
+    "2. Total deaths in suspected cases":97,
+    "3. Total deaths in probable cases":204,
+    "4. Total deaths in confirmed cases":180
+  },
+  {
+    "Date":"18-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":565,
+    "2. Total deaths in suspected cases":122,
+    "3. Total deaths in probable cases":237,
+    "4. Total deaths in confirmed cases":206
+  },
+  {
+    "Date":"19-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":587,
+    "2. Total deaths in suspected cases":126,
+    "3. Total deaths in probable cases":250,
+    "4. Total deaths in confirmed cases":211
+  },
+  {
+    "Date":"20-Aug-14",
+    "1. Total deaths in confirmed, probable and suspected cases":613,
+    "2. Total deaths in suspected cases":132,
+    "3. Total deaths in probable cases":265,
+    "4. Total deaths in confirmed cases":216
+  },
+  {
+    "Date":"Grand Total",
+    "1. Total deaths in confirmed, probable and suspected cases":7304,
+    "2. Total deaths in suspected cases":1292,
+    "3. Total deaths in probable cases":3083,
+    "4. Total deaths in confirmed cases":2929
+  }
+]

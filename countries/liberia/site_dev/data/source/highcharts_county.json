@@ -1,0 +1,3 @@
+series:[{name: total_deaths_suspected,data: [0, 17, 0, 3, 3, 2, 0, 34, 37, 0, 135, 11, 5, 0, 0]},{name: total_deaths_confirmed,data: [19, 11, 0, 13, 4, 0, 0, 146, 25, 0, 169, 27, 0, 0, 0]},{name: total_deaths_probable,data: [15, 13, 0, 3, 2, 0, 0, 140, 49, 0, 133, 34, 0, 1, 0]}]
+
+series:[{name: cases_cum_probable,data: [31, 40, 0, 12, 4, 0, 0, 345, 89, 0, 309, 50, 3, 0, 0]},{name: cases_cum_confirmed,data: [31, 24, 0, 13, 4, 0, 0, 220, 30, 0, 225, 41, 0, 1, 1]},{name: cases_cum_suspected,data: [1, 83, 1, 21, 2, 3, 0, 63, 126, 0, 42, 17, 6, 0, 1]}]
