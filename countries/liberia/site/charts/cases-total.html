@@ -70,11 +70,11 @@
                   for (var i = 0, len = dataObj.length; i < len; ++i) {
                        
                          var aDay = dataObj[i];
-                        date = aDay.Date;
-                        cases = aDay["1. Total cases"];
-                        suspected = aDay["2. Total suspected cases"];
-                        probable = aDay["3. Total probable cases"];
-                        confirmed = aDay["4.Total confirmed cases"];
+                        date = aDay["sit_rep__date"];
+                cases = aDay["cases_cum"];
+                suspected = aDay["cases_cum_suspected"];
+                probable = aDay["cases_cum_probable"];
+                confirmed = aDay["cases_cum_confirmed"];
                 
                         (i % 2 == 0 ? dataArray : oddOnes).push(cases);
                         (i % 2 == 0 ? daysArray : oddOnes).push(date);
@@ -89,11 +89,11 @@
             for (var i = 0, len = dataObj.length; i < len; ++i) {
                 
                 var aDay = dataObj[i];
-                date = aDay.Date;
-                cases = aDay["1. Total cases"];
-                suspected = aDay["2. Total suspected cases"];
-                probable = aDay["3. Total probable cases"];
-                confirmed = aDay["4.Total confirmed cases"];
+                date = aDay["sit_rep__date"];
+                cases = aDay["cases_cum"];
+                suspected = aDay["cases_cum_suspected"];
+                probable = aDay["cases_cum_probable"];
+                confirmed = aDay["cases_cum_confirmed"];
                 dataArray.push(cases);
                 daysArray.push(date);
                 suspectedArray.push(suspected);
@@ -132,6 +132,7 @@
 
          xAxis: {
                 categories: daysArray,
+                reversed: true,
                 labels: {
                     rotation: -45,
                     formatter: function () {

@@ -29,43 +29,26 @@ function parseData(data){
     var theLastItem = dataObj.length - 1;
     
        
-   
+   //console.log()
     //death box top left
-    $("#total-deaths").text(numberWithCommas(dataObj[theLastItem]["1. Total deaths in confirmed, probable and suspected cases"]));
-    
-    
-    
- 
-    var theDifference = 228;
-    var percentChange = 9;
-    $("#death-difference").html(theDifference + " deaths this week");
+    $("#total-deaths").text(numberWithCommas(dataObj[0]["total_deaths_all"]));
+    $("#death-difference").html(numberWithCommas(dataObj[0]["new_weekly_deaths"]) + " deaths this week");
     
    
     
     //case box top left
-    $("#total-cases").text(numberWithCommas(dataObj[theLastItem]["1. Total cases"]));
-    var theDifference = 376;
-    var percentChange = 55;
-
-    $("#case-difference").html(theDifference + " cases this week");
+    $("#total-cases").text(numberWithCommas(dataObj[0]["cases_cum"]));
+    $("#case-difference").html(numberWithCommas(dataObj[0]["new_weekly_cases"]) + " cases this week");
     
-  
     
     //hcw deaths box top left
-    $("#hcw-deaths").text(numberWithCommas(dataObj[theLastItem]["HealthCare worker total deaths"]));
-    var theDifference = 4;
-    var percentChange = 25;
+    $("#hcw-deaths").text(numberWithCommas(dataObj[0]["hcw_deaths_cum"]));
+    $("#hcw-death-details").text(numberWithCommas(dataObj[0]["new_weekly_deaths_hcw"]) + " deaths this week");  
 
-    $("#hcw-death-details").html(theDifference + " deaths this week");
     
-    
-    $("#hcw-cases").text(numberWithCommas(dataObj[theLastItem]["HealthCare worker total cases"]));
-    
-    var theDifference = 14;
-    var percentChange = 27;
+    $("#hcw-cases").text(numberWithCommas(dataObj[0]["hcw_cases_cum"]));
+    $("#hcw-cases-details").text(numberWithCommas(dataObj[0]["new_weekly_cases_hcw"]) + " cases this week");  
 
-    $("#hcw-cases-details").html(theDifference + " cases this week");
-    
    
     
   

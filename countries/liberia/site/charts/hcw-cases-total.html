@@ -75,8 +75,8 @@
                         
                          var aDay = dataObj[i];
                         date = aDay.Date;
-                        cases = aDay["HealthCare worker total cases"];
-                        suspected = aDay["HealthCare worker total deaths"];
+                        cases = aDay["hcw_cases_cum"];
+                        suspected = aDay["hcw_cases_cum"];
                         
                 
                         
@@ -95,9 +95,9 @@
             for (var i = 0, len = dataObj.length; i < len; ++i) {
                 
                 var aDay = dataObj[i];
-                date = aDay.Date;
-                cases = aDay["HealthCare worker total cases"];
-                suspected = aDay["HealthCare worker total deaths"];
+                date = aDay["sit_rep__date"];
+                cases = aDay["hcw_cases_cum"];
+                suspected = aDay["hcw_deaths_cum"];
                 
                 dataArray.push(cases);
                 daysArray.push(date);
@@ -142,6 +142,7 @@
 
          xAxis: {
                 categories: daysArray,
+                reversed:true,
                 labels: {
                     rotation: -45,
                     formatter: function () {

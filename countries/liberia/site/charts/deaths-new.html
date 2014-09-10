@@ -50,10 +50,11 @@
          
             for (var i = 0, len = dataObj.length; i < len; ++i) {
             //sets data to arrays for charts
-            theDate.push(dataObj[i]["Date"]);
+            theDate.push(dataObj[i]["sit_rep__date"]);
+            
             var tempHolder;
             
-            tempHolder = dataObj[i]["1. Total daily deaths"]
+            tempHolder = dataObj[i]["deaths_new_total"]
             
             if (tempHolder === undefined) {
                 tempHolder = null;
@@ -63,7 +64,7 @@
             
             var tempHolder;
             
-            tempHolder = dataObj[i]["2. Daily deaths in suspected cases"]
+            tempHolder = dataObj[i]["new_deaths_suspected"]
             
             if (tempHolder === undefined) {
                 tempHolder = null;
@@ -72,7 +73,7 @@
             
             var tempHolder;
             
-            tempHolder = dataObj[i]["3. Daily deaths in probable  cases"]
+            tempHolder = dataObj[i]["new_deaths_probable"]
             
             if (tempHolder === undefined) {
                 tempHolder = null;
@@ -81,7 +82,7 @@
             
              var tempHolder;
             
-            tempHolder = dataObj[i]["4. Daily deaths in confirmed cases"]
+            tempHolder = dataObj[i]["new_deaths_confirmed"]
             
             if (tempHolder === undefined) {
                 tempHolder = null;
@@ -92,7 +93,7 @@
            
             
             if (i == (len-1)) {
-                totalDeaths = dataObj[i]["1. Total daily deaths"]
+                totalDeaths = dataObj[i]["deaths_new_total"]
               
               
             }
@@ -140,6 +141,7 @@
         xAxis: {
             allowDecimals: false,
             categories: theDate,
+            reversed:true,
             
             labels: {
                 rotation: -45,

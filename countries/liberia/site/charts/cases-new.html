@@ -49,7 +49,7 @@
     
      
       function parseData(data){
-        
+        //console.log("parseData");
         dataObj = $.parseJSON(data);
                                 
      
@@ -60,11 +60,11 @@
                 var aDay = dataObj[i];
                 
               
-                date = aDay.Date;
-                cases = aDay["1. Total new cases"];
-                suspected = aDay["2. New suspected cases"];
-                probable = aDay["3. New probable cases"];
-                confirmed = aDay["4. New confirmed cases"];
+               date = aDay["sit_rep__date"];
+                cases = aDay["new_cases"];
+                suspected = aDay["cases_new_suspected"];
+                probable = aDay["cases_new_probable"];
+                confirmed = aDay["cases_new_confirmed"];
                 dataArray.push(cases);
                 daysArray.push(date);
                 suspectedArray.push(suspected);
@@ -99,6 +99,7 @@
 
          xAxis: {
                 categories: daysArray,
+                reversed: true,
                 labels: {
                     rotation: -45,
                     formatter: function () {
@@ -114,6 +115,7 @@
                 
             },
          yAxis: {
+                
                 min: 0,
                 title:
                     {

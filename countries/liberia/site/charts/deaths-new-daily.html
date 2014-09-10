@@ -20,6 +20,15 @@
             }
         </style>
         <script type="text/javascript">
+        
+        var dataArray = [];
+    var daysArray = [];
+    var suspectedArray = []; 
+    var probableArray = [];
+    var confirmedArray = []; 
+    
+    var dataObj =""; 
+        
         var theDate = [];
         var dayTotal= [];
         var daySuspected = [];
@@ -36,7 +45,7 @@
          function loadData(){
         $.ajax({
           type:"GET",
-          url:"../data/export_main.json",
+          url:"../data/export_main_daily.json",
           dataType:"text",
           success: parseData
         });
@@ -44,38 +53,33 @@
 
       
         function parseData(data){
-            
+             
             
             var dataObj = $.parseJSON(data);
-         
+       
             for (var i = 0, len = dataObj.length; i < len; ++i) {
             //sets data to arrays for charts
-            theDate.push(dataObj[i]["Date"]);
-           
-            dayTotal.push(dataObj[i]["1. Total daily deaths"]);
-            daySuspected.push(dataObj[i]["2. Daily deaths in suspected cases"]);
-            dayProb.push(dataObj[i]["3. Daily deaths in probable  cases"]);
-            dayConfirm.push(dataObj[i]["4. Daily deaths in confirmed cases"]);
-            
-            
-            
-            
+             var aDay = dataObj[i];
+            date = aDay["sit_rep__date"];
+              
+                suspected = aDay["new_deaths_suspected"];
+                probable = aDay["new_deaths_probable"];
+                confirmed = aDay["new_deaths_confirmed"];
+                daysArray.push(date);
+                suspectedArray.push(suspected);
+                probableArray.push(probable);
+                confirmedArray.push(confirmed); 
+         
         
-            
-            if (i == (len-1)) {
-                totalDeaths = dataObj[i]["1. Total daily deaths"]
-              
-              
-            }
-            
+
            
            
  }
        
       
-      
+        console.log(suspectedArray);
           
-            
+                
             for (var i = 0, len = dayProb.length; i < len; ++i) {
         if (dayProb[i] < 0 ) {
             dayProp[i] = 0;
@@ -113,8 +117,8 @@
         },
         xAxis: {
             allowDecimals: false,
-            categories: theDate,
-            
+            categories: daysArray,
+            reversed: true,
             labels: {
                 step:3,
                 rotation: -45,
@@ -164,15 +168,15 @@
         },
         series: [{
             name: 'Confirmed Deaths',
-            data: dayConfirm
+            data: confirmedArray
         },
         {
             name: 'Probable Deaths',
-            data: dayProb
+            data: probableArray
         },
            {
             name: 'Suspected Deaths',
-            data: daySuspected
+            data: suspectedArray
         }
         
          
