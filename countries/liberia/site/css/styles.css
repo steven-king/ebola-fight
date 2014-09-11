@@ -14,6 +14,11 @@ left: 0;
 top: 0;
 }
 
+.title a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
 .stats-hr {
     width: 150px;
     text-align: center;
@@ -129,6 +134,31 @@ iframe{
     
 }
 
+.social-btns {
+    margin: 5px 0;
+    float: right;
+}
+
+.right-small {
+    width: 5.5rem !important;
+}
+
+.social-btns li {
+    list-style-type: none;
+    float: left;
+    margin: 0 10px 0 0;
+    color: #fff;
+}
+
+.social-btns i {
+    color: #fff;
+    font-size: 24px;
+}
+
+.panel {
+    padding: 4em 1.25em !important;
+}
+
 .panel .lg-number{
     margin-top:.53em;
     margin-bottom: .43em;
@@ -178,7 +208,7 @@ iframe{
     line-height: 25px;
 }
 .crossbar{
-    min-height: 325px;
+    min-height: 350px;
 }
 
 .crossbar .stats-hr{
