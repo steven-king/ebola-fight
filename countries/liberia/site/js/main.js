@@ -8,7 +8,8 @@ var HCWCases = new Array;
 var labs = new Array;
 var treatments = new Array;
 
-// make number human readable 
+// make number human readable
+
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -22,7 +23,7 @@ function loadData(){
     });
   }//end load(xml)
 
-      
+//extract data      
 function parseData(data){
    
     dataObj = $.parseJSON(data);
