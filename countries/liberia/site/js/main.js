@@ -49,8 +49,10 @@ function parseData(data){
     
     $("#hcw-cases").text(numberWithCommas(dataObj[0]["hcw_cases_cum"]));
     $("#hcw-cases-details").text(numberWithCommas(dataObj[0]["new_weekly_cases_hcw"]) + " cases this week");  
-
-   
+    
+    console.log("Sit Date: " + dataObj[0]["sit_rep__date"]);
+    
+    $("#sit-date").html(dataObj[0]["sit_rep__date"])
     
   
     
