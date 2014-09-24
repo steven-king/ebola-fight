@@ -1,0 +1,45 @@
+{"1. Total
+new cases": 45, "1. Total deaths in confirmed, probable and suspected cases":
+181, "3. Daily deaths in probable cases": 14, "4.Total confirmed cases": 101,
+"4. Total deaths in confirmed cases": 82, "2. Total suspected cases": 101,
+"HealthCare worker total deaths": 28, "HealthCare worker new cases": null,
+"HealthCare worker new deaths": null, "4. Daily deaths in confirmed cases": 10,
+"2. Daily deaths in suspected cases": 1, "3. Total probable cases": 158, "2. New
+suspected cases": 0, "1. Total daily deaths": 25, "3. New probable cases": 42,
+"4. New confirmed cases": 3, "1. Total cases": 360, "Date": "Jul 28", "2. Total
+deaths in suspected cases": 23, "3. Total deaths in probable cases": 76,
+"HealthCare worker total cases": 47},
+
+{"1. Total new cases": 55, "1. Total deaths
+in confirmed, probable and suspected cases": 208, "3. Daily deaths in probable
+cases": 0, "4.Total confirmed cases": 0, "4. Total deaths in confirmed cases":
+0, "2. Total suspected cases": 0, "HealthCare worker total deaths": 0,
+"HealthCare worker new cases": null, "HealthCare worker new deaths": null, "4.
+Daily deaths in confirmed cases": 0, "2. Daily deaths in suspected cases": 0,
+"3. Total probable cases": 0, "2. New suspected cases": 0, "1. Total daily
+deaths": 0, "3. New probable cases": 0, "4. New confirmed cases": 0, "1. Total
+cases": 0, "Date": "Jul 29", "2. Total deaths in suspected cases": 0, "3. Total
+deaths in probable cases": 0, "HealthCare worker total cases": 0},
+
+{"1. Total
+new cases": 65, "1. Total deaths in confirmed, probable and suspected cases": 234,
+"3. Daily deaths in probable cases": 0, "4.Total confirmed cases": 0, "4. Total
+deaths in confirmed cases": 0, "2. Total suspected cases": 0, "HealthCare worker
+total deaths": 0, "HealthCare worker new cases": null, "HealthCare worker new
+deaths": null, "4. Daily deaths in confirmed cases": 0, "2. Daily deaths in
+suspected cases": 0, "3. Total probable cases": 0, "2. New suspected cases": 0,
+"1. Total daily deaths": 0, "3. New probable cases": 0, "4. New confirmed
+cases": 0, "1. Total cases": 0, "Date": "Jul 30", "2. Total deaths in suspected
+cases": 0, "3. Total deaths in probable cases": 0, "HealthCare worker total
+cases": 0},
+
+{"1. Total new cases": 74, "1. Total deaths in confirmed, probable
+and suspected cases": 236, "3. Daily deaths in probable cases": 17, "4.Total
+confirmed cases": 109, "4. Total deaths in confirmed cases": 107, "2. Total
+suspected cases": 101, "HealthCare worker total deaths": 37, "HealthCare worker
+new cases": null, "HealthCare worker new deaths": null, "4. Daily deaths in
+confirmed cases": 25, "2. Daily deaths in suspected cases": 13, "3. Total
+probable cases": 224, "2. New suspected cases": 0, "1. Total daily deaths": 55,
+"3. New probable cases": 66, "4. New confirmed cases": 8, "1. Total cases": 434,
+"Date": "Jul 31", "2. Total deaths in suspected cases": 36, "3. Total deaths in
+probable cases": 93, "HealthCare worker total cases": 61}

@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ebola Cases</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    
+</head>
+
+<body>
+<script type = "text/javascript">
+   
+    var dataArray = [];
+    var daysArray = [];
+    var suspectedArray = []; 
+    var probableArray = [];
+    var confirmedArray = []; 
+    var cases = "";
+    var date = "";
+    var suspected = "";
+    var probable = "";
+    var confirmed = "";
+    var dataObj =""; 
+
+    
+    $(document).ready(function() {
+        
+    
+        loadData();
+      });
+
+            
+         function loadData(){
+        $.ajax({
+          type:"GET",
+          url:"../data/export_main_daily.json",
+          dataType:"text",
+          success: parseData
+        });
+      }
+      //end load(json)
+     
+    
+     
+      function parseData(data){
+        
+        dataObj = $.parseJSON(data);
+                                
+
+          
+            
+            for (var i = 0, len = dataObj.length; i < len; ++i) {
+                
+                var aDay = dataObj[i];
+                
+             
+                date = aDay["sit_rep__date"];
+                cases = aDay["new_cases"];
+                suspected = aDay["cases_new_suspected"];
+                probable = aDay["cases_new_probable"];
+                confirmed = aDay["cases_new_confirmed"];
+                dataArray.push(cases);
+                daysArray.push(date);
+                suspectedArray.push(suspected);
+                probableArray.push(probable);
+                confirmedArray.push(confirmed); 
+                
+            }
+            
+           writeChart(); 
+ }
+        
+    
+         
+ 
+ 
+    
+     
+        
+    function writeChart() {
+   
+     $('#container').highcharts
+        var chart = new Highcharts.Chart({
+        chart: {
+          type: 'column',
+          renderTo: 'container'
+        },
+        colors: ['#0cc1bc', '#DF1FA4', '#F1E258', '#052E70'],
+        title: {
+                text: 'New Cases, By Day',
+               
+            },
+
+         xAxis: {
+                categories: daysArray,
+                reversed: true,
+                labels: {
+                    step:3,
+                    rotation: -45,
+                    formatter: function () {
+                        return this.value; // clean, unformatted number for year
+                    },
+                    style: {
+                    fontSize: '9px',
+                    }   
+                },
+                title: {
+                    text: null
+                }
+                
+            },
+         yAxis: {
+                min: 0,
+                title:
+                    {
+                        text:'Cases'
+                    },
+                    
+                labels: {
+                    
+                    overflow: 'justify',
+                    
+                }
+            },
+            plotOptions: {
+              
+                
+             
+            column: {
+                
+               
+                fillOpacity: 0.5,
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                    style: {
+                        textShadow: '0 0 1px black, 0 0 1px black'
+                    }
+                },
+                
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    }
+                }
+            }
+        },
+        
+            credits: {
+                enabled: false
+            },
+         tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/><br/>Total Cases: ' + this.total;
+            }
+        },
+        series: [
+            {
+                    name: 'Confirmed Cases',
+                    data: confirmedArray
+                
+             },
+            
+             {
+                    name: 'Probable Cases',
+                    data: probableArray, 
+             },
+             {
+                    name: 'Suspected Cases',
+                    data: suspectedArray,
+                
+        
+             },
+             
+             
+    
+             
+             ]
+        
+        
+        },
+        function(chart){
+            $.each(chart.series,function(i,serie){
+        $.each(serie.data,function(j,data){
+            if(data.yBottom - data.plotY < 15)
+                data.dataLabel.destroy();
+        });
+    });
+         
+
+
+    });
+
+         
+    };
+ 
+</script>
+
+</script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br><br>
+<p><em>* Daily reports not available for all days.</em></p>
+</body>
+</html>
+

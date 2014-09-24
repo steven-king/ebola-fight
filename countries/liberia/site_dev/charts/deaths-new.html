@@ -1,0 +1,238 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Liberia Ebola</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <style type="text/css">
+            #container {
+                height: 400px; 
+                min-width: 310px; 
+                max-width: 100%; 
+                margin: 0 auto; 
+            }
+            .loading {
+                margin-top: 5em;
+                text-align: center;
+                color: gray;
+            }
+        </style>
+        <script type="text/javascript">
+        var theDate = [];
+        var dayTotal= [];
+        var daySuspected = [];
+        var dayProb = [];
+        var dayConfirm = [];
+        var totalDeaths;
+            
+             $(document).ready(function() {
+       
+        loadData();
+      });
+
+            
+         function loadData(){
+        $.ajax({
+          type:"GET",
+          url:"../data/export_main_weekly.json",
+          dataType:"text",
+          success: parseData
+        });
+      }//end load(xml)
+
+      
+        function parseData(data){
+            
+            
+            var dataObj = $.parseJSON(data);
+         
+            for (var i = 0, len = dataObj.length; i < len; ++i) {
+            //sets data to arrays for charts
+            theDate.push(dataObj[i]["Date"]);
+            var tempHolder;
+            
+            tempHolder = dataObj[i]["1. Total daily deaths"]
+            
+            if (tempHolder === undefined) {
+                tempHolder = null;
+            }
+            dayTotal.push(tempHolder);
+            
+            
+            var tempHolder;
+            
+            tempHolder = dataObj[i]["2. Daily deaths in suspected cases"]
+            
+            if (tempHolder === undefined) {
+                tempHolder = null;
+            }
+            daySuspected.push(tempHolder);
+            
+            var tempHolder;
+            
+            tempHolder = dataObj[i]["3. Daily deaths in probable  cases"]
+            
+            if (tempHolder === undefined) {
+                tempHolder = null;
+            }
+            dayProb.push(tempHolder);
+            
+             var tempHolder;
+            
+            tempHolder = dataObj[i]["4. Daily deaths in confirmed cases"]
+            
+            if (tempHolder === undefined) {
+                tempHolder = null;
+            }
+           dayConfirm.push(tempHolder)
+            
+            
+           
+            
+            if (i == (len-1)) {
+                totalDeaths = dataObj[i]["1. Total daily deaths"]
+              
+              
+            }
+            
+           
+           
+ }
+ 
+   for (var i = 0, len = dayProb.length; i < len; ++i) {
+        if (dayProb[i] < 0 ) {
+            dayProp[i] = 0;
+        }
+        if (dayConfirm[i] < 0 ) {
+            dayConfirm[i] = 0;
+        }
+        if (daySuspected[i] < 0 ) {
+            daySuspected[i] = 0;
+        }
+        
+   }
+       
+        createChart();     
+            
+        }
+            
+            
+            
+            function createChart(aDataType){
+
+               
+              $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        colors: ['#0cc1bc', '#DF1FA4', '#F1E258',  '#052E70'],
+        title: {
+            text: 'Deaths, Each Week'
+        },
+        subtitle: {
+            text: ''
+        },
+        credits: {
+            enabled: false
+        },
+        xAxis: {
+            allowDecimals: false,
+            categories: theDate,
+            
+            labels: {
+                rotation: -45,
+                formatter: function () {
+                    return this.value; // clean, unformatted number for year
+                },
+                style: {
+                    fontSize: '9px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Daily Deaths'
+            }
+        
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/><br/>Total Cases: ' + this.total;
+            }
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                    style: {
+                        textShadow: '0 0 1px black, 0 0 1px black'
+                    }
+                },
+                
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    }
+                }
+            }
+        },
+        series: [
+                  {
+            name: 'Confirmed Deaths',
+            data: dayConfirm
+        },
+        {
+            name: 'Probable Deaths',
+            data: dayProb
+        },
+      
+         
+           {
+            name: 'Suspected Deaths',
+            data: daySuspected
+        }
+        
+        
+         
+        
+        ]
+
+              },
+              function(chart){
+            $.each(chart.series,function(i,serie){
+        $.each(serie.data,function(j,data){
+            if(data.yBottom - data.plotY < 15)
+                data.dataLabel.destroy();
+        });
+    });
+         
+
+
+    });
+
+         
+    };
+        </script>
+    </head>
+    <body>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script> 
+        
+
+
+        <div id="container"></div>
+<p><em>* Weekly total sum of daily reports. Daily reports not available for all days.</em></p>
+
+    </body>
+</html>

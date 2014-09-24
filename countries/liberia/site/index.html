@@ -1,0 +1,286 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get the latest official data and news regarding the Ebola outbreak in Liberia.">
+	<meta name="keywords" content="Ebola,Liberia,news,data,MICAT, Liberia Ministry of Information">
+	<meta name="author" content="Liberia Ministry of Information">
+	<meta property="og:image" content="/img/ebola-in-liberia-og-image.jpg" />
+    <title>Ebola Report | Republic of Liberia</title>
+    <link rel="stylesheet" href="css/foundation.min.css" />
+    <link rel="stylesheet" href="css/foundation-icons.css" />
+
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <script src="js/vendor/modernizr.js"></script>
+
+  </head>
+  <body>
+
+
+
+    <div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+        <h1 class="title uppercase show-for-small-only">Ebola Report</h1>
+	<h1 class="title uppercase show-for-medium-up"><A href="./">Ebola Report | Republic of Liberia</a></h1>
+      </section>
+      <section class="right-small">
+        <ul class="social-btns">
+          <li><a class="tweet" href="#"><i class="fi-social-twitter size-36"></i></a></li>
+          <li><a class="fb" href="#"><i class="fi-social-facebook size-36"></i></a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+	<li class="uppercase cat"><a href="index.html"><i class="red"></i>Home</a></li>
+       <li class="uppercase cat show-for-large-up"><a href="dashboard.html"><i class="red"></i>Dashboard</a></li>
+
+      <li class="uppercase cat"><a href="news.html"><i class=" red"></i>News</a></li>
+          <li class="uppercase cat"><a href="resources.html"><i class="red"></i>Resources</a></li>
+          <li class="hide uppercase cat"><a href="map.html"><i class="red"></i>Interactive Map</a></li></li>
+      <li class="uppercase cat"><a href="about.html"><i class="red"></i>About</a></li>
+
+      <li class="uppercase cat hide"><a href="#"><i class="red"></i>SIGN IN</a></li>
+
+
+    </ul>
+      </ul>
+    </aside>
+
+
+
+    <section class="main-section">
+      <!-- content goes here -->
+
+
+
+
+
+
+
+   <div class="row">
+
+      	<div class="panel redrock lg-number">
+
+	<!-- Up caret = &#9650; down caret = &#9660; -->
+
+	  <div class="row">
+	     <div class="small-12 medium-6 large-6 text-center columns bigstat">
+		  <h3 class="uppercase white">Cases</h3>
+		  <h2 id="total-cases" class="lg-number">-</h2>
+            <hr class="stats-hr">
+		  <h5 id="case-difference" class="uppercase overtimeLinks">-</h5>
+		</div>
+
+
+
+	      <div class="small-12 medium-6 large-6 text-center columns bigstat">
+		<h3 class="uppercase white ">Total Deaths</h3>
+		<h2 id= "total-deaths" class="lg-number ">-</h2>
+        <hr class="stats-hr">
+		<h5 id="death-difference" class="uppercase overtimeLinks">-</h5>
+
+	      </div>
+
+
+
+
+	  </div><!-- Close row -->
+	</div><!-- Close panel -->
+
+   </div>
+
+   <div class="row">
+    <div id="cases-chart-total" class="small-12 medium-12 large-6 columns overtime graph">
+
+       <iframe src="charts/cases-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+   <a href="#" data-reveal-id="embed-cases-total"><i class="fa fa-code"></i>Embed Chart</a>
+
+<div id="embed-cases-total" class="reveal-modal" data-reveal>
+  <h3>Embed Chart Code</h3>
+  <p><pre><code>&lt;iframe src="charts/cases-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"&gt;&lt;/iframe&gt;
+</code></pre></p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+        <hr/>
+      </div>
+
+
+       <div id="deaths-chart-total" class="small-12 medium-12 large-6 columns overtime graph">
+
+    <iframe src="charts/deaths-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+    <a href="#" data-reveal-id="embed-deaths-total"><i class="fa fa-code"></i>Embed Chart</a>
+
+<div id="embed-deaths-total" class="reveal-modal" data-reveal>
+  <h3>Embed Chart Code</h3>
+  <p><pre><code>&lt;iframe src="charts/deaths-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"&gt;&lt;/iframe&gt;
+</code></pre></p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+    <hr/>
+      </div>
+</div>
+
+
+   <div class="row">
+
+                 <div id="county-map" class="hide-for-small-only small-12 medium-12 columns overtime graph">
+
+    <iframe width='100%' height='520' frameborder='0' src='http://unc-crisis-team.cartodb.com/viz/374d1302-3140-11e4-9ca7-0edbca4b5057/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+		 <a href="#" data-reveal-id="embed-map"><i class="fa fa-code"></i>Embed Map</a>
+
+        <div id="embed-map" class="reveal-modal" data-reveal>
+         <h3>Embed Map Code</h3>
+         <p><pre><code>&lt;iframe src="http://unc-crisis-team.cartodb.com/viz/374d1302-3140-11e4-9ca7-0edbca4b5057/embed_map" width="100%" height="520px" scrolling="no" frameBorder="0" border="none"&gt;&lt;/iframe&gt;</code></pre></p>
+         <a class="close-reveal-modal">&#215;</a>
+        </div>
+         </div>
+   </div>
+ <!--
+<div class="row">
+          <div id="cases-map" class=" small-12 medium-12 columns">
+
+
+  <iframe src="charts/county.html" width="100%" height="500px" scrolling="no" frameBorder="0" border="none"></iframe>
+      </div>
+
+
+
+
+
+      <div id="cases-chart-new"class="small-12 medium-12 large-6 columns overtime">
+
+       <iframe src="charts/cases-new.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+
+      </div>
+
+       <div id="deaths-chart-new" class="small-12 medium-12 large-6 columns overtime">
+
+    <iframe src="charts/deaths-new.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+
+      </div>
+-->
+</div>
+
+
+
+
+	<div class="panel greypnl lg-number">
+
+	<!-- Up caret = &#9650; down caret = &#9660; -->
+	  <div class="row">
+
+
+
+	      <div class="small-12 medium-6 large-6 text-center columns bigstat">
+
+		<h3 class="uppercase black statcat">Healthcare Worker Cases</h3>
+		<h2 id="hcw-cases" class="lg-number">0</h2>
+        <hr class="stats-hr">
+		<h5 id="hcw-cases-details" class="uppercase overtimeLinks overtime black"></h5>
+		<!--<a href="#" class="button [radius round] uppercase thisweek black">View over time</a>-->
+	      </div>
+
+
+	       <div class="small-12 medium-6 large-6 text-center columns bigstat">
+	      <h3 class="uppercase black statcat">Healthcare Worker Deaths</h3>
+		<h2 id="hcw-deaths" class="lg-number">0</h2>
+        <hr class="stats-hr">
+		<h5 id="hcw-death-details"class="uppercase overtimeLinks overtime black"></h5>
+		<!--<a href="#" class="button [radius round] uppercase thisweek black">View over time</a>-->
+
+	      </div>
+
+	      <div class="small-12 large-12  columns graph">
+
+    <iframe src="charts/hcw-cases-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"></iframe>
+       <a href="#" data-reveal-id="embed-hcw-cases-total"><i class="fa fa-code"></i>Embed Chart</a>
+
+<div id="embed-hcw-cases-total" class="reveal-modal" data-reveal>
+  <h3>Embed Chart Code</h3>
+  <p><pre><code>&lt;iframe src="charts/hcw-cases-total.html" width="100%" height="425px" scrolling="no" frameBorder="0" border="none"&gt;&lt;/iframe&gt;
+</code></pre></p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+  </div>
+
+
+	      <div class="spacer"></div>
+
+
+	      <div class="small-12 medium-12 large-12 coatofarms">
+          <img src="img/coat-of-arms-of-liberia.png">
+        </div>
+
+	      <div class="small-12 medium-12 large-12 text-center columns blank50"></div>
+
+	  </div><!-- Close row -->
+	</div><!-- Close panel -->
+
+	 <div class="footer">
+	 <!-- <span id="openall" class=""><a href="#" onclick="showAll()" class="button uppercase thisweek "><i class="fa fa-area-chart mobile-icon "></i> Show All Graphs</a></span><br/>
+	-->
+
+	  <p><strong>Updated: <span id="sit-date"></span></strong> Source: Liberian MoHSW <br>FIGURES SUBJECT TO CHANGE AS REPORTING CONTINUES</p></div>
+
+    </div>
+
+       </div>
+
+    </section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/social.js"></script>
+    <!--<script src="js/jquery.fittext.js"></script>-->
+
+
+
+
+
+    <script src="js/main.js"></script>
+    <script>
+      $(document).foundation();
+      $(document).ready(function() {
+
+	       loadData();
+
+      });
+    </script>
+
+         <!--Google Analytics-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54325158-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  </body>
+</html>

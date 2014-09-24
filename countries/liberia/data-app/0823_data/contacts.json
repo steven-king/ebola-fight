@@ -1,0 +1,122 @@
+[
+  {
+    "Date":"2-Aug-14",
+    "News contacts":5,
+    "Contacts completed ovservation":7,
+    "Contacts lost follow up":2
+  },
+  {
+    "Date":"3-Aug-14",
+    "News contacts":14,
+    "Contacts completed ovservation":0,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"4-Aug-14",
+    "News contacts":26,
+    "Contacts completed ovservation":37,
+    "Contacts lost follow up":7
+  },
+  {
+    "Date":"5-Aug-14",
+    "News contacts":24,
+    "Contacts completed ovservation":36,
+    "Contacts lost follow up":9
+  },
+  {
+    "Date":"6-Aug-14",
+    "News contacts":42,
+    "Contacts completed ovservation":1,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"7-Aug-14",
+    "News contacts":2,
+    "Contacts completed ovservation":8,
+    "Contacts lost follow up":6
+  },
+  {
+    "Date":"8-Aug-14",
+    "News contacts":33,
+    "Contacts completed ovservation":0,
+    "Contacts lost follow up":6
+  },
+  {
+    "Date":"9-Aug-14",
+    "News contacts":15,
+    "Contacts completed ovservation":19,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"10-Aug-14",
+    "News contacts":28,
+    "Contacts completed ovservation":0,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"11-Aug-14",
+    "News contacts":182,
+    "Contacts completed ovservation":133,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"12-Aug-14",
+    "News contacts":173,
+    "Contacts completed ovservation":59,
+    "Contacts lost follow up":28
+  },
+  {
+    "Date":"13-Aug-14",
+    "News contacts":157,
+    "Contacts completed ovservation":34,
+    "Contacts lost follow up":28
+  },
+  {
+    "Date":"14-Aug-14",
+    "News contacts":61,
+    "Contacts completed ovservation":61,
+    "Contacts lost follow up":9
+  },
+  {
+    "Date":"15-Aug-14",
+    "News contacts":59,
+    "Contacts completed ovservation":100,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"16-Aug-14",
+    "News contacts":145,
+    "Contacts completed ovservation":96,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"17-Aug-14",
+    "News contacts":107,
+    "Contacts completed ovservation":48,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"18-Aug-14",
+    "News contacts":281,
+    "Contacts completed ovservation":88,
+    "Contacts lost follow up":21
+  },
+  {
+    "Date":"19-Aug-14",
+    "News contacts":139,
+    "Contacts completed ovservation":71,
+    "Contacts lost follow up":9
+  },
+  {
+    "Date":"20-Aug-14",
+    "News contacts":196,
+    "Contacts completed ovservation":115,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"Grand Total",
+    "News contacts":1689,
+    "Contacts completed ovservation":913,
+    "Contacts lost follow up":125
+  }
+]

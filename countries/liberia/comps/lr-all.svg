@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="700px" height="700px" viewBox="0 0 700 700" enable-background="new 0 0 700 700" xml:space="preserve">
+<desc>Map version: 1.0.3
+Copyright (c) 2014 Highsoft AS, Based on data from Natural Earth http://www.naturalearthdata.com</desc>
+<title>Liberia</title>
+<g id="admin1">
+	<g id="LR">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<name>Liberia</name>
+			<labelrank>4</labelrank>
+			<country-abbrev>Liberia</country-abbrev>
+			<subregion>Western Africa</subregion>
+			<woe-id>23424876</woe-id>
+			<region-wb>Sub-Saharan Africa</region-wb>
+			<iso-a3>LBR</iso-a3>
+			<iso-a2>LR</iso-a2>
+			<region-un>Africa</region-un>
+			<continent>Africa</continent>
+			<hc-key>lr</hc-key>
+			<hc-a2>LI</hc-a2>
+		</desc>
+	</g>
+	<path id="LR.MY" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M643.3,621.9l4.4,5.5l1.2,10.1l-0.7,35.6l0.7,8.9l1.5,4.9
+		l-2.301,4.8l0.7,3.6l5.5,3.8l-8.7,0.9l-8.6-2.4l-11.4,0.101l-3.399-3.4l-9.2-2.8l-4-2.9l-3.4-6l-1.899-0.5l4.3-8.8l0.2-9.2
+		l1.3-5.899l-1-2.9l-13.7-22.2L587.4,627l-10.801-4.6l-11.899-4L561.1,613.6l-0.199-3l5.8-14.5l8.1-13.399l0.4-5.4l-1.8-4.3
+		l27.1,4.6l3.2,3.2l0.1,29l1,4.4l8.601,0.8l5.8-3.3h5.6l8.7,3.399l2.8,3.801L643.3,621.9z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.MY</hasc>
+			<alt-name>NULL</alt-name>
+			<woe-id>2346107</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI13</fips>
+			<postal-code>MY</postal-code>
+			<name>Maryland</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-7.69738</longitude>
+			<woe-name>Maryland</woe-name>
+			<latitude>4.64403</latitude>
+			<woe-label>Maryland, LR, Liberia</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.67</hc-middle-x>
+			<hc-middle-y>0.61</hc-middle-y>
+			<hc-key>lr-my</hc-key>
+			<hc-a2>MY</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.SI" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M460.4,621.4L448,616l-11.7-9.8l-4.3-2.8l-10.3-4.2
+		l-5.101-0.8l-8-3l-1.8-3.4l-7.3-2l-5.9-3.4L384,578.4l-8.4-4.4l-5.199-3.9l-5.801-2.5L362.4,561.7l-10.301-5l-10.7-9.9l-1.8-5.7
+		l6.8-3.8l2.1-4.2l3.2-0.5l5.3-6.8l1.7-6.5l-3.4-15.2l-3.7-9.1l15.4-13l6.1-2.6l5.2-4l7.2-2l2-3l0.9-6.7l4.8-7.601l3.5-2.399
+		l4.399-1.101l19.301,0.5l4.3-2.899l2.5-3.7l43.399,24.1l9.5,4.101l10.601-12.9l3.399-1l8.101,1.101l9.3,6.899l5.8,9.2l1.5,5l-1,5.2
+		l-14.5,3.1l-1.5,4.7l-4.7,7.5l2.301,4.1l4.899,1.301l1.5,4.8l-1.5,8.3l3.7,10l11.7,11.9l5.2,7.699l1.399,4.101l-0.2,7.8l-4.5,2.5
+		l-8,9.9l-12,1.5l-11,8.5l-5,2.699l-8.1,14.101l-8.8,3.7l-2.4,9.199L460.4,621.4z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.SI</hasc>
+			<alt-name>NULL</alt-name>
+			<woe-id>2346104</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI10</fips>
+			<postal-code>SI</postal-code>
+			<name>Sinoe</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-8.86819</longitude>
+			<woe-name>Sinoe</woe-name>
+			<latitude>5.39111</latitude>
+			<woe-label>Sinoe, LR, Liberia</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.53</hc-middle-x>
+			<hc-middle-y>0.42</hc-middle-y>
+			<hc-key>lr-si</hc-key>
+			<hc-a2>SI</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.BM" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M110.9,358.4l-2.9-5.9l-5.5-5.8l-6.4-4.4l-26.2-14.2
+		l-3.8-1.399l-0.1-6.8l3.8-4.101l3.4-1.1l1.7-5.3l3.4-3.601l4.6-0.5l2.4-12.2l-2.7-4.8l6.5-18.6l0.2-9.5l2.3-0.5l9.2,3.2l10.2-0.8
+		l10.3,2.2l1.2,3.8h-3.2l-0.7,6.6l0.3,8.8l5,6.2l5.5-1.4l6.1-4.2l8.6-3.3h18.2l5-1.1l-3.8,5.9l-2.5,0.9l-8.9,2.5l-0.5,5.9l-1.9,1.7
+		l1.1,5.4l-4.2,6.4l-1.4,6.699v7.4l6.5,8.9l-7.8,5.199l-10.6-6.699l-4.4-0.2l-8.1,6.3l-4.6,1l-5.2,3.5l0.1,5.3l1.9,5.9L110.9,358.4z
+		">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.BM</hasc>
+			<alt-name>NULL</alt-name>
+			<woe-id>2346109</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI15</fips>
+			<postal-code>BM</postal-code>
+			<name>Bomi</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-10.7753</longitude>
+			<woe-name>Bomi</woe-name>
+			<latitude>6.75329</latitude>
+			<woe-label>Bomi, LR, Liberia</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.43</hc-middle-x>
+			<hc-middle-y>0.52</hc-middle-y>
+			<hc-key>lr-bm</hc-key>
+			<hc-a2>BM</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.GP" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M167.3,279.7l-5,1.1h-18.2l-8.6,3.3l-6.1,4.2l-5.5,1.4
+		l-5-6.2l-0.3-8.8l0.7-6.6h3.2l-1.2-3.8l-10.3-2.2l-10.2,0.8l-9.2-3.2l-2.3,0.5L88,259l4.9-2.5l5.7-6.9l13.1-8.5l3.9-0.9l4-3.2
+		l4-5.9l5.1-4l5.6-1.5l20.2-11.8l5.4-6.1l-0.7-8.4l-1.5-5.9L148,180l-3.1-1.9l-9.8-0.6l-4.7-1.7l-17.4-3l-2.8-2.4l-8.1-1.6
+		l22.2-26.8l6.3-5.3l7.9-4.2l5-1l-0.3-40.2l0.3-1.9l8.5,7.3l16.6-4.2l9.2,8.7l30.1,9.3l4.3-6.2l15.3,21.7l26.5-6.1l41.8,17.3
+		l1.8,11.1L272.9,205l3.3,19.4l-11.3,7.8l-6.6,6.6l-8.8,0.4l-9.6,5.7l-5.2,5.1l-5.4,2.5l-4.3-8.9l1.6-4.5l-8.1-2.4l-4.4-0.2
+		l-14.6,11.8l-5,7.6l-6.5,6.4l-8.1-0.2l-10.1,4.7L167.3,279.7z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.GP</hasc>
+			<alt-name>Gbarpolu</alt-name>
+			<woe-id>-2346101</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI21</fips>
+			<postal-code>GP</postal-code>
+			<name>Gbapolu</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-10.1841</longitude>
+			<woe-name>NULL</woe-name>
+			<latitude>7.51706</latitude>
+			<woe-label>NULL</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.55</hc-middle-x>
+			<hc-middle-y>0.41</hc-middle-y>
+			<hc-key>lr-gp</hc-key>
+			<hc-a2>GP</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.BG" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M161,286.5l2.5-0.9l3.8-5.9l2.5-12.9l10.1-4.7l8.1,0.2
+		l6.5-6.4l5-7.6l14.6-11.8l4.4,0.2l8.1,2.4l-1.6,4.5l4.3,8.9l5.4-2.5l5.2-5.1l9.6-5.7l8.8-0.4l6.6-6.6l11.3-7.8l4.9,2.3l8.3,1.4
+		l10.7-3.9l3.2-4.8l-0.9-1.8l3.9-5.2l14.2-4.4l6.4-4.3l4-4.3l-0.6-1.7l8.1-8l5.1,7.2l4.7-6.3l7.3-0.6l2.6,1.3l3.301,5.8l10.8-0.7
+		l2.399,3.3l2.2,10.4l4.2,3.8l4.7,0.1l1,3.5l4.5,2.7l-0.9,7.9l3.2-2.1l-6.1,19.6l-2.9,4.1l-1.5,9.9l-3.1,3.5l4.1,4.4l3.9,7.5
+		l4.899,3.7l-0.899,6l0.8,6.8l-3.7,4.8l0.6,3.4l-3.8,6.6l-0.3,4.3l-2.2,3.4l0.3,6.7l-3.199,1.1l-4.5,0.101l-15.801,4l-3.8-2.4
+		l-5.6,4.5l-2.8,4.6l-3.4,0.5l-5.7,4.801l-2,3.399l-8.4,1l-3.1,4.601l-9.3-0.2l-8.3,5.6l-3.4,0.7l-1.2-3.1l2.1-4.601l8.5-10
+		l0.4-3.899l-9.7-10.801l-4.3-2.3l-9.6,1l-3.2-1.899l4.2-9.9l-1-5.8L282,295l-5.6-0.1l-2.3,2.9l-0.1,7.6l-3.2,4.3l-2.5,8.8l-5.7,3
+		l-5.2-6.1l-6.1-2.9l-8.6-1.8l-6.2,2.899l-5,0.601l-20.4-6.8l-7-5.8l-6.7-3.4l-11.6,0.7l-4.4-2.8l-11-0.1l-3.7-1.9L161,286.5z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.BG</hasc>
+			<alt-name>NULL</alt-name>
+			<woe-id>2346099</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI01</fips>
+			<postal-code>BG</postal-code>
+			<name>Bong</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-9.806039999999999</longitude>
+			<woe-name>Bong</woe-name>
+			<latitude>6.99958</latitude>
+			<woe-label>Bong, LR, Liberia</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.72</hc-middle-x>
+			<hc-middle-y>0.52</hc-middle-y>
+			<hc-key>lr-bg</hc-key>
+			<hc-a2>BG</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.586" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M289.1,495.2L271,477.9l-22.9-18.7l-5.9-6.7l-4.1-2.7
+		l-1-7l-4.2-4.7l-7.2-3.1l-11.8-9.3l-6.8-7.4l-8.8-5.6l-9.3-2.5l-4.7-3.9l0.4-2.3l4.7-1.1l-5.6-2.5l3.9-8l-0.2-8.2l4-6.4l2.4-1.3
+		l-0.8-6.8l4.1-2l4.5-5.601l-0.4-6.1l5.2-5.5l2.6-6.5l-4.5-6.7l10.8-3.3l5.8,7.3l5.2,3.3l6-0.5l4.6-4.1l7.2,0.2l7.2,1.6l10.4-8.2
+		l9.5,2.101l3.5-3.4l12.5-14.899l3.2,1.899l9.6-1l4.3,2.3l9.7,10.801l-0.4,3.899l-8.5,10l-2.1,4.601l1.2,3.1l3.4-0.7l8.3-5.6
+		l9.3,0.2l3.1-4.601l8.4-1l2-3.399l5.7-4.801l3.4-0.5l2.8-4.6l5.6-4.5l3.8,2.4l15.801-4l4.5-0.101l9.5,2.8l2.8-1.199l3.3,2.1
+		l-1.9,4.5l-2.899,1.3l-2.7,4.2l-2.4,8.3l3.801,2.601L387.8,354l-0.7,12.8l-35,0.2l-8.1,3.6l-6.6,1.4l-2.9,2.6l0.8,4l-1.4,10.2
+		l1.6,8.601l-7.1,7.8l-5.3,7.2l-3.6-2.9l-9,1.1l-2,6.7l-5.8,3l0.1,5.4l-2,6.3l-0.9,7l1.6,5.9l-5.4,8.6l-0.8,5.7l1.8,4.3l-1.5,5.8
+		l3.3,10.8l-1,4.301l-3.8,3.6L289.1,495.2z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.MG</hasc>
+			<alt-name>NULL</alt-name>
+			<woe-id>2346105</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI11</fips>
+			<postal-code>NULL</postal-code>
+			<name>Grand Bassa</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-9.728870000000001</longitude>
+			<woe-name>Grand Bassa</woe-name>
+			<latitude>6.11786</latitude>
+			<woe-label>Grand Bassa, LR, Liberia</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.36</hc-middle-x>
+			<hc-middle-y>0.46</hc-middle-y>
+			<hc-key>lr-586</hc-key>
+			<hc-a2>GB</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.CM" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M89.3,260.2l-0.2,9.5l-6.5,18.6l2.7,4.8l-2.4,12.2
+		l-4.6,0.5l-3.4,3.601l-1.7,5.3l-3.4,1.1L66,319.9l0.1,6.8l-25.9-9.4L20.3,308.4l-3.6-4.3l-0.1-6.6l1.2-7.4L15,285l-6.4-3l-4.4-4
+		L0,272l6.6-3.1l0.3-7.1l4.6-2.5l3-8.4v-4.4l5.7-1.7l-0.2-3.6l-2.7-5.6l3.5-3.3l5.8-9l2.9-0.6l13.7-6.1l15.3-18.9l24.7-19.3l6.8-3.7
+		l8.5-2.4l3.6-3.5l8.1,1.6l2.8,2.4l17.4,3l4.7,1.7l9.8,0.6l3.1,1.9l9.7,13.4l1.5,5.9l0.7,8.4l-5.4,6.1l-20.2,11.8l-5.6,1.5l-5.1,4
+		l-4,5.9l-4,3.2l-3.9,0.9l-13.1,8.5l-5.7,6.9L88,259L89.3,260.2z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.CM</hasc>
+			<alt-name>NULL</alt-name>
+			<woe-id>2346106</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI12</fips>
+			<postal-code>CM</postal-code>
+			<name>Grand Cape Mount</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-10.9953</longitude>
+			<woe-name>Grand Cape Mount</woe-name>
+			<latitude>7.09577</latitude>
+			<woe-label>Grand Cape Mount, LR, Liberia</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.46</hc-middle-x>
+			<hc-middle-y>0.43</hc-middle-y>
+			<hc-key>lr-cm</hc-key>
+			<hc-a2>CM</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.LF" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M330.3,197.7l0.6,1.7l-4,4.3l-6.4,4.3l-14.2,4.4l-3.9,5.2
+		l0.9,1.8l-3.2,4.8l-10.7,3.9l-8.3-1.4l-4.9-2.3l-3.3-19.4l24.7-56.7l-1.8-11.1L254,119.9l-26.5,6.1l-15.3-21.7l-4.3,6.2l-30.1-9.3
+		l-9.2-8.7L152,96.7l-8.5-7.3l8.1-6.8l6.3-10.1l7.3-2.4h13.3l6.7-1.5l7.3-5.7l0.4-3.1l-2.5-8l0.4-3.8l2.9-6.3l5.2-20.3l0.1-8.6
+		l7-1.5l1.3,2.8l8.3-7.1l5.6-0.7l9.4,2.4l3.6,3.8l-1.6,7.8l0.7,2.2l5.7,0.2l13.1-8.9l5.5-2.3l9.1-1.1l2.4,2.2l8.6-3.2l-0.4-3.7
+		l5.9-5.7l2.6,5l1.8,10.8l4,5.4l1.1-6.3l5.3-2.3l5.5,3.7l0.9,3.6l-5.1,5.6l-0.3,3l9.6-0.2l3.2-3l3.5,3.9l8.2,3.5l5,3.8l-6.7,4.8
+		l5,8.2l-2.7,4.1l-0.8,9.2l8.1,3.4l3.5,16l-2.3,6.6l3.7-3.8l3.7,2.5l1.1,3.5l-3.9,10.9l-0.4,7l1.6,6.9l3.8,7l10,13.7l-3.5,10.2
+		l0.3,5.5l3.5,4.1l-4.2,6l-0.8,4.5l-4.2,5.3l-0.8,5.8l-3.7,5.6l-5,4.2l-1.2,6.3L330.3,197.7z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.LF</hasc>
+			<alt-name>NULL</alt-name>
+			<woe-id>2346101</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI20</fips>
+			<postal-code>LF</postal-code>
+			<name>Lofa</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-9.87553</longitude>
+			<woe-name>Lofa</woe-name>
+			<latitude>8.12994</latitude>
+			<woe-label>Lofa, LR, Liberia</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.58</hc-middle-x>
+			<hc-middle-y>0.32</hc-middle-y>
+			<hc-key>lr-lf</hc-key>
+			<hc-a2>LF</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.MO" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M139,388.5l-3.7-0.9l-21.4-11l-3.3-3l1.3-2.8l4.6,3.4
+		l-2.7-4.601l-0.6-4l5.5-7.5l-6.8,2.4l-1-2.1l2.1-6.7l-1.9-5.9l-0.1-5.3l5.2-3.5l4.6-1l8.1-6.3l4.4,0.2l10.6,6.699l7.8-5.199
+		l-6.5-8.9v-7.4l1.4-6.699l4.2-6.4l-1.1-5.4l1.9-1.7l0.5-5.9l8.9-2.5l5.7,7.6l3.7,1.9l11,0.1l4.4,2.8l0.2,5.7l-9.4,18.6l3.6,6.8
+		l1.5,6.5l-0.5,13.9l-3.3,2.5l-6.3,2.199l-4.5,7.5L164,365l-9,3.5l-12.5,8.8L139,388.5z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.MO</hasc>
+			<alt-name>NULL</alt-name>
+			<woe-id>2346108</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI14</fips>
+			<postal-code>MO</postal-code>
+			<name>Montserrado</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-10.5806</longitude>
+			<woe-name>Montserrado</woe-name>
+			<latitude>6.43188</latitude>
+			<woe-label>Montserrado, LR, Liberia</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.56</hc-middle-x>
+			<hc-middle-y>0.61</hc-middle-y>
+			<hc-key>lr-mo</hc-key>
+			<hc-a2>MO</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.MG" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M287.3,317.4L274.8,332.3l-3.5,3.4l-9.5-2.101l-10.4,8.2
+		l-7.2-1.6L237,340l-4.6,4.1l-6,0.5l-5.2-3.3l-5.8-7.3l-10.8,3.3l4.5,6.7l-2.6,6.5l-5.2,5.5l0.4,6.1l-4.5,5.601l-4.1,2l0.8,6.8
+		l-2.4,1.3l-4,6.4l0.2,8.2l-3.9,8l-4.7-4.301l-8.2-4.5l-3.2,1l8.6,4.5l2.5,3.801l-9.9-4.9l-29.9-7.5l3.5-11.2l12.5-8.8l9-3.5
+		l3.1-2.4l4.5-7.5l6.3-2.199l3.3-2.5l0.5-13.9l-1.5-6.5l-3.6-6.8l9.4-18.6l-0.2-5.7l11.6-0.7l6.7,3.4l7,5.8l20.4,6.8l5-0.601
+		l6.2-2.899l8.6,1.8l6.1,2.9l5.2,6.1l5.7-3l2.5-8.8l3.2-4.3l0.1-7.6l2.3-2.9l5.6,0.1l8.5,6.7l1,5.8L287.3,317.4z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.MG</hasc>
+			<alt-name>NULL</alt-name>
+			<woe-id>2346111</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI17</fips>
+			<postal-code>MG</postal-code>
+			<name>Margibi</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-10.1783</longitude>
+			<woe-name>Margibi</woe-name>
+			<latitude>6.62708</latitude>
+			<woe-label>Margibi, LR, Liberia</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.62</hc-middle-x>
+			<hc-middle-y>0.29</hc-middle-y>
+			<hc-key>lr-mg</hc-key>
+			<hc-a2>MG</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.NI" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M427.2,446.5l-2.5,3.7l-4.3,2.899l-19.301-0.5L396.7,453.7
+		l2.3-9.101l-3-6.3l2.4-2.7l-4.2-4.1l0.6-3.2l4.8-2.7l-3.8-3.399l3.5-5l-3.7-5.101l0.601-5.399l-4.7-4.101l2.9-6.8l1.199,1.5
+		l2.5-5.1l2.801-2l-1.101-7.7l1.101-2.4l-8.9-4l-4.9-9.3l0.7-12.8l2.101-7.6L386.1,343.8l2.4-8.3l2.7-4.2l2.899-1.3l1.9-4.5
+		l-3.3-2.1l-2.8,1.199l-9.5-2.8l3.199-1.1l-0.3-6.7l2.2-3.4l0.3-4.3l3.8-6.6l-0.6-3.4l3.7-4.8l-0.8-6.8l0.899-6L387.9,275l-3.9-7.5
+		l-4.1-4.4l3.1-3.5l1.5-9.9l2.9-4.1l6.1-19.6l5.4-1.4l6.699-4.8l2.801,0.2l8.899-4l0.8-3.9l5.301,6.3l11.199-4l1.101-3.3l-2.3-9
+		l5.3-7.8l4.2-1.8l2.899-7.7l5.601-3.6l4.5-6l0.399-7.2l-2-2.3l3-12.8l5.7-8.5l19.7,1l-0.9,6.2l1.101,4.5l3.1,3.8l10.3,7.1l7,3.4
+		l3,5.9l3.4,11.7l2.899,19.3l5,8.2l1.301,5.2l3.399,5l0.5,5.3l3.9,5.8l3.1,19.8l-0.399,4l-5.5,5.7l-0.101,8.2l-2.2,4.6l3,3.1
+		l-0.1,4.6l-3.5,9.8l-2.3,3.7l-18.2,20.2l-17.4,13.7l-1.8,3.899l-2.8,0.601l-4.1,5.2L471.6,350l-3.899,13.3l-10,19.9l-6.4,8.399
+		L446.9,395.2l-7,2.899l-2.101,5.5l-2.5,2l2.3,6.801l-2.199,7.5l-2.601,1.8l-9.6,1.7l-2.101,2.8l3.301,3.6l-3.101,5.5v5.5l2.4-2.2
+		l3.899,4.801L427.2,446.5z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.NI</hasc>
+			<alt-name>NULL</alt-name>
+			<woe-id>2346103</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI09</fips>
+			<postal-code>NI</postal-code>
+			<name>Nimba</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-8.73626</longitude>
+			<woe-name>Nimba</woe-name>
+			<latitude>6.8643</latitude>
+			<woe-label>Nimba, LR, Liberia</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.52</hc-middle-x>
+			<hc-middle-y>0.39</hc-middle-y>
+			<hc-key>lr-ni</hc-key>
+			<hc-a2>NI</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.RI" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M396.7,453.7l-3.5,2.399l-4.8,7.601l-0.9,6.7l-2,3l-7.2,2
+		l-5.2,4L367,482l-15.4,13l3.7,9.1l3.4,15.2l-1.7,6.5l-5.3,6.8l-3.2,0.5l-2.1,4.2l-6.8,3.8l1.8,5.7l-8.7-8.2l-4.4-11.5l-4.5-3.5
+		L318,521.2l-5.7-0.9l2.1-5.7l-2.7-3.899l-16.6-9.7l-6-5.8l5-7.2l3.8-3.6l1-4.301l-3.3-10.8l1.5-5.8l-1.8-4.3l0.8-5.7l5.4-8.6
+		l-1.6-5.9l0.9-7l2-6.3l-0.1-5.4l5.8-3l2-6.7l9-1.1l3.6,2.9l5.3-7.2l7.1-7.8l-1.6-8.601l1.4-10.2l-0.8-4l2.9-2.6l6.6-1.4l8.1-3.6
+		l35-0.2l4.9,9.3l8.9,4l-1.101,2.4l1.101,7.7l-2.801,2l-2.5,5.1l-1.199-1.5l-2.9,6.8l4.7,4.101L395.6,412.1l3.7,5.101l-3.5,5
+		l3.8,3.399l-4.8,2.7l-0.6,3.2l4.2,4.1l-2.4,2.7l3,6.3L396.7,453.7z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.RI</hasc>
+			<alt-name>Rivercess</alt-name>
+			<woe-id>2346112</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI18</fips>
+			<postal-code>RI</postal-code>
+			<name>River Cess</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-9.39724</longitude>
+			<woe-name>River Cess</woe-name>
+			<latitude>5.82919</latitude>
+			<woe-label>NULL</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.50</hc-middle-x>
+			<hc-middle-y>0.41</hc-middle-y>
+			<hc-key>lr-ri</hc-key>
+			<hc-a2>RI</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.GD" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M474.4,343.9l8.399,0.399l3.8,2.2l4.9,6.6l5.1-0.699
+		l2.9-7.601l10.4,8.5L507.6,358l2.101,5.9l-2.9,3.399l2,1.9l3.8-2.5l3.801,0.899l2.199-1.899l5,4.1l2.101-1.3l2.5,5.2L542.6,377.1
+		l6.301,3.101l5-0.601l5.6-2.899l7.7-1.101l7.399,0.601l2.7,1.8l10.7,2.5h3.5l1.3,3.2l7.4,5.899l3,5.4l-3.4,13.7l2.3,4.899l5.2-1.3
+		l2.8,6.7l2.301,1.3L610.6,423.9v5.899l2.2,2.7l6.601,3.4l5,6.1l6.1-6.7l5.3,4.9l3,0.5l7.7,4.1l-0.5,2.8l4.7,4.5l5.2-3.199
+		l5.6,8.699l2.6-8.899l5.301,2.3l0.8,5.8L669,469.9l3.1,13l5.7,11.399l2.101,2.7l-4.601,1.4l3.101,6.1l-2.7,1.7L562.5,511.1
+		l-10.8,2.2l-21.8,2.4l-18.301,0.2l-5.8-2.2l-1.5-4.8L499.4,507.6l-2.301-4.1l4.7-7.5l1.5-4.7l14.5-3.1l1-5.2l-1.5-5l-5.8-9.2
+		l-9.3-6.899L494.1,460.8l-3.399,1L480.1,474.7l-9.5-4.101L427.2,446.5l0.399-3.1L423.7,438.6l-2.4,2.2v-5.5l3.101-5.5l-3.301-3.6
+		l2.101-2.8l9.6-1.7l2.601-1.8l2.199-7.5l-2.3-6.801l2.5-2l2.101-5.5l7-2.899l4.399-3.601l6.4-8.399l10-19.9L471.6,350L474.4,343.9z
+		">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.GD</hasc>
+			<alt-name>Grand Gedeh</alt-name>
+			<woe-id>2346100</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI19</fips>
+			<postal-code>GD</postal-code>
+			<name>Grand Gedeh</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-8.164160000000001</longitude>
+			<woe-name>Grand Gedeh</woe-name>
+			<latitude>5.87286</latitude>
+			<woe-label>NULL</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.39</hc-middle-x>
+			<hc-middle-y>0.49</hc-middle-y>
+			<hc-key>lr-gd</hc-key>
+			<hc-a2>GD</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.RG" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M675.7,506.2l-3.8,5.6L671.3,519.9L669,518.6l1.9,8.5
+		l4,3.601l3-0.101l1.199,8.2l-4,8.4L672.7,549l-2.3-5.2l-4.301,2.3l-3.699,8.5l1.399,7.9l-1.1,5.7l-4.5,8.1l-5.2-1l-2.7,1.3
+		l-2.5,5.9l1.2,13.2l2.7,4.399l1,5.801l-4.3-1.301l-5.101,4l1.2,6.7l-1.2,6.601l-7-3l-2.8-3.801l-8.7-3.399h-5.6l-5.8,3.3
+		l-8.601-0.8l-1-4.4l-0.1-29l-3.2-3.2l-27.1-4.6l-23.2-3.7l-8.4-0.2L535.9,565.2l-9.801-1.7l0.2-7.8L524.9,551.6l-5.2-7.699L508,532
+		l-3.7-10l1.5-8.3l5.8,2.2l18.301-0.2l21.8-2.4l10.8-2.2L675.7,506.2z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.RG</hasc>
+			<alt-name>NULL</alt-name>
+			<woe-id>-2346100</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI22</fips>
+			<postal-code>RG</postal-code>
+			<name>River Gee</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-7.91438</longitude>
+			<woe-name>NULL</woe-name>
+			<latitude>5.29303</latitude>
+			<woe-label>NULL</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.58</hc-middle-x>
+			<hc-middle-y>0.35</hc-middle-y>
+			<hc-key>lr-rg</hc-key>
+			<hc-a2>RG</hc-a2>
+		</desc>
+	</path>
+	<path id="LR.GK" fill="#DDA6A6" stroke="#6E6E6E" stroke-width="0.4" d="M603.7,682.1L596.6,678l-4.6-1l-4.6-3.1l-10.2-3.101
+		l-5.7-0.8l-10.5-4.1l-20.3-2.4l-5.9-2l-7.1-7.8L504.6,645.6L486,632.5l-9.6-5.3l-16-5.8l5.899-5.801l2.4-9.199l8.8-3.7l8.1-14.101
+		l5-2.699l11-8.5l12-1.5l8-9.9l4.5-2.5l9.801,1.7l5.899,3.899l8.4,0.2l23.2,3.7l1.8,4.3l-0.4,5.4l-8.1,13.399l-5.8,14.5l0.199,3
+		l3.601,4.801l11.899,4L587.4,627l7.399,6.1l13.7,22.2l1,2.9l-1.3,5.899l-0.2,9.2L603.7,682.1z">
+		<desc  xmlns="http://www.highcharts.com/svg/namespace">
+			<labelrank>7</labelrank>
+			<hasc>LR.GK</hasc>
+			<alt-name>Grand Kru</alt-name>
+			<woe-id>2346110</woe-id>
+			<subregion>NULL</subregion>
+			<fips>LI16</fips>
+			<postal-code>GK</postal-code>
+			<name>Grand Kru</name>
+			<country>Liberia</country>
+			<type-en>County</type-en>
+			<region>NULL</region>
+			<longitude>-8.256220000000001</longitude>
+			<woe-name>Grand Kru</woe-name>
+			<latitude>4.87073</latitude>
+			<woe-label>NULL</woe-label>
+			<type>County</type>
+			<hc-middle-x>0.51</hc-middle-x>
+			<hc-middle-y>0.49</hc-middle-y>
+			<hc-key>lr-gk</hc-key>
+			<hc-a2>GK</hc-a2>
+		</desc>
+	</path>
+</g>
+<text transform="matrix(1 0 0 1 146.6582 714)" font-family="'Verdana'" font-size="8">Copyright (c) 2014 Highsoft AS, Based on data from Natural Earth http://www.naturalearthdata.com</text>
+</svg>

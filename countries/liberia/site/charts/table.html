@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ebola Cases</title>
+<link rel="stylesheet" href="../css/foundation.css" />
+<link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/725b2a2115b/integration/foundation/dataTables.foundation.css" />
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
+ </head>
+
+<body>
+    
+    <style>
+        .jqstooltip {
+            min-height:30px;
+            min-width:100px;
+ background-color: #c6e5f6 !important;
+ font-size: 11px !important; 
+ padding: 5px !important; 
+ color: black !important; 
+ overflow: auto !important; 
+ text-align: center !important;  
+ border-color: #CCCCCC !important; 
+ max-width: 400px !important; 
+ max-height: 400px !important; 
+}
+
+.jqsfield { 
+ font-size: 10px !important; 
+ color: black !important; /*set the text color here */
+}
+    </style>
+
+<table id="container" class="display" cellspacing="0" width="100%">
+    <thead>
+            <tr>
+                <th>County</th>
+                <th>Total Cases</th>
+                <th>Weekly Cases</th>
+                <th>Total Deaths</th>
+                <th>Weekly Deaths</th>
+                <th>Healthcare Worker Cases</th>
+                <th>Healthcare Worker Deaths</th>
+                
+            </tr>
+        </thead>
+ 
+        <tfoot>
+            <tr>
+                <th>County</th>
+                <th>Total Cases</th>
+                <th>Weekly Cases</th>
+                <th>Total Deaths</th>
+                <th>Weekly Deaths</th>
+                <th>Healthcare Worker Cases</th>
+                <th>Healthcare Worker Deaths</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+    
+    <script type = "text/javascript">
+$(document).ready(function() {
+    $('#container').dataTable( {
+        "paging":   false,
+        "bFilter": false,
+        "ajax": "../data/regional_drilldown.json",
+        "columnDefs": [ {
+            "targets": [4,2],
+            "class":"line",
+        
+      }],
+        "columns": [
+            { "data": "location__name" },
+            { "data": "cases_cum"},
+            { "data": "new_weekly_cases"},
+            { "data": "total_deaths_all"},
+            { "data": "new_weekly_deaths"},
+            { "data": "hcw_deaths_cum" },
+            { "data": "hcw_cases_cum" }
+            
+        
+            
+            
+        ],
+       
+    "initComplete": function(settings, json) {
+      $('.line').each(function(i,v){
+        if (i > 0 && i != 1) {
+            var t=$(this);
+          
+        
+        var data1 =t.text().split(',');
+        
+       
+        //var val1=t.text();
+        //var val2=100-val1;
+        t.sparkline(data1, {
+          type: 'line',
+          lineColor: '#0cc1bc',
+          spotColor: '#DF1FA4',
+          minSpotColor: '#DF1FA4',
+          maxSpotColor: '#DF1FA4',
+          highlightLineColor:'#DF1FA4',
+          lineWidth: '1',
+          height: '30px',
+          tooltipFormat: "Day Total: {{y:val}}",
+          defaultPixelsPerValue: 10});
+        }else{
+            console.log("not 0");
+        }
+        
+      })
+    },
+    } );
+} );
+</script>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ebola Cases</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    
+</head>
+
+<body>
+<script type = "text/javascript">
+   
+    var dataArray = [];
+    var daysArray = [];
+    var suspectedArray = []; 
+    var probableArray = [];
+    var confirmedArray = []; 
+    var cases = "";
+    var date = "";
+    var suspected = "";
+    var probable = "";
+    var confirmed = "";
+    var dataObj =""; 
+  var isPhone= false;
+      var oddOnes= [];
+    
+    $(document).ready(function() {
+        
+    
+        loadData();
+      });
+
+            
+         function loadData(){
+        $.ajax({
+          type:"GET",
+          url:"../data/export_main_weekly.json",
+          dataType:"text",
+          success: parseData
+        });
+      }
+      //end load(json)
+     
+    
+     
+      function parseData(data){
+        
+        dataObj = $.parseJSON(data);
+                                
+            
+
+           //detects width of screen
+    screenWidth = $( window ).width();
+    if (screenWidth <= 410) {
+       isPhone = true;
+       
+    }
+        
+        dataObj = $.parseJSON(data);
+                                
+            
+
+            
+            
+            
+            if (isPhone == true) {
+              
+                    
+                  for (var i = 0, len = dataObj.length; i < len; ++i) {
+                        
+                         var aDay = dataObj[i];
+                        date = aDay.Date;
+                        cases = aDay["hcw_cases_cum"];
+                        suspected = aDay["hcw_cases_cum"];
+                        
+                
+                        
+                        (i % 2 == 0 ? dataArray : oddOnes).push(cases);
+                        (i % 2 == 0 ? daysArray : oddOnes).push(date);
+                        (i % 2 == 0 ? suspectedArray : oddOnes).push(suspected);
+                       
+                        
+                    }   
+               
+            }else{
+          
+          
+          
+            
+            for (var i = 0, len = dataObj.length; i < len; ++i) {
+                
+                var aDay = dataObj[i];
+                date = aDay["sit_rep__date"];
+                cases = aDay["hcw_cases_cum"];
+                suspected = aDay["hcw_deaths_cum"];
+                
+                dataArray.push(cases);
+                daysArray.push(date);
+                suspectedArray.push(suspected);
+                
+                
+                
+                if (i == (len-1)) {
+                totalDeaths = dataObj[i]["Total cases"]
+              
+              //drops off the grand total from end of each array
+               dataArray.pop();
+               daysArray.pop();
+               suspectedArray.pop();
+               
+            }
+            }
+        
+ }
+         
+       
+    
+            writeChart(); 
+ 
+ 
+      }
+     
+        
+    function writeChart() {
+   
+     $('#container').highcharts
+        var chart = new Highcharts.Chart({
+        chart: {
+          type: 'line',
+          renderTo: 'container'
+        },
+        colors: ['#0cc1bc', '#DF1FA4', '#F1E258', '#052E70'],
+        title: {
+                text: 'Healthcare Workers Cases and Deaths',
+               
+            },
+
+         xAxis: {
+                categories: daysArray,
+                reversed:true,
+                labels: {
+                    rotation: -45,
+                    formatter: function () {
+                        return this.value; // clean, unformatted number for year
+                    }
+                },
+                title: {
+                    text: null
+                }
+                
+            },
+         yAxis: {
+                min: 0,
+                title:
+                    {
+                        text:'Cases'
+                    },
+                    
+                labels: {
+                    
+                    overflow: 'justify'
+                }
+            },
+            plotOptions: {
+            line: {
+                stacking: 'normal',
+                fillOpacity: 0.5,
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    }
+                }
+            }
+        },
+        
+            credits: {
+                enabled: false
+            },
+         tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>'
+            }
+        },
+        series: [{
+                
+                    name: 'Total Cases',
+                    data: dataArray,
+                    
+    
+            },
+            {
+                    name: 'Total Deaths',
+                    data: suspectedArray,
+                
+        
+             }
+            
+         
+             
+             ]
+        
+        
+        });    
+                
+            }
+</script>
+
+</script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br><br>
+
+</body>
+</html>
+

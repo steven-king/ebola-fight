@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Liberia Ebola</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <style type="text/css">
+            #container {
+                height: 500px; 
+                min-width: 310px; 
+                max-width: 100%; 
+                margin: 0 auto; 
+            }
+            .loading {
+                margin-top: 5em;
+                text-align: center;
+                color: gray;
+            }
+        </style>
+        <script type="text/javascript">
+            
+            
+             $(document).ready(function() {
+        
+        //loadData();
+      });
+        var counties = [];
+        var dayTotal= [];
+        var daySuspected = [];
+        var dayProb = [];
+        var dayConfirm = [];
+        var totalDeaths;
+        var dataObj;
+        
+        var drillDownSeries = [];
+        
+       
+            createChart()
+            
+     
+        
+        function createChart(){
+         
+               
+         $(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+            
+        },
+        colors: ['#044140','#08817E', '#0cc1bc', '#5F0D46', '#9F1675', '#DF1FA4'],
+        
+        
+        title: {
+            text: 'Cumulative Totals by County'
+        },
+        xAxis: {
+            title: 'County',
+            labels: {
+                rotation: -45,
+                formatter: function () {
+                    return this.value; // clean, unformatted number for year
+                },
+                style: {
+                    fontSize: '9px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            },
+            categories: ['Bomi County', 'Bong County', 'Gbarpolu County', 'Grand Bassa', 'Grand Cape Mount', 'Grand Gedeh', 'Grand Kru', 'Lofa County', 'Margibi County', 'Maryland County', 'Montserrado County', 'Nimba County', 'River Gee County', 'RiverCess County', 'Sinoe County']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Cumulative Deaths'
+            },
+            stackLabels: {
+                enabled: true,
+                style: {
+                    fontWeight: 'bold',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                }
+            }
+        },
+        legend: {
+            align: 'center',
+           
+            verticalAlign: 'bottom',
+           
+            floating: false,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+            borderColor: '#CCC',
+            borderWidth: 1,
+            shadow: false
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>' +
+                    'Total: ' + this.point.stackTotal;
+            }
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                
+                dataLabels: {
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                    style: {
+                        textShadow: '0 0 3px black, 0 0 3px black'
+                    }
+                }
+            }
+        },
+         series:[
+
+
+{
+name: "Cases Suspected",
+data: [4, 88, 1, 21, 5, 3, 0, 53, 164, 1, 108, 24, 0, 6, 1],
+stack:"Cases"
+},
+
+
+{
+name: "Cases Probable",
+data: [37, 41, 0, 12, 5, 0, 0, 370, 141, 5, 333, 58, 0, 3, 0],
+stack:"Cases"
+},
+{
+name: "Cases Confirmed",
+data: [33, 44, 0, 13, 4, 0, 0, 258, 33, 0, 266, 47, 1, 0, 1],
+stack:"Cases"
+},
+{
+
+name: "Deaths Suspected",
+
+data: [0, 22, 0, 3, 5, 2, 0, 35, 54, 0, 101, 12, 0, 5, 0],
+stack:"Deaths"
+},
+
+{
+
+name: "Deaths Probable",
+
+data: [20, 13, 0, 3, 3, 0, 0, 158, 64, 4, 134, 43, 1, 0, 0],
+stack:"Deaths"
+},
+
+{
+
+name: "Deaths Confirmed",
+
+data: [27, 11, 0, 13, 4, 0, 0, 165, 30, 0, 249, 31, 0, 0, 0],
+stack:"Deaths"
+
+}
+
+
+
+]
+              
+
+         },function(chart){
+            $.each(chart.series,function(i,serie){
+        $.each(serie.data,function(j,data){
+            if(data.yBottom - data.plotY < 15)
+                data.dataLabel.destroy();
+        });
+    });
+         
+
+
+    });
+});
+         
+          
+    };
+ 
+
+            
+            
+            
+                   </script>
+    </head>
+    <body>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="http://code.highcharts.com/modules/drilldown.js"></script>
+
+        <div id="container"></div>
+
+    </body>
+</html>

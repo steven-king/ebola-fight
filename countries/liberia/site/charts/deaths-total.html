@@ -1,0 +1,204 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Liberia Ebola</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <style type="text/css">
+            #container {
+                height: 400px; 
+                min-width: 310px; 
+                max-width: 100%; 
+                margin: 0 auto; 
+            }
+            .loading {
+                margin-top: 5em;
+                text-align: center;
+                color: gray;
+            }
+        </style>
+        <script type="text/javascript">
+        var theDate = [];
+        var dayTotal= [];
+        var daySuspected = [];
+        var dayProb = [];
+        var dayConfirm = [];
+        var totalDeaths;
+        var isPhone =  false;
+        var oddOnes = [];
+            
+             $(document).ready(function() {
+       
+        loadData();
+      });
+
+            
+         function loadData(){
+        $.ajax({
+          type:"GET",
+          url:"../data/export_main_weekly.json",
+          dataType:"text",
+          success: parseData
+        });
+      }//end load(xml)
+
+      
+        function parseData(data){
+            
+            
+            var dataObj = $.parseJSON(data);
+            
+            
+             //detects width of screen
+    screenWidth = $( window ).width();
+    if (screenWidth <= 410) {
+       isPhone = true;
+      
+    }
+        
+        dataObj = $.parseJSON(data);
+                                
+            
+
+            
+            
+            
+            if (isPhone == true) {
+              
+                    
+                  for (var i = 0, len = dataObj.length; i < len; ++i) {
+                       
+                      theDate.push(dataObj[i]["sit_rep__date"]);
+           
+
+                         
+                        (i % 2 == 0 ? dayTotal : oddOnes).push(dataObj[i]["total_deaths_all"]);
+                        (i % 2 == 0 ? daySuspected : oddOnes).push(dataObj[i]["total_deaths_suspected"]);
+                        (i % 2 == 0 ? dayProb : oddOnes).push(dataObj[i]["total_deaths_probable"]);
+                        (i % 2 == 0 ? dayConfirm : oddOnes).push(dataObj[i]["total_deaths_confirmed"]);
+                        
+                    }   
+               
+            }else{
+            
+            
+            for (var i = 0, len = dataObj.length; i < len; ++i) {
+            //sets data to arrays for charts
+            theDate.push(dataObj[i]["sit_rep__date"]);
+           
+            dayTotal.push(dataObj[i]["total_deaths_all"]);
+            daySuspected.push(dataObj[i]["total_deaths_suspected"]);
+            dayProb.push(dataObj[i]["total_deaths_probable"]);
+            dayConfirm.push(dataObj[i]["total_deaths_confirmed"]);
+           
+            if (i == (len-1)) {
+                totalDeaths = dataObj[i]["total_deaths_all"]
+              
+              //drops off the grand total from end of each array
+               
+            }
+            }
+           
+         
+           
+ }
+            
+         createChart();      
+        }
+            
+            
+            
+            function createChart(aDataType){
+
+               
+              $('#container').highcharts({
+        chart: {
+            type: 'area'
+        },
+        colors: ['#0cc1bc', '#DF1FA4', '#F1E258', '#052E70'],
+        title: {
+            text: 'Cumulative Total Deaths'
+        },
+        subtitle: {
+            text: ''
+        },
+        credits: {
+            enabled: false
+        },
+        xAxis: {
+            allowDecimals: false,
+            categories: theDate,
+            reversed:true,
+            
+            labels: {
+                rotation: -45,
+                formatter: function () {
+                    return this.value; // clean, unformatted number for year
+                },
+                style: {
+                    fontSize: '9px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Daily Deaths'
+            }
+        
+        },
+        tooltip: {
+            pointFormat: '{series.name} | <b>{point.y:,.0f}</b>'
+        },
+        plotOptions: {
+            area: {
+                stacking: 'normal',
+               fillOpacity: 0.4,
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    }
+                }
+            }
+        },
+        series: [
+                      {
+            name: 'Confirmed Deaths',
+            data: dayConfirm
+        },
+        {
+            name: 'Probable Deaths',
+            data: dayProb
+        },
+      
+         
+           {
+            name: 'Suspected Deaths',
+            data: daySuspected
+        }
+        
+        
+        
+        ]
+    });
+
+};
+        </script>
+    </head>
+    <body>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script> 
+        
+
+
+        <div id="container"></div>
+
+    </body>
+</html>

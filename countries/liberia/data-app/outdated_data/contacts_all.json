@@ -1,0 +1,116 @@
+[
+  {
+    "Date":"2-Aug-14",
+    "New contacts":5,
+    "Contacts completed observation":7,
+    "Contacts lost follow up":2
+  },
+  {
+    "Date":"3-Aug-14",
+    "New contacts":14,
+    "Contacts completed observation":0,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"4-Aug-14",
+    "New contacts":26,
+    "Contacts completed observation":37,
+    "Contacts lost follow up":7
+  },
+  {
+    "Date":"5-Aug-14",
+    "New contacts":24,
+    "Contacts completed observation":36,
+    "Contacts lost follow up":9
+  },
+  {
+    "Date":"6-Aug-14",
+    "New contacts":42,
+    "Contacts completed observation":1,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"7-Aug-14",
+    "New contacts":2,
+    "Contacts completed observation":8,
+    "Contacts lost follow up":6
+  },
+  {
+    "Date":"8-Aug-14",
+    "New contacts":33,
+    "Contacts completed observation":0,
+    "Contacts lost follow up":6
+  },
+  {
+    "Date":"9-Aug-14",
+    "New contacts":15,
+    "Contacts completed observation":19,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"10-Aug-14",
+    "New contacts":28,
+    "Contacts completed observation":0,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"11-Aug-14",
+    "New contacts":182,
+    "Contacts completed observation":133,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"12-Aug-14",
+    "New contacts":173,
+    "Contacts completed observation":59,
+    "Contacts lost follow up":28
+  },
+  {
+    "Date":"13-Aug-14",
+    "New contacts":157,
+    "Contacts completed observation":34,
+    "Contacts lost follow up":28
+  },
+  {
+    "Date":"14-Aug-14",
+    "New contacts":61,
+    "Contacts completed observation":61,
+    "Contacts lost follow up":9
+  },
+  {
+    "Date":"15-Aug-14",
+    "New contacts":59,
+    "Contacts completed observation":100,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"16-Aug-14",
+    "New contacts":145,
+    "Contacts completed observation":96,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"17-Aug-14",
+    "New contacts":107,
+    "Contacts completed observation":48,
+    "Contacts lost follow up":0
+  },
+  {
+    "Date":"18-Aug-14",
+    "New contacts":281,
+    "Contacts completed observation":88,
+    "Contacts lost follow up":21
+  },
+  {
+    "Date":"19-Aug-14",
+    "New contacts":139,
+    "Contacts completed observation":71,
+    "Contacts lost follow up":9
+  },
+  {
+    "Date":"20-Aug-14",
+    "New contacts":196,
+    "Contacts completed observation":115,
+    "Contacts lost follow up":0
+  }
+]
