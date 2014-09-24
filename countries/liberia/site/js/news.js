@@ -37,11 +37,11 @@ function loadNewsArticles(){
 
   function loadOpenLibrary() {
 
-  var apiurl3 = "http://content.guardianapis.com/search?q=ebola&api-key=qnhewepyj6xfty2guy2y4vf4";
+  var apiurl3 = "http://content.guardianapis.com/search?api-key=ruj4qjh6sjw6n8spkjrpwtpx&q=ebola+liberia&from-date=2014-09-15";
 
 $.ajax({
     type: "GET",
-    url: "http://content.guardianapis.com/search?api-key=ruj4qjh6sjw6n8spkjrpwtpx&q=ebola+liberia&from-date=2014-09-20",
+    url: "http://content.guardianapis.com/search?api-key=ruj4qjh6sjw6n8spkjrpwtpx&q=ebola+liberia&from-date=2014-09-15",
     dataType: "jsonp",
     crossDomain: true,
     success: loadGuardian
